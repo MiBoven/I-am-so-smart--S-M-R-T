@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": "khuhfp",
+      "title": "Kurzlehrbuch Heilpraktiker und Heilpraktikerin für Psychotherapie",
+      "author": "Sonja Streiber",
+      "edition": "6. Auflage",
+      "parts": [
+        { "number": 1, "title": "Grundlagen" },
+        { "number": 2, "title": "Störungen und Krankheitsbilder" },
+        { "number": 3, "title": "Therapie" }
+      ],
+      "chapters": [
+        { "number": 1, "title": "Psychiatrie und Psychotherapie", "part": 1, "file": "khuhfp-ch01.json" }
+      ]
+    }
+  ]
+}
