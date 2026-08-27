@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#131313">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="style.css">
+<title>KLUK</title>
+</head>
+<body>
+
+<header>
+  <button class="icon" id="backBtn" style="display:none;">←</button>
+  <h1 id="headerTitle">KLUK</h1>
+  <div class="header-actions">
+    <button class="icon" id="fullscreenToggle" title="Vollbild">⛶</button>
+    <button class="icon" id="themeToggle" title="Theme wechseln">◐</button>
+  </div>
+</header>
+
+<!-- ================= BOOK SELECTION ================= -->
+<section id="screen-books" class="screen">
+  <p class="sub" id="booksIntro">Ich bin so klug – K-L-U-K</p>
+  <div id="bookList" class="stack"></div>
+</section>
+
+<!-- ================= HOME (per book) ================= -->
+<section id="screen-home" class="screen">
+  <div class="book-card" id="homeBookCard"></div>
+  <div class="stack">
+    <button class="menu-btn primary" id="btnStartLearning">📚 Lerneinheit starten</button>
+    <button class="menu-btn" id="btnCatalog">📖 Fragenkatalog</button>
+    <button class="menu-btn" id="btnAchievements">🏆 Achievements</button>
+    <button class="menu-btn" id="btnSettings">⚙️ Einstellungen</button>
+  </div>
+</section>
+
+<!-- ================= CHAPTER SELECTION ================= -->
+<section id="screen-chapters" class="screen">
+  <div class="segment" id="chapterModeToggle">
+    <button type="button" class="seg-btn active" data-mode="next">Nächstes</button>
+    <button type="button" class="seg-btn" data-mode="all">Alle</button>
+    <button type="button" class="seg-btn" data-mode="parts">Nach Teil</button>
+    <button type="button" class="seg-btn" data-mode="custom">Einzeln</button>
+  </div>
+  <div id="chapterModeDetail" class="card"></div>
+  <p class="hint" id="chapterCountHint"></p>
+  <button class="menu-btn primary" id="btnStartSession">Lerneinheit starten</button>
+</section>
+
+<!-- ================= SESSION ================= -->
+<section id="screen-session" class="screen">
+  <div class="session-progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text" id="progressText"></div>
+  </div>
+  <div class="card-stage" id="cardStage">
+    <div class="flashcard" id="flashcard">
+      <div class="flashcard-inner" id="flashcardInner">
+        <div class="flashcard-face flashcard-front">
+          <img id="cardImage" class="card-image" style="display:none;" alt="">
+          <div class="card-section-label" id="cardSectionLabel"></div>
+          <div class="card-question" id="cardQuestion"></div>
+          <div class="flip-hint">Tippen zum Umdrehen</div>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <div class="answer-block">
+            <div class="answer-label">Antwort</div>
+            <div class="answer-simple" id="answerSimple"></div>
+          </div>
+          <button class="more-btn" id="moreBtn1">Mehr anzeigen</button>
+          <div class="answer-block" id="answerDetailBlock" style="display:none;">
+            <div class="answer-label">Details</div>
+            <div class="answer-detail" id="answerDetail"></div>
+          </div>
+          <button class="more-btn" id="moreBtn2" style="display:none;">Noch mehr anzeigen</button>
+          <div class="answer-block" id="answerExtraBlock" style="display:none;">
+            <div class="answer-label">Extra</div>
+            <div class="answer-extra" id="answerExtra"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="session-actions" id="sessionActions" style="visibility:hidden;">
+    <button class="action-btn no" id="btnNo">✕<span>Kann ich nicht</span></button>
+    <button class="action-btn later" id="btnLater">🕓<span>Später</span></button>
+    <button class="action-btn yes" id="btnYes">✓<span>Weiß ich</span></button>
+  </div>
+</section>
+
+<!-- ================= SESSION SUMMARY ================= -->
+<section id="screen-summary" class="screen">
+  <div class="summary-card">
+    <div class="summary-emoji">🎉</div>
+    <h2>Lerneinheit abgeschlossen!</h2>
+    <div class="summary-stats" id="summaryStats"></div>
+    <div id="summaryAchievements"></div>
+    <button class="menu-btn primary" id="btnSummaryHome">Zurück zum Start</button>
+  </div>
+</section>
+
+<!-- ================= CATALOG ================= -->
+<section id="screen-catalog" class="screen">
+  <input type="text" id="catalogSearch" placeholder="Suchen…">
+  <div class="chip-row" id="catalogFilters"></div>
+  <div id="catalogList" class="stack"></div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="screen-achievements" class="screen">
+  <div class="stats-grid" id="statsGrid"></div>
+  <h3 class="section-title">Abzeichen</h3>
+  <div class="badge-grid" id="badgeGrid"></div>
+</section>
+
+<!-- ================= SETTINGS ================= -->
+<section id="screen-settings" class="screen">
+  <div class="card">
+    <label class="label-main" for="sessionSizeInput">Kartenanzahl pro Lerneinheit</label>
+    <div class="row" style="margin-top:8px;">
+      <input type="range" id="sessionSizeInput" min="5" max="30" step="5" value="10">
+      <span class="qty-val" id="sessionSizeLabel">10</span>
+    </div>
+  </div>
+  <div class="card">
+    <label class="label-main" for="languageSelect">Sprache</label>
+    <select id="languageSelect" style="margin-top:8px; width:100%;">
+      <option value="de">Deutsch</option>
+    </select>
+    <p class="hint">Weitere Sprachen folgen in einem späteren Update.</p>
+  </div>
+  <div class="card">
+    <label class="label-main">Daten</label>
+    <div class="btn-row" style="margin-top:10px;">
+      <button id="exportBtn">Exportieren</button>
+      <button id="importBtn">Importieren</button>
+    </div>
+    <input type="file" id="importFile" accept="application/json" style="display:none;">
+    <button id="resetBtn" class="danger-btn">Fortschritt zurücksetzen</button>
+  </div>
+  <footer>KLUK · v0.1.0</footer>
+</section>
+
+<!-- ================= IMAGE MODAL ================= -->
+<div class="modal-bg" id="imageModalBg">
+  <div class="modal image-modal">
+    <img id="modalImage" src="" alt="">
+    <button class="close" id="closeImageModal">Schließen</button>
+  </div>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
