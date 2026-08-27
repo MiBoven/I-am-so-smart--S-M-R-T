@@ -1,0 +1,128 @@
+{
+  "book": "giddens-soziologie",
+  "chapter": 1,
+  "title": "Was ist Soziologie?",
+  "part": 1,
+  "cards": [
+    {
+      "id": "giddens-01-001",
+      "section": "1.1",
+      "question": "Eine Studentin fragt sich, warum ihr Studienerfolg auch von ihrer sozialen Herkunft abhängt und nicht nur von ihrer individuellen Anstrengung. Mit welchem soziologischen Grundbegriff lässt sich das fassen?",
+      "answerSimple": "Mit dem Konzept der „soziologischen Imagination“.",
+      "answerDetail": "Die von C. Wright Mills geprägte soziologische Imagination beschreibt die Fähigkeit, private Erfahrungen (wie individuellen Studienerfolg) in Beziehung zu größeren gesellschaftlichen Strukturen und Prozessen zu setzen.",
+      "extra": "Mills unterschied dabei zwischen „personal troubles“ (individuellen Problemen) und „public issues“ (gesellschaftlichen Fragestellungen).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-002",
+      "section": "1.1",
+      "question": "Was unterscheidet die soziologische Perspektive grundlegend vom Alltagsverständnis sozialer Phänomene?",
+      "answerSimple": "Soziologie hinterfragt systematisch, was im Alltag oft als selbstverständlich gilt.",
+      "answerDetail": "Während Alltagswissen soziale Zusammenhänge meist unhinterfragt hinnimmt, untersucht die Soziologie systematisch und methodisch, wie soziale Strukturen individuelles Handeln beeinflussen und umgekehrt.",
+      "extra": "Dieser „Blick hinter die Kulissen“ wird häufig auch als Entselbstverständlichung des Alltäglichen bezeichnet.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-003",
+      "section": "1.2",
+      "question": "Welche zwei zentralen, gegensätzlichen Ebenen unterscheidet die Soziologie bei der Analyse sozialer Phänomene?",
+      "answerSimple": "Mikroebene (Interaktion einzelner Personen) und Makroebene (großräumige gesellschaftliche Strukturen).",
+      "answerDetail": "Mikrosoziologie untersucht Face-to-Face-Interaktionen im Alltag, Makrosoziologie befasst sich mit umfassenden Systemen wie Wirtschaftsordnungen oder politischen Systemen.",
+      "extra": "Viele soziologische Theorien versuchen, beide Ebenen zu verbinden (Mikro-Makro-Problem).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-004",
+      "section": "1.3",
+      "question": "Nenne einen der Gründungsväter der Soziologie und sein zentrales Forschungsthema.",
+      "answerSimple": "Z. B. Émile Durkheim und sein Werk zum Suizid als sozialem, nicht rein individuellem Phänomen.",
+      "answerDetail": "Durkheim zeigte, dass Suizidraten systematisch mit dem Grad sozialer Integration und Regulierung zusammenhängen und nicht allein psychologisch erklärbar sind.",
+      "extra": "Weitere Gründungsväter: Karl Marx (Klassenkonflikt), Max Weber (soziales Handeln und Bürokratie).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-005",
+      "section": "1.4",
+      "question": "Was versteht man unter „sozialer Struktur“?",
+      "answerSimple": "Die relativ dauerhaften Muster sozialer Beziehungen, die individuelles Verhalten formen.",
+      "answerDetail": "Soziale Strukturen bestehen aus wiederkehrenden Mustern (z. B. Institutionen, Rollen, Normen), die zwar von Menschen geschaffen werden, aber wie ein äußerer Rahmen auf das Handeln Einzelner wirken.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-006",
+      "section": "1.4",
+      "question": "Ein Individuum verhält sich in der Schule anders als zu Hause. Mit welchem soziologischen Begriff lässt sich dieses Phänomen erklären?",
+      "answerSimple": "Mit dem Konzept der sozialen Rolle.",
+      "answerDetail": "Eine soziale Rolle bezeichnet das erwartete Verhalten, das mit einer bestimmten sozialen Position (z. B. Schüler, Kind) verbunden ist. Menschen wechseln je nach Kontext zwischen verschiedenen Rollen.",
+      "extra": "Rollenkonflikte entstehen, wenn widersprüchliche Erwartungen an verschiedene gleichzeitig innegehabte Rollen gestellt werden.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-007",
+      "section": "1.5",
+      "question": "Was unterscheidet quantitative von qualitativer Sozialforschung?",
+      "answerSimple": "Quantitative Forschung misst mit Zahlen/Statistik, qualitative Forschung untersucht Bedeutungen und Sinnzusammenhänge in der Tiefe.",
+      "answerDetail": "Quantitative Methoden (z. B. standardisierte Umfragen) zielen auf verallgemeinerbare, zahlenbasierte Aussagen. Qualitative Methoden (z. B. Interviews, Beobachtung) zielen auf ein vertieftes Verständnis einzelner Fälle.",
+      "extra": "Viele Studien kombinieren beide Ansätze (Methodentriangulation).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-008",
+      "section": "1.6",
+      "question": "Was besagt der Begriff „Globalisierung“ aus soziologischer Sicht?",
+      "answerSimple": "Die zunehmende weltweite Verflechtung sozialer, wirtschaftlicher und kultureller Beziehungen.",
+      "answerDetail": "Globalisierung beschreibt Prozesse, durch die Ereignisse, Entscheidungen und Aktivitäten an einem Ort der Welt bedeutsame Konsequenzen für Individuen und Gemeinschaften an weit entfernten Orten haben.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-009",
+      "section": "1.3",
+      "question": "Wieso gilt Auguste Comte als Begründer des Begriffs „Soziologie“?",
+      "answerSimple": "Er prägte im 19. Jahrhundert den Begriff und wollte eine Wissenschaft der Gesellschaft nach dem Vorbild der Naturwissenschaften etablieren.",
+      "answerDetail": "Comte war überzeugt, dass soziale Phänomene mit ähnlicher wissenschaftlicher Strenge wie Naturphänomene untersucht werden können (Positivismus).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-010",
+      "section": "1.3",
+      "question": "Was bezeichnet der Begriff „Anomie“ nach Émile Durkheim?",
+      "answerSimple": "Einen Zustand fehlender oder widersprüchlicher gesellschaftlicher Normen.",
+      "answerDetail": "Anomie entsteht, wenn gesellschaftliche Regeln und Werte ihre orientierende Kraft verlieren, etwa in Zeiten raschen sozialen Wandels — Individuen fehlt dann eine klare normative Orientierung.",
+      "extra": "Durkheim brachte erhöhte Suizidraten teilweise mit anomischen Gesellschaftszuständen in Verbindung.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-011",
+      "section": "1.1",
+      "question": "Was unterscheidet eine Gesellschaft von einer bloßen Ansammlung von Individuen aus soziologischer Perspektive?",
+      "answerSimple": "Eine Gesellschaft ist durch dauerhafte, strukturierte soziale Beziehungen und gemeinsame Institutionen gekennzeichnet.",
+      "answerDetail": "Erst geteilte Normen, Werte, Institutionen und wiederkehrende Interaktionsmuster machen aus einer Gruppe von Individuen eine Gesellschaft im soziologischen Sinn.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-01-012",
+      "section": "1.4",
+      "question": "Was ist mit dem „Doppelcharakter“ sozialer Strukturen gemeint (Handeln schafft Struktur, Struktur prägt Handeln)?",
+      "answerSimple": "Soziale Strukturen werden durch menschliches Handeln geschaffen und reproduziert, wirken aber zugleich einschränkend/ermöglichend auf dieses Handeln zurück.",
+      "answerDetail": "Dieses Wechselverhältnis wird u. a. in Anthony Giddens' Strukturierungstheorie als „Dualität von Struktur“ bezeichnet.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

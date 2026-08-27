@@ -6,12 +6,116 @@
       "author": "Sonja Streiber",
       "edition": "6. Auflage",
       "parts": [
-        { "number": 1, "title": "Grundlagen" },
-        { "number": 2, "title": "Störungen und Krankheitsbilder" },
-        { "number": 3, "title": "Therapie" }
+        {
+          "number": 1,
+          "title": "Grundlagen"
+        },
+        {
+          "number": 2,
+          "title": "Störungen und Krankheitsbilder"
+        },
+        {
+          "number": 3,
+          "title": "Therapie"
+        }
       ],
       "chapters": [
-        { "number": 1, "title": "Psychiatrie und Psychotherapie", "part": 1, "file": "khuhfp-ch01.json" }
+        {
+          "number": 1,
+          "title": "Psychiatrie und Psychotherapie",
+          "part": 1,
+          "file": "khuhfp-ch01.json"
+        }
+      ]
+    },
+    {
+      "id": "giddens-soziologie",
+      "title": "Soziologie",
+      "author": "Anthony Giddens, Philip W. Sutton",
+      "edition": "Deutsche Ausgabe",
+      "parts": [
+        {
+          "number": 1,
+          "title": "Grundlagen"
+        },
+        {
+          "number": 2,
+          "title": "Sozialstruktur und Institutionen"
+        }
+      ],
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Was ist Soziologie?",
+          "part": 1,
+          "file": "giddens-ch01.json"
+        },
+        {
+          "number": 2,
+          "title": "Kultur, Werte und Normen",
+          "part": 2,
+          "file": "giddens-ch02.json"
+        }
+      ]
+    },
+    {
+      "id": "krueger-erziehungswissenschaft",
+      "title": "Einführung in Theorien und Methoden der Erziehungswissenschaft",
+      "author": "Heinz-Hermann Krüger",
+      "edition": "",
+      "parts": [
+        {
+          "number": 1,
+          "title": "Grundbegriffe"
+        },
+        {
+          "number": 2,
+          "title": "Theorien und Methoden"
+        }
+      ],
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Erziehung, Bildung und Sozialisation",
+          "part": 1,
+          "file": "krueger-ch01.json"
+        },
+        {
+          "number": 2,
+          "title": "Empirische Forschungsmethoden in der Erziehungswissenschaft",
+          "part": 2,
+          "file": "krueger-ch02.json"
+        }
+      ]
+    },
+    {
+      "id": "zimbardo-psychologie",
+      "title": "Psychologie",
+      "author": "Philip G. Zimbardo, Richard J. Gerrig",
+      "edition": "",
+      "parts": [
+        {
+          "number": 1,
+          "title": "Grundlagen der Psychologie"
+        },
+        {
+          "number": 2,
+          "title": "Lernen und Gedächtnis"
+        }
+      ],
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Was ist Psychologie? Geschichte und Perspektiven",
+          "part": 1,
+          "file": "zimbardo-ch01.json"
+        },
+        {
+          "number": 2,
+          "title": "Lernen: Klassische und operante Konditionierung",
+          "part": 2,
+          "file": "zimbardo-ch02.json"
+        }
       ]
     }
   ]

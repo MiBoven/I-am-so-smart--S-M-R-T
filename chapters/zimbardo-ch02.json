@@ -1,0 +1,128 @@
+{
+  "book": "zimbardo-psychologie",
+  "chapter": 2,
+  "title": "Lernen: Klassische und operante Konditionierung",
+  "part": 2,
+  "cards": [
+    {
+      "id": "zimbardo-02-001",
+      "section": "2.1",
+      "question": "Was ist der Kernmechanismus der klassischen Konditionierung nach Iwan Pawlow?",
+      "answerSimple": "Ein neutraler Reiz wird durch wiederholte Kopplung mit einem unbedingten Reiz selbst zu einem Reiz, der eine bedingte Reaktion auslöst.",
+      "answerDetail": "In Pawlows klassischem Experiment wurde ein Glockenton (neutraler Reiz) wiederholt mit der Futtergabe (unbedingter Reiz, löst unbedingten Speichelfluss aus) gekoppelt, bis der Ton allein (jetzt bedingter Reiz) Speichelfluss (bedingte Reaktion) auslöste.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-002",
+      "section": "2.2",
+      "question": "Was versteht man unter „Extinktion“ (Löschung) im Rahmen der klassischen Konditionierung?",
+      "answerSimple": "Das allmähliche Verschwinden einer bedingten Reaktion, wenn der bedingte Reiz wiederholt ohne den unbedingten Reiz dargeboten wird.",
+      "answerDetail": "Wird z. B. der Glockenton wiederholt ohne Futtergabe präsentiert, nimmt die konditionierte Speichelreaktion mit der Zeit ab.",
+      "extra": "Nach einer Pause kann die gelöschte Reaktion teilweise spontan wieder auftreten (spontane Erholung).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-003",
+      "section": "2.3",
+      "question": "Was ist der zentrale Unterschied zwischen klassischer und operanter Konditionierung?",
+      "answerSimple": "Bei der klassischen Konditionierung wird eine bestehende Reflexreaktion mit einem neuen Reiz verknüpft; bei der operanten Konditionierung wird die Auftretenswahrscheinlichkeit eines aktiven Verhaltens durch dessen Konsequenzen verändert.",
+      "answerDetail": "Klassische Konditionierung (Pawlow) betrifft unwillkürliche, reflexartige Reaktionen. Operante Konditionierung (v. a. Skinner) betrifft willkürliches Verhalten, das durch Verstärkung oder Bestrafung in seiner Häufigkeit verändert wird.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-004",
+      "section": "2.4",
+      "question": "Was ist der Unterschied zwischen positiver und negativer Verstärkung?",
+      "answerSimple": "Positive Verstärkung fügt einen angenehmen Reiz hinzu; negative Verstärkung entfernt einen unangenehmen Reiz – beide erhöhen die Auftretenswahrscheinlichkeit eines Verhaltens.",
+      "answerDetail": "Beispiel positive Verstärkung: Lob nach getaner Hausaufgabe. Beispiel negative Verstärkung: Ein Sicherheitsgurt-Warnton hört auf, sobald man sich anschnallt – das Anschnallen wird dadurch wahrscheinlicher.",
+      "extra": "Negative Verstärkung ist nicht mit Bestrafung zu verwechseln – beide sind gegensätzliche Konzepte.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-005",
+      "section": "2.5",
+      "question": "Was besagt das „Gesetz der Wirkung“ (Law of Effect) nach Edward Thorndike?",
+      "answerSimple": "Verhalten, das positive Konsequenzen nach sich zieht, wird eher wiederholt; Verhalten mit negativen Konsequenzen wird seltener gezeigt.",
+      "answerDetail": "Thorndikes Beobachtungen an Katzen in seinen „Puzzle Boxes“ bildeten eine wichtige Grundlage für Skinners spätere Theorie der operanten Konditionierung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-006",
+      "section": "2.6",
+      "question": "Was versteht man unter einem „Verstärkungsplan“ (reinforcement schedule), und nenne ein Beispiel.",
+      "answerSimple": "Ein Muster, nach dem Verstärkung nur bei bestimmten Verhaltensweisen oder in bestimmten zeitlichen Abständen erfolgt, z. B. variable Verstärkung.",
+      "answerDetail": "Bei variabler Verstärkung erfolgt die Belohnung nach einer unvorhersehbaren Anzahl von Verhaltensweisen – dieses Muster erzeugt besonders lang anhaltendes, löschungsresistentes Verhalten (z. B. bei Glücksspielautomaten).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-007",
+      "section": "2.4",
+      "question": "Was ist „Bestrafung“ im lerntheoretischen Sinn, und welche zwei Formen werden unterschieden?",
+      "answerSimple": "Eine Konsequenz, die die Auftretenswahrscheinlichkeit eines Verhaltens verringert – positive Bestrafung (Hinzufügen eines unangenehmen Reizes) und negative Bestrafung (Entzug eines angenehmen Reizes).",
+      "answerDetail": "Beispiel positive Bestrafung: ein Tadel nach Fehlverhalten. Beispiel negative Bestrafung: Entzug des Taschengelds.",
+      "extra": "Bestrafung gilt in der Verhaltenstherapie meist als weniger wirksam und nebenwirkungsreicher als Verstärkung erwünschten Verhaltens.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-008",
+      "section": "2.7",
+      "question": "Was zeigt das Konzept der „erlernten Hilflosigkeit“ (learned helplessness) nach Martin Seligman?",
+      "answerSimple": "Wiederholte Erfahrungen von Kontrollverlust können dazu führen, dass Lebewesen aufhören, aktiv nach Lösungen zu suchen, selbst wenn später eine Kontrollmöglichkeit besteht.",
+      "answerDetail": "In Seligmans klassischen Experimenten zeigten Hunde, die zuvor unentrinnbaren Elektroschocks ausgesetzt waren, auch dann kein Fluchtverhalten mehr, als eine Fluchtmöglichkeit gegeben war.",
+      "extra": "Das Konzept wurde später auf die Entstehung von Depression beim Menschen übertragen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-009",
+      "section": "2.8",
+      "question": "Was versteht man unter „Beobachtungslernen“ (Modelllernen) nach Albert Bandura?",
+      "answerSimple": "Das Erlernen von Verhalten durch die Beobachtung anderer Personen (Modelle), ohne selbst aktiv Verstärkung erfahren zu müssen.",
+      "answerDetail": "Banduras berühmtes „Bobo-Doll-Experiment“ zeigte, dass Kinder aggressives Verhalten gegenüber einer Puppe zeigten, nachdem sie zuvor beobachtet hatten, wie ein erwachsenes Modell dieses Verhalten zeigte.",
+      "extra": "Beobachtungslernen ist zentral für die sozial-kognitive Lerntheorie und erklärt u. a. Diskussionen über Medienwirkung auf aggressives Verhalten.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-010",
+      "section": "2.1",
+      "question": "Was bedeutet „Generalisierung“ im Kontext der klassischen Konditionierung?",
+      "answerSimple": "Die Tendenz, auch auf Reize ähnlich dem konditionierten Reiz mit der bedingten Reaktion zu reagieren.",
+      "answerDetail": "Beispiel: Wurde Angst vor einem bestimmten weißen Kaninchen konditioniert (wie im „Kleiner Albert“-Experiment von Watson), kann sich diese Angst auf ähnliche weiße, pelzige Objekte generalisieren.",
+      "extra": "Das Gegenstück zur Generalisierung ist die Diskrimination, also das Lernen, zwischen ähnlichen Reizen zu unterscheiden.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-011",
+      "section": "2.6",
+      "question": "Was ist „Shaping“ (Verhaltensformung) in der operanten Konditionierung?",
+      "answerSimple": "Das schrittweise Heranführen an ein Zielverhalten durch Verstärkung von Annäherungen an dieses Verhalten.",
+      "answerDetail": "Da komplexe Verhaltensweisen selten spontan in voller Form auftreten, werden zunächst einfachere, dem Zielverhalten ähnliche Verhaltensweisen verstärkt, bis sich das gewünschte Endverhalten einstellt.",
+      "extra": "Shaping wird u. a. in der Tierdressur sowie in der Verhaltenstherapie eingesetzt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-02-012",
+      "section": "2.9",
+      "question": "Was unterscheidet „latentes Lernen“ von unmittelbar beobachtbarem Lernen (nach Edward Tolman)?",
+      "answerSimple": "Latentes Lernen findet statt, ohne dass es sich sofort im beobachtbaren Verhalten zeigt – es wird erst bei entsprechender Motivation sichtbar.",
+      "answerDetail": "In Tolmans Experimenten lernten Ratten ein Labyrinth auch ohne Futterbelohnung kennen (bildeten eine „kognitive Landkarte“), zeigten dieses Wissen aber erst durch schnelleres Verhalten, sobald eine Futterbelohnung eingeführt wurde.",
+      "extra": "Dieses Ergebnis stellte rein behavioristische Erklärungen infrage, da es auf innere kognitive Repräsentationen hindeutete.",
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

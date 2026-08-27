@@ -1,0 +1,128 @@
+{
+  "book": "giddens-soziologie",
+  "chapter": 2,
+  "title": "Kultur, Werte und Normen",
+  "part": 2,
+  "cards": [
+    {
+      "id": "giddens-02-001",
+      "section": "2.1",
+      "question": "Was versteht man unter „Kultur“ im soziologischen Sinn?",
+      "answerSimple": "Die Gesamtheit der Werte, Normen, Überzeugungen und materiellen Güter, die das Leben der Mitglieder einer Gesellschaft prägen.",
+      "answerDetail": "Kultur umfasst sowohl immaterielle Elemente (Sprache, Werte, Normen, Wissen) als auch materielle Elemente (Werkzeuge, Kleidung, Architektur).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-002",
+      "section": "2.2",
+      "question": "Wodurch unterscheiden sich Werte von Normen?",
+      "answerSimple": "Werte sind abstrakte Vorstellungen vom Wünschenswerten; Normen sind konkrete Verhaltensregeln, die aus Werten abgeleitet werden.",
+      "answerDetail": "Beispiel: Der Wert „Ehrlichkeit“ kann sich in der konkreten Norm „man soll nicht lügen“ niederschlagen. Normen sind somit handlungsleitender und spezifischer als Werte.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-003",
+      "section": "2.3",
+      "question": "Was ist der Unterschied zwischen „Ethnozentrismus“ und „kulturellem Relativismus“?",
+      "answerSimple": "Ethnozentrismus bewertet fremde Kulturen anhand der eigenen kulturellen Maßstäbe; kultureller Relativismus versucht, Kulturen aus ihrem eigenen Kontext heraus zu verstehen.",
+      "answerDetail": "Ethnozentrismus kann zu Vorurteilen und Fehleinschätzungen fremder Kulturen führen, da die eigene Kultur als Norm gesetzt wird. Der kulturelle Relativismus fordert dagegen, Praktiken im jeweiligen kulturellen Kontext zu bewerten.",
+      "extra": "Kultureller Relativismus wird auch kritisiert, da er in letzter Konsequenz jede Praxis — auch klar schädliche — relativieren könnte.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-004",
+      "section": "2.4",
+      "question": "Was sind Sanktionen im soziologischen Sinn, und welche zwei grundlegenden Arten gibt es?",
+      "answerSimple": "Reaktionen auf normkonformes oder normabweichendes Verhalten – positive Sanktionen (Belohnung) und negative Sanktionen (Bestrafung).",
+      "answerDetail": "Sanktionen dienen der sozialen Kontrolle, also der Aufrechterhaltung gesellschaftlicher Normen. Sie können formell (z. B. Gesetze, Gerichte) oder informell (z. B. soziale Missbilligung) sein.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-005",
+      "section": "2.5",
+      "question": "Was bezeichnet der Begriff „Subkultur“?",
+      "answerSimple": "Eine Gruppe innerhalb einer Gesellschaft mit eigenen Werten und Verhaltensweisen, die sich von der Mehrheitskultur unterscheiden, aber nicht grundsätzlich widersprechen.",
+      "answerDetail": "Subkulturen teilen zentrale Werte der Gesamtgesellschaft, entwickeln aber zusätzlich eigene Symbole, Stile oder Praktiken (z. B. Jugendkulturen, berufsbezogene Subkulturen).",
+      "extra": "Abzugrenzen von Gegenkulturen, die sich explizit gegen zentrale Werte der Mehrheitsgesellschaft richten.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-006",
+      "section": "2.6",
+      "question": "Was versteht man unter „sozialer Kontrolle“?",
+      "answerSimple": "Die Gesamtheit der Mechanismen, mit denen eine Gesellschaft normkonformes Verhalten sichert.",
+      "answerDetail": "Soziale Kontrolle reicht von informeller Kontrolle (Erziehung, Gruppendruck) bis zu formeller Kontrolle durch Institutionen wie Polizei, Justiz oder Schule.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-007",
+      "section": "2.7",
+      "question": "Wie unterscheiden sich „Institutionen“ von bloßen Gewohnheiten im soziologischen Sinn?",
+      "answerSimple": "Institutionen sind dauerhafte, gesellschaftlich anerkannte und meist formal abgesicherte Muster sozialen Handelns; Gewohnheiten sind individuelle wiederkehrende Verhaltensweisen ohne diesen institutionellen Status.",
+      "answerDetail": "Institutionen strukturieren zentrale gesellschaftliche Bereiche wie Familie, Bildung, Wirtschaft oder Religion und sind relativ stabil über die Zeit.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-008",
+      "section": "2.4",
+      "question": "Was besagt das Konzept der „sozialen Rollenerwartung“?",
+      "answerSimple": "Die gesellschaftlich geteilte Vorstellung davon, wie sich eine Person in einer bestimmten sozialen Position verhalten sollte.",
+      "answerDetail": "Rollenerwartungen sind oft nicht explizit formuliert, werden aber im Sozialisationsprozess erlernt und wirken normativ auf das Verhalten von Rolleninhabern.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-009",
+      "section": "2.8",
+      "question": "Was bezeichnet der Begriff „kulturelle Hegemonie“ (nach Antonio Gramsci)?",
+      "answerSimple": "Die Dominanz der Werte und Weltanschauung einer herrschenden Gruppe, die von der übrigen Gesellschaft weitgehend als „normal“ und selbstverständlich akzeptiert wird.",
+      "answerDetail": "Kulturelle Hegemonie erklärt, wie gesellschaftliche Machtverhältnisse nicht nur durch Zwang, sondern auch durch die Verbreitung bestimmter Weltanschauungen und Werte aufrechterhalten werden können.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-010",
+      "section": "2.1",
+      "question": "Was ist mit „materieller“ im Gegensatz zu „immaterieller Kultur“ gemeint?",
+      "answerSimple": "Materielle Kultur umfasst physische Objekte (Werkzeuge, Kunstwerke, Gebäude); immaterielle Kultur umfasst Ideen, Werte, Normen und Sprache.",
+      "answerDetail": "Beide Ebenen stehen in Wechselwirkung: materielle Kulturobjekte spiegeln oft immaterielle Werte wider und umgekehrt.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-011",
+      "section": "2.1",
+      "question": "Welche Rolle spielt Sprache aus soziologischer Sicht für die Weitergabe von Kultur?",
+      "answerSimple": "Sprache ist das zentrale Medium, über das Werte, Normen und Wissen zwischen Generationen und Gruppen weitergegeben werden.",
+      "answerDetail": "Ohne Sprache wäre die Akkumulation und Weitergabe kulturellen Wissens über Generationen hinweg kaum möglich – sie ist damit eine Grundvoraussetzung von Kultur überhaupt.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "giddens-02-012",
+      "section": "2.3",
+      "question": "Was versteht man unter einem „Kulturschock“?",
+      "answerSimple": "Die Verunsicherung und das Gefühl der Orientierungslosigkeit, das beim Eintauchen in eine fremde Kultur mit anderen Werten und Normen entstehen kann.",
+      "answerDetail": "Ein Kulturschock entsteht typischerweise, wenn vertraute kulturelle Selbstverständlichkeiten (Verhaltensregeln, Kommunikationsstile) plötzlich nicht mehr gelten.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

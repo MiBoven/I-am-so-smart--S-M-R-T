@@ -1,0 +1,128 @@
+{
+  "book": "zimbardo-psychologie",
+  "chapter": 1,
+  "title": "Was ist Psychologie? Geschichte und Perspektiven",
+  "part": 1,
+  "cards": [
+    {
+      "id": "zimbardo-01-001",
+      "section": "1.1",
+      "question": "Wie lässt sich Psychologie als Wissenschaft grundlegend definieren?",
+      "answerSimple": "Die wissenschaftliche Untersuchung von Verhalten und mentalen Prozessen.",
+      "answerDetail": "Psychologie befasst sich systematisch und empirisch mit Erleben und Verhalten von Menschen (und teils Tieren), unter Einsatz wissenschaftlicher Methoden wie Beobachtung, Experiment und Test.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-002",
+      "section": "1.2",
+      "question": "Wer gilt als Begründer des ersten psychologischen Labors, und wo wurde es gegründet?",
+      "answerSimple": "Wilhelm Wundt, 1879 in Leipzig.",
+      "answerDetail": "Wundt gilt als Begründer der experimentellen Psychologie. Er untersuchte u. a. mittels Introspektion (systematischer Selbstbeobachtung) elementare Bewusstseinsprozesse.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-003",
+      "section": "1.3",
+      "question": "Was ist der zentrale Unterschied zwischen dem behavioristischen und dem kognitiven Ansatz in der Psychologie?",
+      "answerSimple": "Behaviorismus konzentriert sich ausschließlich auf beobachtbares Verhalten; der kognitive Ansatz untersucht auch innere mentale Prozesse wie Denken und Gedächtnis.",
+      "answerDetail": "Behavioristen wie John B. Watson und B. F. Skinner lehnten die Introspektion als unwissenschaftlich ab und fokussierten auf Reiz-Reaktions-Zusammenhänge. Die „kognitive Wende“ ab den 1950er/60er-Jahren rückte innere Verarbeitungsprozesse wieder in den Fokus.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-004",
+      "section": "1.4",
+      "question": "Was versteht man unter dem biopsychosozialen Modell in der Psychologie?",
+      "answerSimple": "Die Annahme, dass psychisches Erleben und Verhalten durch das Zusammenspiel biologischer, psychologischer und sozialer Faktoren erklärt werden muss.",
+      "answerDetail": "Das Modell betont, dass keiner der drei Faktoren allein ausreicht, um menschliches Verhalten oder psychische Störungen vollständig zu erklären – sie stehen in ständiger Wechselwirkung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-005",
+      "section": "1.5",
+      "question": "Was unterscheidet ein Experiment von einer Korrelationsstudie in der psychologischen Forschung?",
+      "answerSimple": "Im Experiment wird eine unabhängige Variable gezielt manipuliert, um Kausalschlüsse zu ermöglichen; bei Korrelationsstudien werden nur bestehende Zusammenhänge zwischen Variablen erfasst.",
+      "answerDetail": "Nur durch die gezielte Manipulation und Randomisierung im Experiment lassen sich Ursache-Wirkungs-Beziehungen mit hoher Sicherheit feststellen. Korrelationsstudien zeigen lediglich, dass zwei Variablen zusammenhängen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-006",
+      "section": "1.6",
+      "question": "Was bezeichnet der Begriff „Introspektion“, und warum wurde diese Methode später kritisiert?",
+      "answerSimple": "Die systematische Selbstbeobachtung eigener Bewusstseinsinhalte – kritisiert wegen mangelnder Objektivität und Überprüfbarkeit.",
+      "answerDetail": "Da introspektive Berichte subjektiv und nicht von außen überprüfbar sind, wurde die Methode von Behavioristen als unwissenschaftlich abgelehnt.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-007",
+      "section": "1.7",
+      "question": "Welche zentrale Rolle spielte Sigmund Freud für die Entwicklung der Psychologie, auch wenn seine Theorien heute umstritten sind?",
+      "answerSimple": "Er lenkte die Aufmerksamkeit auf unbewusste psychische Prozesse als Erklärung für Verhalten.",
+      "answerDetail": "Freuds psychoanalytische Theorie postulierte, dass ein Großteil menschlichen Erlebens und Verhaltens von unbewussten Trieben und frühkindlichen Erfahrungen beeinflusst wird – ein bis heute einflussreicher, aber empirisch schwer prüfbarer Ansatz.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-008",
+      "section": "1.8",
+      "question": "Was versteht man unter der „Humanistischen Psychologie“ (z. B. nach Carl Rogers und Abraham Maslow)?",
+      "answerSimple": "Eine Richtung, die den Menschen als grundsätzlich zu Wachstum und Selbstverwirklichung fähig ansieht.",
+      "answerDetail": "Im Gegensatz zu Behaviorismus und Psychoanalyse betont die humanistische Psychologie die Selbstbestimmung, das Streben nach Selbstverwirklichung und die Bedeutung subjektiven Erlebens.",
+      "extra": "Maslows Bedürfnispyramide ist ein bekanntes Modell aus dieser Tradition.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-009",
+      "section": "1.9",
+      "question": "Was ist der Unterschied zwischen Grundlagenforschung und angewandter Forschung in der Psychologie?",
+      "answerSimple": "Grundlagenforschung untersucht allgemeine psychologische Prinzipien ohne unmittelbaren Anwendungsbezug; angewandte Forschung zielt direkt auf die Lösung praktischer Probleme.",
+      "answerDetail": "Beispiel: Grundlagenforschung zum Gedächtnis untersucht allgemeine Mechanismen der Informationsspeicherung; angewandte Forschung nutzt dieses Wissen z. B. zur Entwicklung besserer Lernmethoden.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-010",
+      "section": "1.5",
+      "question": "Was bezeichnet der Begriff „operationale Definition“ in der psychologischen Forschung?",
+      "answerSimple": "Die konkrete, messbare Festlegung eines theoretischen Konzepts für die empirische Untersuchung.",
+      "answerDetail": "Um ein abstraktes Konzept wie „Intelligenz“ oder „Stress“ empirisch untersuchen zu können, muss es operational definiert werden, z. B. Intelligenz als „Punktzahl in einem bestimmten IQ-Test“.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-011",
+      "section": "1.5",
+      "question": "Was versteht man unter einer „doppelblinden“ Studienanordnung, und wozu dient sie?",
+      "answerSimple": "Weder Versuchspersonen noch die Versuchsleitung wissen, wer zur Experimental- oder Kontrollgruppe gehört – das verhindert unbewusste Erwartungseffekte.",
+      "answerDetail": "Ohne Verblindung könnten Erwartungen der Versuchsleitung (Versuchsleiter-Erwartungseffekt) oder der Teilnehmenden (Placebo-Effekt) die Ergebnisse verzerren.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "zimbardo-01-012",
+      "section": "1.3",
+      "question": "Was ist die zentrale Kritik am rein behavioristischen Ansatz, die letztlich zur „kognitiven Wende“ beitrug?",
+      "answerSimple": "Er konnte komplexe geistige Leistungen wie Sprache oder Problemlösen nicht ausreichend erklären, da er innere mentale Prozesse ausklammerte.",
+      "answerDetail": "Insbesondere Noam Chomskys Kritik an behavioristischen Erklärungen des Spracherwerbs gilt als wichtiger Impuls für die kognitive Wende in der Psychologie.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

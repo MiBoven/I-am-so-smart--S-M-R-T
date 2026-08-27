@@ -1,0 +1,128 @@
+{
+  "book": "krueger-erziehungswissenschaft",
+  "chapter": 2,
+  "title": "Empirische Forschungsmethoden in der Erziehungswissenschaft",
+  "part": 2,
+  "cards": [
+    {
+      "id": "krueger-02-001",
+      "section": "2.1",
+      "question": "Was unterscheidet eine Querschnittstudie von einer Längsschnittstudie?",
+      "answerSimple": "Querschnittstudien erfassen Daten zu einem Zeitpunkt bei verschiedenen Personen; Längsschnittstudien verfolgen dieselben Personen über einen längeren Zeitraum.",
+      "answerDetail": "Längsschnittstudien (z. B. das Nationale Bildungspanel NEPS) erlauben Aussagen über individuelle Entwicklungsverläufe, sind aber aufwendiger und anfälliger für Panelmortalität (Ausfall von Teilnehmenden über die Zeit).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-002",
+      "section": "2.2",
+      "question": "Was ist der zentrale Vorteil eines Experiments mit Kontrollgruppe gegenüber einer reinen Beobachtungsstudie?",
+      "answerSimple": "Es erlaubt eher kausale Aussagen, da störende Einflussfaktoren durch die Randomisierung kontrolliert werden.",
+      "answerDetail": "Durch zufällige Zuweisung der Teilnehmenden zu Experimental- und Kontrollgruppe lassen sich Unterschiede zwischen den Gruppen eher auf die untersuchte Intervention zurückführen statt auf andere Störvariablen.",
+      "extra": "In der Bildungsforschung sind echte Experimente aus ethischen/praktischen Gründen oft schwer umsetzbar, weshalb häufig quasi-experimentelle Designs genutzt werden.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-003",
+      "section": "2.3",
+      "question": "Was versteht man unter den „Gütekriterien“ empirischer Forschung, und nenne zwei davon.",
+      "answerSimple": "Kriterien zur Beurteilung der Qualität von Messverfahren – z. B. Validität (Gültigkeit) und Reliabilität (Zuverlässigkeit).",
+      "answerDetail": "Validität bezeichnet, ob ein Instrument tatsächlich das misst, was es messen soll. Reliabilität bezeichnet die Zuverlässigkeit/Wiederholbarkeit der Messung. Ein drittes zentrales Kriterium ist die Objektivität.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-004",
+      "section": "2.4",
+      "question": "Welches methodische Vorgehen ist typisch für die qualitative Inhaltsanalyse?",
+      "answerSimple": "Die systematische, regelgeleitete Kategorisierung von Textmaterial nach zuvor oder induktiv entwickelten Kategorien.",
+      "answerDetail": "Nach Philipp Mayring wird Textmaterial schrittweise in ein Kategoriensystem überführt, um sowohl der Tiefe qualitativer Daten gerecht zu werden als auch eine gewisse Systematik/Nachvollziehbarkeit zu gewährleisten.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-005",
+      "section": "2.5",
+      "question": "Was ist eine „Grounded Theory“, und wofür wird sie in der Erziehungswissenschaft eingesetzt?",
+      "answerSimple": "Ein qualitativer Forschungsansatz, bei dem Theorien induktiv, direkt aus dem empirischen Datenmaterial heraus entwickelt werden.",
+      "answerDetail": "Statt eine bereits bestehende Theorie zu testen, wird bei der Grounded Theory (nach Glaser und Strauss) systematisch aus den Daten heraus eine gegenstandsbezogene Theorie entwickelt, oft im ständigen Wechsel von Datenerhebung und -auswertung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-006",
+      "section": "2.6",
+      "question": "Was bezeichnet der Begriff „teilnehmende Beobachtung“?",
+      "answerSimple": "Eine Forschungsmethode, bei der Forschende selbst aktiv am untersuchten sozialen Feld teilnehmen (z. B. im Klassenzimmer).",
+      "answerDetail": "Teilnehmende Beobachtung ermöglicht einen unmittelbaren Zugang zu Alltagspraktiken, birgt aber die Gefahr, dass die Anwesenheit der Forschenden das beobachtete Verhalten beeinflusst (Beobachtereffekt).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-007",
+      "section": "2.7",
+      "question": "Was versteht man unter einer „repräsentativen Stichprobe“?",
+      "answerSimple": "Eine Stichprobe, deren Zusammensetzung die relevanten Merkmale der Grundgesamtheit widerspiegelt, sodass Ergebnisse verallgemeinert werden können.",
+      "answerDetail": "Repräsentativität wird meist durch Zufallsstichproben angestrebt, bei denen jede Person der Grundgesamtheit dieselbe Auswahlwahrscheinlichkeit hat.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-008",
+      "section": "2.8",
+      "question": "Warum gilt die Unterscheidung zwischen Korrelation und Kausalität als besonders wichtig in der Bildungsforschung?",
+      "answerSimple": "Ein statistischer Zusammenhang zweier Variablen (Korrelation) beweist noch keine Ursache-Wirkungs-Beziehung (Kausalität).",
+      "answerDetail": "Beispiel: Ein Zusammenhang zwischen Bücheranzahl im Haushalt und Schulerfolg kann durch Drittvariablen (z. B. Bildungsniveau der Eltern) erklärt sein, ohne dass die Bücher selbst ursächlich sind.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-009",
+      "section": "2.9",
+      "question": "Was ist der Unterschied zwischen einer standardisierten und einer offenen (narrativen) Interviewform?",
+      "answerSimple": "Standardisierte Interviews nutzen feste Fragen/Reihenfolge; offene/narrative Interviews lassen den Befragten frei erzählen.",
+      "answerDetail": "Standardisierte Interviews erhöhen die Vergleichbarkeit zwischen Befragten, offene Interviews ermöglichen einen tieferen Einblick in subjektive Sichtweisen und unerwartete Themen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-010",
+      "section": "2.10",
+      "question": "Was bedeutet „Triangulation“ in der erziehungswissenschaftlichen Forschung?",
+      "answerSimple": "Die Kombination verschiedener Methoden, Datenquellen oder Forschender zur Absicherung von Forschungsergebnissen.",
+      "answerDetail": "Durch die Kombination z. B. qualitativer und quantitativer Methoden (Methodentriangulation) sollen die jeweiligen Schwächen einzelner Verfahren ausgeglichen und die Ergebnisse abgesichert werden.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-011",
+      "section": "2.11",
+      "question": "Welche forschungsethischen Grundprinzipien müssen bei Studien mit Kindern besonders beachtet werden?",
+      "answerSimple": "Informierte Einwilligung (der Erziehungsberechtigten), Freiwilligkeit, Schutz vor Schaden und Vertraulichkeit der Daten.",
+      "answerDetail": "Da Kinder als besonders schutzbedürftige Gruppe gelten, ist neben der Zustimmung der Eltern häufig auch die altersgerechte Aufklärung und Zustimmung des Kindes selbst (Assent) erforderlich.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-02-012",
+      "section": "2.12",
+      "question": "Was versteht man unter einer „Metaanalyse“, und wofür ist sie in der Bildungsforschung bekannt geworden (Stichwort: John Hattie)?",
+      "answerSimple": "Eine statistische Zusammenfassung der Ergebnisse vieler Einzelstudien zu einer Fragestellung.",
+      "answerDetail": "John Hatties Metaanalyse „Visible Learning“ fasste hunderte Einzelstudien zu Einflussfaktoren auf schulischen Lernerfolg zusammen und rangierte deren Effektstärken.",
+      "extra": "Metaanalysen gelten methodisch als besonders aussagekräftig, da sie Zufallsschwankungen einzelner Studien ausgleichen können.",
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

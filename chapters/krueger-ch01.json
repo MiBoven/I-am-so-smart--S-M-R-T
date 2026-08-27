@@ -1,0 +1,128 @@
+{
+  "book": "krueger-erziehungswissenschaft",
+  "chapter": 1,
+  "title": "Erziehung, Bildung und Sozialisation",
+  "part": 1,
+  "cards": [
+    {
+      "id": "krueger-01-001",
+      "section": "1.1",
+      "question": "Wie lässt sich der Begriff „Erziehung“ von „Sozialisation“ abgrenzen?",
+      "answerSimple": "Erziehung ist absichtsvolles, zielgerichtetes pädagogisches Handeln; Sozialisation umfasst alle – auch unabsichtlichen – Einflüsse auf die Persönlichkeitsentwicklung.",
+      "answerDetail": "Erziehung bezeichnet intentionale Einwirkung mit dem Ziel, bestimmte Fähigkeiten, Werte oder Verhaltensweisen zu fördern. Sozialisation ist der umfassendere Prozess des Hineinwachsens in die Gesellschaft, der auch unbeabsichtigte Einflüsse (Medien, Gleichaltrige) einschließt.",
+      "extra": "Erziehung kann somit als ein spezieller, absichtsvoller Teilbereich von Sozialisation verstanden werden.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-002",
+      "section": "1.2",
+      "question": "Was versteht man unter „Bildung“ im Unterschied zu bloßer „Ausbildung“?",
+      "answerSimple": "Bildung meint die umfassende Entfaltung der Persönlichkeit, Ausbildung zielt auf den Erwerb konkreter beruflicher Fertigkeiten.",
+      "answerDetail": "Der Bildungsbegriff (v. a. in der Tradition Humboldts) betont die freie, ganzheitliche Selbstentfaltung des Individuums, während Ausbildung stärker auf verwertbare Qualifikationen für den Arbeitsmarkt ausgerichtet ist.",
+      "extra": "In der Praxis überschneiden sich beide Begriffe zunehmend, etwa in der Debatte um „Employability“ versus „Persönlichkeitsbildung“.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-003",
+      "section": "1.3",
+      "question": "Was bezeichnet der Begriff des „pädagogischen Bezugs“?",
+      "answerSimple": "Die besondere, auf Vertrauen basierende Beziehung zwischen Erziehenden und dem zu Erziehenden.",
+      "answerDetail": "Der pädagogische Bezug beschreibt eine emotional getragene, zeitlich befristete Beziehung, in der die erziehende Person das Wohl und die Entwicklung des Kindes im Blick hat.",
+      "extra": "Das Konzept wurde v. a. von Herman Nohl in der geisteswissenschaftlichen Pädagogik geprägt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-004",
+      "section": "1.1",
+      "question": "Welche drei klassischen Instanzen der primären und sekundären Sozialisation werden meist unterschieden?",
+      "answerSimple": "Familie, Kindergarten/Schule und Gleichaltrigengruppe (Peers).",
+      "answerDetail": "Die primäre Sozialisation in der frühen Kindheit erfolgt v. a. in der Familie; mit zunehmendem Alter gewinnen institutionelle Instanzen (Kita, Schule) und die Peergroup an Bedeutung (sekundäre Sozialisation).",
+      "extra": "Zunehmend wird auch Medien eine eigenständige Sozialisationsinstanz zugeschrieben.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-005",
+      "section": "1.4",
+      "question": "Was ist der Unterschied zwischen einem normativen und einem deskriptiven Erziehungsbegriff?",
+      "answerSimple": "Normativ = wie Erziehung sein sollte (Werturteile); deskriptiv = wie Erziehung tatsächlich abläuft (empirische Beschreibung).",
+      "answerDetail": "Die Erziehungswissenschaft bewegt sich in einem Spannungsfeld zwischen normativen Fragen (z. B. welche Erziehungsziele wünschenswert sind) und deskriptiv-empirischen Fragen (z. B. wie Erziehung faktisch verläuft).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-006",
+      "section": "1.5",
+      "question": "Was versteht man unter dem „pädagogischen Paradox“ (nach Immanuel Kant)?",
+      "answerSimple": "Die Frage, wie Erziehung zur Freiheit gleichzeitig mit Zwang zur Durchsetzung von Regeln verbunden werden kann.",
+      "answerDetail": "Kant formulierte das Problem, wie man „die Kultur der Freiheit durch Zwang“ bewirken solle – Erziehung soll zu Selbstbestimmung befähigen, benötigt dafür aber zunächst gewisse einschränkende Maßnahmen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-007",
+      "section": "1.6",
+      "question": "Was bedeutet der Begriff der „Erziehungsbedürftigkeit“ des Menschen?",
+      "answerSimple": "Der Mensch kommt im Vergleich zu anderen Lebewesen unfertig zur Welt und ist auf Erziehung/Fürsorge angewiesen, um lebensfähig zu werden.",
+      "answerDetail": "Anders als bei vielen Tieren, deren Verhalten stark instinktgesteuert ist, ist der Mensch biologisch auf einen langen, kulturell gestalteten Entwicklungsprozess angewiesen (Adolf Portmann sprach von einer „physiologischen Frühgeburt“).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-008",
+      "section": "1.7",
+      "question": "Was unterscheidet informelles von formellem und non-formalem Lernen?",
+      "answerSimple": "Formelles Lernen findet in Bildungsinstitutionen mit Zertifikaten statt; non-formales Lernen ist organisiert, aber ohne formalen Abschluss; informelles Lernen geschieht beiläufig im Alltag.",
+      "answerDetail": "Diese Unterscheidung ist zentral für das Verständnis lebenslangen Lernens, da ein Großteil des Wissenserwerbs außerhalb formaler Bildungseinrichtungen stattfindet.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-009",
+      "section": "1.1",
+      "question": "Was versteht man unter „Enkulturation“?",
+      "answerSimple": "Das Hineinwachsen eines Menschen in seine jeweilige Kultur, insbesondere den Erwerb kulturspezifischer Denk- und Verhaltensmuster.",
+      "answerDetail": "Enkulturation wird oft als kulturanthropologischer Parallelbegriff zur soziologischen Sozialisation verstanden, mit Fokus auf die Übernahme kultureller Praktiken und Deutungsmuster.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-010",
+      "section": "1.8",
+      "question": "Welche Rolle spielt die „Institution Schule“ aus erziehungswissenschaftlicher Sicht neben der reinen Wissensvermittlung?",
+      "answerSimple": "Sie übernimmt zusätzlich Selektions-, Sozialisations- und Legitimationsfunktionen.",
+      "answerDetail": "Nach dem Modell von Helmut Fend erfüllt Schule mehrere Funktionen gleichzeitig: Qualifikation, Selektion, Integration/Legitimation und Enkulturation.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-011",
+      "section": "1.9",
+      "question": "Was ist mit dem Begriff „Bildungsgerechtigkeit“ gemeint, und warum ist er in der Erziehungswissenschaft umstritten?",
+      "answerSimple": "Chancengleichheit beim Zugang zu und Erfolg in Bildung – umstritten ist v. a., wie Gerechtigkeit genau definiert werden soll.",
+      "answerDetail": "Empirische Studien (z. B. PISA) zeigen wiederkehrend, dass Bildungserfolg in Deutschland stark mit der sozialen Herkunft zusammenhängt, was die Bildungsgerechtigkeitsdebatte antreibt.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "krueger-01-012",
+      "section": "1.8",
+      "question": "Was versteht man unter dem „heimlichen Lehrplan“ (hidden curriculum)?",
+      "answerSimple": "Werte, Normen und Verhaltensweisen, die in der Schule vermittelt werden, ohne explizit im offiziellen Lehrplan zu stehen.",
+      "answerDetail": "Der heimliche Lehrplan umfasst z. B. das Einüben von Pünktlichkeit, Unterordnung unter Autoritäten oder Konkurrenzverhalten – Wirkungen, die durch die schulische Organisationsform selbst entstehen.",
+      "extra": "Der Begriff geht maßgeblich auf den amerikanischen Erziehungswissenschaftler Philip W. Jackson zurück.",
+      "relevance": null,
+      "images": []
+    }
+  ]
+}
