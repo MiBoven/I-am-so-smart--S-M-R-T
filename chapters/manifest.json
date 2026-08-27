@@ -117,6 +117,52 @@
           "file": "zimbardo-ch02.json"
         }
       ]
+    },
+    {
+      "id": "lachenmeier-adhs",
+      "title": "Mit ADHS erfolgreich im Beruf",
+      "author": "Heiner Lachenmeier",
+      "edition": "2. Auflage",
+      "parts": [
+        {
+          "number": 1,
+          "title": "Grundlegendes zu ADHS und Beruf"
+        },
+        {
+          "number": 2,
+          "title": "Kenntnisse über ADHS-Funktionen ermöglichen Berufserfolg"
+        },
+        {
+          "number": 3,
+          "title": "Von der Transition zur lebenslangen Laufbahn-Gestaltung"
+        }
+      ],
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Einleitung",
+          "part": 1,
+          "file": "lachenmeier-ch01.json"
+        },
+        {
+          "number": 2,
+          "title": "ADHS ist nicht gleich ADHS",
+          "part": 1,
+          "file": "lachenmeier-ch02.json"
+        },
+        {
+          "number": 3,
+          "title": "Das funktionale System der ADHS: ADHSler denken nicht zu wenig, sondern zu weit",
+          "part": 1,
+          "file": "lachenmeier-ch03.json"
+        },
+        {
+          "number": 4,
+          "title": "Prinzipielles zu ADHS in der Arbeitswelt",
+          "part": 1,
+          "file": "lachenmeier-ch04.json"
+        }
+      ]
     }
   ]
 }

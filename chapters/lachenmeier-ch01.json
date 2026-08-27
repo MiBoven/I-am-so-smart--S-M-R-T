@@ -1,0 +1,58 @@
+{
+  "book": "lachenmeier-adhs",
+  "chapter": 1,
+  "title": "Einleitung",
+  "part": 1,
+  "cards": [
+    {
+      "id": "adhs-01-001",
+      "section": "1",
+      "question": "Der Autor unterscheidet zu Beginn zwischen „Wissen“ und „Verstehen“. Worin liegt für ihn der Unterschied?",
+      "answerSimple": "Wissen kann man auswendig lernen; Verstehen bedeutet, Zusammenhänge zu begreifen und sich flexibel an veränderte Umstände anzupassen.",
+      "answerDetail": "Er illustriert das mit dem Bild einer Bergtour: Wer nur eine auswendig gelernte Wegbeschreibung befolgt, obwohl sich das Gelände verändert hat (z. B. durch einen Felsabbruch), kann in Gefahr geraten. Nur wer die Situation wirklich versteht, findet einen neuen, sicheren Weg.",
+      "extra": "Genau dieses „Verstehen“ von ADHS – statt bloßer Symptomlisten – ist das erklärte Ziel des Buches.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-01-002",
+      "section": "1",
+      "question": "Wie viel Prozent der Menschen haben nach heutigem Wissensstand laut dem Buch eine ADHS?",
+      "answerSimple": "Rund 5 %.",
+      "answerDetail": "Der Autor betont bewusst, dass er nicht schreibt, diese Menschen „leiden an“ ADHS – viele leiden weniger an der ADHS selbst als daran, sie nicht zu verstehen und deshalb in Missverständnisse und Konflikte zu geraten.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-01-003",
+      "section": "1",
+      "question": "Warum legt der Autor Wert darauf, ADHS ohne komplizierte Fachbegriffe wie „präfrontal“ oder „Striatum“ zu erklären?",
+      "answerSimple": "Damit die Modelle allgemeinverständlich und im Alltag tatsächlich nutzbar sind.",
+      "answerDetail": "Er vergleicht das mit einer einfachen Erklärung von Fußball: Zwei Mannschaften, ein Ball, zwei Tore – das reicht, um das Spiel zu verstehen und mitzumachen. Feinheiten der Regeln helfen Einsteigern dagegen nicht weiter.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-01-004",
+      "section": "1",
+      "question": "Welchen Stellenwert misst der Autor dem Begriff „ausreichend“ bei, wenn es um das Verstehen und Umsetzen im Alltag mit ADHS geht?",
+      "answerSimple": "Ein „ausreichendes“ Verständnis und ein „ausreichendes“ Erledigen von Aufgaben sind meist sinnvoller als Perfektionismus.",
+      "answerDetail": "Perfektionismus kann in bestimmten Situationen wichtig sein, ist im Alltag aber oft hinderlich und kann bis zur völligen Blockade führen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-01-005",
+      "section": "1",
+      "question": "Woraus setzt sich laut Einleitung ein gutes Modell von ADHS zusammen?",
+      "answerSimple": "Aus Erkenntnissen der Grundlagenforschung (Neurobiologie, Genetik, Pharmakologie) sowie – als unverzichtbarer Kernbestandteil – aus den Erfahrungsberichten und beobachtbaren Verhaltensweisen von Menschen mit ADHS.",
+      "answerDetail": "Der Autor betont, dass diese Modelle ein vorläufiges Ergebnis jahrzehntelanger Praxisforschung sind und sich mit neuen Erkenntnissen weiterentwickeln werden.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "book": "lachenmeier-adhs",
+  "chapter": 3,
+  "title": "Das funktionale System der ADHS: ADHSler denken nicht zu wenig, sondern zu weit",
+  "part": 1,
+  "cards": [
+    {
+      "id": "adhs-03-001",
+      "section": "3.1",
+      "question": "Was besagt das „Filtermodell“ im Kern über Menschen mit ADHS?",
+      "answerSimple": "Informationen von außen, aus dem Gedächtnis und deren Verknüpfung werden bei ADHS weniger automatisch vorgefiltert bzw. gewichtet.",
+      "answerDetail": "Dopamin und Noradrenalin haben eine Art Navigationsfunktion: Dopamin dämpft weniger wichtige Informationen, Noradrenalin verstärkt wichtige. Bei ADHS steht von beidem weniger zur Verfügung, wodurch mehr Informationen gleichrangig „durchkommen“.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-002",
+      "section": "3.1",
+      "question": "Was bedeutet der Satz „ADHSler denken nicht zu wenig, sondern zu weit“ konkret?",
+      "answerSimple": "Durch die geringere Vorfilterung entsteht eine größere Assoziationsbreite – dadurch geht schneller der Überblick verloren, gleichzeitig entsteht mehr kreatives, innovatives Denken.",
+      "answerDetail": "Nicht-ADHSler profitieren im Alltag von der automatischen Vorfilterung (schneller Überblick), verlieren dadurch aber an Flexibilität in ungewohnten Situationen – ein Nachteil, den ADHSler in solchen Situationen oft nicht haben.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-003",
+      "section": "3.1",
+      "question": "In welchen zwei Situationen sind ADHSler laut Buch tendenziell eher schneller als vergleichbare Nicht-ADHSler?",
+      "answerSimple": "1) In Bereichen mit langem eigenem Interesse, wo sie neue Umstände schnell „intuitiv“ erkennen. 2) In Bereichen mit gut trainierten, angepassten Copingmechanismen.",
+      "answerDetail": "Beispiel aus dem Buch: ein Taxifahrer, der seit 20 Jahren in derselben Stadt fährt und deshalb besonders schnell auf veränderte Straßenverhältnisse reagieren kann.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-004",
+      "section": "3.2",
+      "question": "Was besagt das „Steuerungsmodell“ über die exekutiven Funktionen (Konzentration, Wahrnehmung, Impulssteuerung, Organisation) bei ADHS?",
+      "answerSimple": "Die Funktionen selbst sind normal vorhanden – aber die „Steuerungszentrale“, die sie ansteuert und dosiert, ist weniger aktiv.",
+      "answerDetail": "Es besteht also entgegen dem Namen „Aufmerksamkeitsdefizit“ kein grundsätzliches Defizit der Aufmerksamkeitsfähigkeit – bei eigenem Interesse aktiviert sich die Funktion von selbst.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-005",
+      "section": "3.2.1",
+      "question": "Was ist der Unterschied zwischen positivem und negativem Hyperfokus?",
+      "answerSimple": "Positiver Hyperfokus entsteht bei echtem eigenem Interesse und ermöglicht besonders tiefe, lange Konzentration; negativer Hyperfokus entsteht bei einem störenden Reiz und führt zu radikal-negativer, überzogener Bewertung einer Situation.",
+      "answerDetail": "Positiver Hyperfokus gilt als einer der großen Vorteile von ADHS. Negativer Hyperfokus (Röhrenblick) verursacht dagegen einen großen Teil des Leidens bei ADHS.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-006",
+      "section": "3.2.1.3",
+      "question": "Was passiert beim „quantitativen“ negativen Hyperfokus mit der emotionalen Reaktion auf eine eigentlich kleine Irritation?",
+      "answerSimple": "Sie wird wie unter einer Lupe massiv vergrößert – aus leichtem Ärger wird heftige Wut, aus einer selbstsicheren Reaktion ein unkontrollierter Gegenangriff.",
+      "answerDetail": "Diese Art des Röhrenblicks ist inhaltlich zwar auf das auslösende Thema begrenzt, innerhalb dieses Themas laufen die Gedanken aber ungebremst weiter.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-007",
+      "section": "3.2.1.4",
+      "question": "Worin unterscheidet sich der „qualitative“ negative Hyperfokus vom quantitativen?",
+      "answerSimple": "Beim qualitativen Hyperfokus verändert sich durch den eingeengten Ausschnitt die Bedeutung der ganzen Situation, nicht nur ihre Intensität.",
+      "answerDetail": "Anschauliches Beispiel aus dem Buch: In einer E-Mail wurde das entscheidende Wort „no“ übersehen – aus „no major changes have to be made“ wurde im Röhrenblick fälschlich „major changes have to be made“ gelesen, mit gegenteiliger Bedeutung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-008",
+      "section": "3.2.1.5",
+      "question": "Warum kann wiederholtes Kontrollieren (z. B. ob die Kaffeemaschine wirklich aus ist) bei ADHS auftreten, ohne dass eine Zwangsstörung vorliegt?",
+      "answerSimple": "Weil die Funktion „Speichern“ bei Routinehandlungen nicht automatisch mitaktiviert wird – man hat etwas aufmerksam getan, aber es nicht „abgespeichert“.",
+      "answerDetail": "Das Symptom sieht einer Zwangsstörung zum Verwechseln ähnlich, lässt sich aber vergleichsweise einfach durch Training des bewussten „manuellen“ Speicherns überwinden – anders als eine echte Zwangsstörung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-009",
+      "section": "3.2.2",
+      "question": "Wie kann sich eine reduzierte Regulation der Wahrnehmung (Eingangsfunktionen) im Alltag zeigen?",
+      "answerSimple": "Sinnesreize wie Gerüche, Licht, Lärm oder Schmerz werden teils viel stärker oder teils fast gar nicht wahrgenommen als situativ angemessen wäre.",
+      "answerDetail": "Im Fallbeispiel „Die Pöstlerin mit den blauen Flecken“ bemerkte eine Frau wochenlang nicht, dass sie sich an einem neu montierten Regal stieß – die reduzierte Schmerzwahrnehmung führte zu Missverständnissen mit ihrem Mann, der einen anderen Grund vermutete.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-010",
+      "section": "3.2.3",
+      "question": "Worauf bezieht sich reduzierte Impulssteuerung bei ADHS im Berufsleben laut Buch am häufigsten – und ist Impulsivität automatisch mit Aggression gleichzusetzen?",
+      "answerSimple": "Am häufigsten auf den Impuls zu sprechen; Impulsivität ist nicht automatisch aggressiv – ADHSler gelten insgesamt eher als friedfertig.",
+      "answerDetail": "Reduzierte Impulssteuerung beim Reden kann sowohl zu störender Redeflut oder ungeduldigem Unterbrechen führen, als auch – in Kombination mit Intelligenz – ein Erfolgsfaktor sein, etwa bei Kabarettisten, Journalisten und Fernsehmoderatoren.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-011",
+      "section": "3.2.4",
+      "question": "Kann jemand mit ADHS beruflich hervorragend organisiert sein und trotzdem im Privatleben chaotisch? Was zeigt das Beispiel der Topmanagerin?",
+      "answerSimple": "Ja – Organisationsschwierigkeiten müssen sich nicht auf alle Lebensbereiche gleich auswirken.",
+      "answerDetail": "Im Buch wird eine Topmanagerin beschrieben, die beruflich perfekt organisiert ist (Sitzungskoordination, aufgeräumter Arbeitsplatz), gleichzeitig aber private Dinge wie Steuerunterlagen oder die Wohnungsordnung überhaupt nicht im Griff hat.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-012",
+      "section": "3.3",
+      "question": "Was bezeichnen die Begriffe „Coping“ und „Copingmechanismen“ im Zusammenhang mit ADHS?",
+      "answerSimple": "Die individuellen Strategien, mit denen ein ADHSler versucht, mit der Informationsflut und den schwerer aktivierbaren exekutiven Funktionen zurechtzukommen.",
+      "answerDetail": "Copingmechanismen entwickeln sich schon sehr früh im Leben, meist unbewusst – manche sind konstruktiv, andere weniger, und selbst konstruktive Mechanismen können unerwünschte Nebenwirkungen haben.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-03-013",
+      "section": "3.3",
+      "question": "Im Beispiel mit der Menükarte im Restaurant: Was verändert sich, wenn ein ADHSler versteht, warum ihm die Auswahl schwerfällt?",
+      "answerSimple": "Er kann denselben Copingmechanismus (z. B. immer das Gleiche wie das Gegenüber wählen) offensiv statt defensiv einsetzen, ohne an sich selbst zu zweifeln.",
+      "answerDetail": "Statt sich unsicher zu fühlen, kann er aktiv sagen: „Ich will mich ganz auf unser Gespräch konzentrieren, deshalb nehme ich das Gleiche wie Sie“ – und positioniert sich damit selbstbewusst.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

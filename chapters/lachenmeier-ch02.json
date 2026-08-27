@@ -1,0 +1,68 @@
+{
+  "book": "lachenmeier-adhs",
+  "chapter": 2,
+  "title": "ADHS ist nicht gleich ADHS",
+  "part": 1,
+  "cards": [
+    {
+      "id": "adhs-02-001",
+      "section": "2.1",
+      "question": "Im Fallbeispiel „Vom Loser zum Aufsteiger des Jahres“ (Alfons) – was war neben seiner eigenen Innovationsfähigkeit der zweite entscheidende Faktor für seinen beruflichen Erfolg?",
+      "answerSimple": "Dass ein Vorgesetzter (der Werkstattchef) sein Potenzial erkannte und ihn unbürokratisch dort einsetzte, wo er am besten war.",
+      "answerDetail": "Alfons' erster Verbesserungsvorschlag wurde von seinem Vorarbeiter zunächst schroff abgelehnt. Erst der Werkstattchef – selbst ADHSler – erkannte den Wert der Idee und ermöglichte eine Testreihe, die der Firma später Millionen einsparte.",
+      "extra": "Alfons konnte konstruktiv mit der ersten Ablehnung umgehen, weil er zu diesem Zeitpunkt bereits verstanden hatte, wie seine ADHS funktioniert.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-02-002",
+      "section": "2.2",
+      "question": "Wofür steht die vom Autor vorgeschlagene Bezeichnung „UMIF“ als Alternative zu „Aufmerksamkeitsdefizit- und Hyperaktivitätsstörung“?",
+      "answerSimple": "„Unusual Management of Informations and Functions“ – ein ungewöhnliches Management von Informationen und Funktionen.",
+      "answerDetail": "Der Begriff „Defizit“ und „Störung“ betont nach Ansicht des Autors zu einseitig zwei auffällige Symptome und lenkt vom eigentlichen Wesen der ADHS ab, das sowohl Nachteile als auch Vorteile umfasst.",
+      "extra": "Im Buch selbst wird trotzdem weiterhin der konventionelle Begriff „ADHS“ verwendet, um keine Verwirrung zu stiften.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-02-003",
+      "section": "2.2",
+      "question": "Was ist laut UMIF-Definition bei ADHS eigentlich entscheidend – reicht die Kenntnis der Symptome und der Funktionsweise?",
+      "answerSimple": "Nein – entscheidend ist die Bedeutung dieser Funktionsweise für das Erleben, Reagieren und Handeln der jeweiligen Person, insbesondere die emotionale Bedeutung.",
+      "answerDetail": "Es geht also nicht nur darum, WAS bei ADHS passiert, sondern WAS DAS für den einzelnen Menschen persönlich bedeutet.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-02-004",
+      "section": "2.3",
+      "question": "Welche Rolle können hohe Intelligenz und ein unterstützendes Aufwachsen für den Umgang mit ADHS spielen – und was kann bei starken Selbstzweifeln stattdessen passieren?",
+      "answerSimple": "Hohe Intelligenz kann helfen, Informationen systematisch zu sichten und zu gewichten (Coping) – bei starken Selbstzweifeln kann dieselbe Intelligenz aber auch zu noch größerer Unsicherheit und Blockaden führen.",
+      "answerDetail": "Je höher die Intelligenz, desto größer können die „Assoziationsbäume“ werden – ohne ein stabiles Selbstwertgefühl wächst dadurch eher die Verunsicherung als die Klarheit.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-02-005",
+      "section": "2.4.1",
+      "question": "Warum sind ADHSler oft besonders stark auf eine gute Beziehung zu Ausbildern oder Vorgesetzten angewiesen?",
+      "answerSimple": "Weil eine gute, tragende Beziehung hilft, sich zu orientieren und das eigene Potenzial trotz des „Informationsnebels“ zu nutzen.",
+      "answerDetail": "Der Autor vergleicht das mit Erstklässlern, die auf eine gute Beziehung zur Lehrperson angewiesen sind, um sich in der neuen Schulwelt zurechtzufinden – bei ADHSlern hält diese Abhängigkeit oft bis ins Studium oder sogar lebenslang an.",
+      "extra": "Diese starke Angewiesenheit auf positive Beziehungen bedeutet gleichzeitig ein erhöhtes Risiko für Abhängigkeitsentwicklungen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-02-006",
+      "section": "2.4.2",
+      "question": "Was für eine Art von Strukturen wirkt sich laut Kapitel 2 positiv auf ADHSler aus?",
+      "answerSimple": "Klare und konstruktive Strukturen mit Freiräumen – ein „wertschätzendes Disziplingebot“.",
+      "answerDetail": "Das Gegenteil, ein starr-unflexibles, herabwürdigendes „Disziplindiktat“, wirkt sich dagegen ungünstig aus. Dies betrifft Strukturen in Familie, sozialem Umfeld und gesellschaftlichen Rahmenbedingungen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "book": "lachenmeier-adhs",
+  "chapter": 4,
+  "title": "Prinzipielles zu ADHS in der Arbeitswelt",
+  "part": 1,
+  "cards": [
+    {
+      "id": "adhs-04-001",
+      "section": "4.1.1",
+      "question": "Warum rät der Autor davon ab, die ADHS-Diagnose gleich beim Vorstellungsgespräch offenzulegen?",
+      "answerSimple": "Weil man dann schnell auf Vorurteile und Halbwissen trifft und in eine „Troublemaker-Schublade“ geraten kann.",
+      "answerDetail": "Bei einer Bewerbung geht es primär darum, einen ersten Kontakt zu knüpfen und die eigenen Qualitäten zu zeigen – eine einmal herausgegebene Information lässt sich zudem nicht mehr zurücknehmen.",
+      "extra": "Frühzeitige Information kann trotzdem sinnvoll sein, wenn man von Beginn an auf bestimmte Anpassungen der Arbeitsbedingungen angewiesen ist.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-002",
+      "section": "4.1.2",
+      "question": "Was schlägt der Autor als Alternative zum sofortigen „ADHS-Label“ vor?",
+      "answerSimple": "Über das eigene Funktionsmuster („wie ticke ich“) zu sprechen, ohne zunächst den Diagnosebegriff zu nennen.",
+      "answerDetail": "So können sowohl mögliche Schwierigkeiten als auch Vorteile besprochen werden. Der Diagnosebegriff kann später genannt werden, wenn eine solide Vertrauensbasis besteht.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-003",
+      "section": "4.1.3",
+      "question": "Wie unterscheidet der Autor zwischen „Ehrlichkeit“ und dem, was er scherzhaft „Inkontinenz“ nennt?",
+      "answerSimple": "Ehrlichkeit bedeutet, nicht zu lügen – aber selbst zu entscheiden, was man preisgibt. „Inkontinenz“ meint ungefiltertes Ausplaudern ohne diese bewusste Kontrolle.",
+      "answerDetail": "Der Wunsch nach Privat- und Intimsphäre ist völlig normal und hat nichts mit mangelnder Transparenz zu tun – viele ADHSler neigen aus reduzierter Impulssteuerung oder als Coping zu ungewollter Über-Offenheit.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-004",
+      "section": "4.2.1",
+      "question": "Wieso warnt der Autor vor Pauschalisierungen wie „ADHSler können nicht im Großraumbüro arbeiten“?",
+      "answerSimple": "Weil es darauf ankommt, wodurch die Ablenkung bei der jeweiligen Person hauptsächlich entsteht – durch äußere oder durch innere Reize.",
+      "answerDetail": "Wird die Reizüberflutung vorwiegend durch die eigene Gedankenflut ausgelöst, kann Hintergrundlärm sogar helfen, das weit ausufernde Denken zu bremsen – manche Topjournalisten mit ADHS arbeiten deshalb bewusst in belebter Umgebung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-005",
+      "section": "4.2.3",
+      "question": "Was besagt das „Peter-Prinzip“, das der Autor ADHSlern zum Verständnis von Hierarchien empfiehlt?",
+      "answerSimple": "Dass in komplexen Hierarchien jede Person so lange befördert wird, bis sie an der Stelle ihrer eigenen Unfähigkeit angelangt ist.",
+      "answerDetail": "Ein Vorgesetzter, der diesen Punkt bereits erreicht hat, empfindet einen fähigen Untergebenen oft als Bedrohung und fördert deshalb eher weniger kompetente Mitarbeitende, die ihm nicht gefährlich werden können.",
+      "extra": "Der Autor warnt aber auch davor, das Prinzip zu pauschalisieren: nicht jeder unfreundliche Vorgesetzte ist automatisch an diesem Punkt angelangt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-006",
+      "section": "4.2.3",
+      "question": "Warum wirken ADHSler im Umgang mit Hierarchien und Office Politics manchmal seltsam naiv – ist das wirklich Naivität?",
+      "answerSimple": "Es handelt sich meist nicht um echte Naivität, sondern um einen Copingmechanismus: Die Welt wird bewusst „eindeutig“ gehalten, um die Menge zu verarbeitender Informationen zu begrenzen.",
+      "answerDetail": "Mehrdeutigkeiten würden die ohnehin schon breiten Assoziationsketten zusätzlich exponentiell vergrößern – deshalb wird stattdessen an einer vereinfachten, eindeutigen Weltsicht festgehalten.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-007",
+      "section": "4.2.4",
+      "question": "Was fällt vielen ADHSlern im Umgang mit Fragen auf, die ihnen gestellt werden?",
+      "answerSimple": "Sie beantworten praktisch automatisch jede gestellte Frage – auch unpassende oder unzulässige.",
+      "answerDetail": "Der Autor illustriert das mit einem Beispiel aus der eigenen Praxis: Auf die (bewusst unpassende) Frage nach der Farbe seiner Unterhose antwortete ein Patient prompt und wortwörtlich, ohne den Sinn der Frage zu hinterfragen.",
+      "extra": "Das Erkennen dieses automatischen Antwort-Copings eröffnet die Möglichkeit, Fragen künftig gezielter einzuordnen, bevor man antwortet.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-008",
+      "section": "4.2.4.1",
+      "question": "Welche vier Kriterien schlägt der Autor zur groben Einordnung vor, bevor man eine Frage direkt inhaltlich beantwortet?",
+      "answerSimple": "Ist die Frage inhaltlich berechtigt, in konstruktiver Haltung, im passenden Kontext und von einer berufenen Person gestellt?",
+      "answerDetail": "Können diese vier Punkte mit „Ja“ beantwortet werden und gibt es keine Hinweise auf eine verdeckte Agenda, macht in der Regel eine direkte Antwort Sinn.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-009",
+      "section": "4.2.5",
+      "question": "Warum lehnen manche ADHSler Smalltalk und Höflichkeitsfloskeln wie „Wie geht's?“ ab, obwohl diese sozial wichtig sind?",
+      "answerSimple": "Weil das Alles-wörtlich-Nehmen eine Form des Copings ist, um die Menge zu verarbeitender (mehrdeutiger) Informationen zu reduzieren.",
+      "answerDetail": "Der Autor erklärt, dass Floskeln und Smalltalk gerade deshalb wertvoll sind, weil sie unverfänglich bleiben – sie ermöglichen einen ersten, risikoarmen Kontakt zwischen Menschen, ohne gleich tiefergehende Themen anzusprechen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-010",
+      "section": "4.2.5.1",
+      "question": "Welcher „erste Schritt“ ist laut Buch nötig, bevor ein ADHSler sein bisheriges Smalltalk-Vermeidungscoping wirklich verändern kann?",
+      "answerSimple": "Ein emotionaler Schritt: das Erkennen und der berechtigte Stolz darauf, dass das bisherige Coping eine kreative Leistung war – keine Dummheit.",
+      "answerDetail": "Erst die Kombination aus intellektuellem Verständnis und diesem gefühlten Stolz setzt laut Autor die Bereitschaft frei, ein bisheriges Coping überhaupt infrage zu stellen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-011",
+      "section": "4.2.6.1",
+      "question": "Was unterscheidet die von ADHSlern oft berichteten „Assoziationsketten beim Einschlafen“ von depressivem Gedankenkreisen?",
+      "answerSimple": "Die ADHS-typischen Assoziationsketten wechseln stark in Thema und Inhalt; depressives Gedankenkreisen dreht sich dagegen Nacht für Nacht immer wieder um denselben Inhalt.",
+      "answerDetail": "Der Autor warnt davor, dass Fachleute bei den Worten „Gedankenkreisen“ oder „Gedankendrehen“ vorschnell und ohne genaues Nachfragen eine depressive Zuordnung treffen könnten.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-012",
+      "section": "4.2.6.2",
+      "question": "Welches auf den ersten Blick paradoxe Prinzip beschreibt das Fallbeispiel „Vom Mann, der sich für guten Schlaf schämte“ (Föhngeräusch)?",
+      "answerSimple": "Eine moderate Stimulation kann beim Einschlafen helfen, weil sie den ohnehin schwachen Vorfilter gerade so weit aktiviert, dass die Gedanken nicht mehr ungebremst in alle Richtungen abschweifen.",
+      "answerDetail": "Matthias schlief schon als Kind beim Geräusch des Staubsaugers gut ein und konstruierte sich später ein Gerät, das Föhngeräusche zeitgesteuert abspielte – eine Lösung, für die er sich lange schämte, bis er ihren Nutzen verstand.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-013",
+      "section": "4.2.7",
+      "question": "Wieso stellt das Buch klar, dass Erfolg im Beruf nicht zwingend die höchste Karriereposition bedeutet?",
+      "answerSimple": "Weil eine Beförderung über die eigenen Fähigkeiten hinaus (vgl. Peter-Prinzip) zu Überforderung statt zu Erfolg führen kann.",
+      "answerDetail": "Im Fallbeispiel „Die Frau, die sich die Freiheit nahm“ (Miriam) entschied sich eine intelligente Frau bewusst für eine wenig anspruchsvolle Stelle, um nie wieder das belastende Gefühl der Überforderung erleben zu müssen – und war damit zufrieden.",
+      "extra": "Erfolgreich zu sein bedeutet laut Autor vor allem, dort zu sein, wo man seine Fähigkeiten nutzen kann und auch will.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "adhs-04-014",
+      "section": "4.3",
+      "question": "Was bedeutet die medizinische Redewendung „Man kann Läuse und Flöhe haben“ im Kontext von ADHS?",
+      "answerSimple": "Dass Schwierigkeiten bei einer Person mit ADHS nicht automatisch nur an der ADHS liegen müssen – es können mehrere Ursachen gleichzeitig vorliegen.",
+      "answerDetail": "Der Autor nennt als mögliche weitere Ursachen z. B. unverarbeitete psychische Konflikte, hormonelle Fehlregulationen oder Hirnverletzungen, die ähnliche Symptome wie ADHS verursachen können.",
+      "extra": "Fazit des Kapitels: Ein ADHSler ist zuallererst ein Mensch – die ADHS sollte nicht zur alleinigen Grundlage der eigenen Identität werden.",
+      "relevance": null,
+      "images": []
+    }
+  ]
+}
