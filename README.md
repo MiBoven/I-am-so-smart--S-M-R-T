@@ -1,4 +1,6 @@
-# KLUK — Ich bin so klug
+# KLUK
+### Ich bin so klug – K-L-U-K
+*(I am so smart – S-M-R-T)*
 
 A privacy-friendly, fully offline flashcard learning app for studying textbook chapters, chapter by chapter. Everything runs entirely in your browser — no backend, no analytics, no data ever leaves the device (except optional manual export/import as a JSON file).
 
@@ -51,12 +53,12 @@ Lists all books, their parts, and their chapters (each chapter points to its own
 {
   "books": [
     {
-      "id": "khuhfp",
-      "title": "…",
-      "author": "…",
-      "edition": "…",
-      "parts": [{ "number": 1, "title": "Grundlagen" }],
-      "chapters": [{ "number": 1, "title": "…", "part": 1, "file": "khuhfp-ch01.json" }]
+      "id": "grundzuege-biologie",
+      "title": "Grundzüge der Biologie",
+      "author": "J. Wagner",
+      "edition": "4. Auflage",
+      "parts": [{ "number": 1, "title": "Zellbiologie" }],
+      "chapters": [{ "number": 1, "title": "Der Zellaufbau", "part": 1, "file": "gzb-ch01.json" }]
     }
   ]
 }
@@ -67,13 +69,13 @@ One file per chapter, containing an array of cards:
 
 ```json
 {
-  "book": "khuhfp",
+  "book": "grundzuege-biologie",
   "chapter": 1,
-  "title": "Psychiatrie und Psychotherapie",
+  "title": "Der Zellaufbau",
   "part": 1,
   "cards": [
     {
-      "id": "khuhfp-01-001",
+      "id": "gzb-01-001",
       "section": "1.1.1",
       "question": "…",
       "answerSimple": "…",
@@ -87,7 +89,7 @@ One file per chapter, containing an array of cards:
 ```
 
 ### Images
-Place image files referenced by chapter cards in `images/` at the repo root, e.g. `images/KHuHfP.Buch.Abb.1.9.jpg`. The same image file may be referenced by multiple cards.
+Place image files referenced by chapter cards in `images/` at the repo root, e.g. `images/GZB.Buch.Abb.1.9.jpg`. The same image file may be referenced by multiple cards.
 
 ## Adding new chapters or books
 
@@ -104,21 +106,6 @@ No code changes are needed for new chapters or books using the existing structur
 - `app.js` — application logic
 - `chapters/` — manifest + one JSON file per chapter
 - `images/` — images referenced by cards
-
-## Deployment (Netlify)
-
-1. Push this repository to GitHub.
-2. In Netlify: **Add new site → Import an existing project**, and pick the repo.
-3. Build settings: none needed — this is a static site.
-   - Build command: *(leave empty)*
-   - Publish directory: `/`
-4. Deploy.
-5. To use the `kluk.michels.world` subdomain:
-   - In Netlify: **Site settings → Domain management → Add a domain** → enter `kluk.michels.world`.
-   - In your DNS provider for `michels.world`, add a `CNAME` record:
-     - Host: `kluk`
-     - Value: `<your-site-name>.netlify.app`
-   - Netlify provisions an HTTPS certificate automatically once DNS is verified.
 
 ## Favicon
 
@@ -143,4 +130,3 @@ Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()`
 - Fragenkatalog with search and part filter
 - Achievements screen with stats and six animal-emoji badges
 - Export / import / reset of learning progress
-- Chapter 1 ("Psychiatrie und Psychotherapie") of *Kurzlehrbuch Heilpraktiker und Heilpraktikerin für Psychotherapie* (Sonja Streiber, 6. Auflage) included with 46 cards
