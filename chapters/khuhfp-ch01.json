@@ -1,0 +1,469 @@
+{
+  "book": "khuhfp",
+  "chapter": 1,
+  "title": "Psychiatrie und Psychotherapie",
+  "part": 1,
+  "partTitle": "Grundlagen",
+  "cards": [
+    {
+      "id": "khuhfp-01-001",
+      "section": "1.1.1",
+      "question": "Ein Arzt hat sich im Anschluss ans Medizinstudium 5 Jahre lang auf die Behandlung psychischer Störungen spezialisiert. Wie nennt man diesen Facharzt, und was darf nur er im Gegensatz zu Psychologen?",
+      "answerSimple": "Facharzt/-ärztin für Psychiatrie – nur Ärzte dürfen Psychopharmaka verordnen.",
+      "answerDetail": "Die fachärztliche Weiterbildung dauert ca. 5 Jahre nach dem Medizinstudium (ca. 12 Semester). Da nur Ärzte Psychopharmaka verordnen dürfen, ist die Behandlung schwerer psychischer Erkrankungen in der Regel ohne Psychiater nicht möglich.",
+      "extra": "Viele Psychiater besitzen zusätzlich eine neurologische Weiterbildung. Psychiater können sich zudem auf Kinder und Jugendliche spezialisieren (Facharzt für Kinder- und Jugendpsychiatrie).",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-002",
+      "section": "1.1.1",
+      "question": "Welchen Studienabschluss braucht ein Psychologe mindestens, um klinisch-psychologisch diagnostisch tätig zu sein, und wie heißt die Fachrichtung, die sich mit Erkennung, Beschreibung und Behandlung psychischer Störungen befasst?",
+      "answerSimple": "Mindestens Bachelor (B.Sc.), spezialisiert im Master u.a. auf „Klinische Psychologie“.",
+      "answerDetail": "Psychologen absolvieren ein Grundstudium mit Bachelorabschluss und spezialisieren sich im Masterstudiengang, z. B. auf Klinische Psychologie. Der Master of Science (M.Sc.) entspricht dem früheren Diplom und ist Voraussetzung für eine Promotion.",
+      "extra": "Weitere Fachrichtungen: Neuropsychologie (Diagnostik/Therapie neuropsychiatrischer Erkrankungen wie Demenzen), Pädagogische Psychologie, Umweltpsychologie, Arbeits- und Organisationspsychologie, Sozialpsychologie, Verkehrspsychologie.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-003",
+      "section": "1.1.1",
+      "question": "Seit wann ist die Berufsbezeichnung „Psychotherapeut“ in Deutschland gesetzlich geschützt, und welches Gesetz regelt das?",
+      "answerSimple": "Seit 1999, geregelt durch das Psychotherapeutengesetz (PsychThG).",
+      "answerDetail": "Vorher konnte sich jede Person „Psychotherapeut“ nennen, ohne eine fundierte Ausbildung durchlaufen zu haben. Voraussetzungen sind heute ein Medizin- oder Psychologiestudium plus mehrjährige psychotherapeutische Weiterbildung in einem anerkannten Verfahren.",
+      "extra": "Anerkannte Verfahren in Deutschland: Kognitive Verhaltenstherapie (KVT), tiefenpsychologisch orientierte Psychotherapie/Psychoanalyse, Systemische Therapie.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-004",
+      "section": "1.1.1",
+      "question": "Welche Zusatzausbildung braucht ein approbierter Arzt oder Psychologe, um sich „Ärztlicher Psychotherapeut“ bzw. „Psychologischer Psychotherapeut“ nennen zu dürfen?",
+      "answerSimple": "Eine mehrjährige psychotherapeutische Weiterbildung in einem anerkannten Verfahren inkl. Approbation.",
+      "answerDetail": "Die Ausbildung umfasst Theorie, Selbsterfahrung, Durchführung supervidierter Psychotherapie sowie eine mindestens einjährige Tätigkeit in einem psychiatrischen Krankenhaus.",
+      "extra": "Nach der Approbation ist die Niederlassung in Privatpraxis oder mit kassenärztlicher Zulassung möglich – Letzteres ermöglicht die direkte Abrechnung mit gesetzlichen Krankenkassen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-005",
+      "section": "1.1.1",
+      "question": "Ein psychisch erkrankter Patient möchte sich privat behandeln lassen, findet aber zeitnah keinen Therapieplatz bei einem Kassensitz. Welche Möglichkeit hat er über das Kostenerstattungsverfahren, und welche Hürde muss er meist zuerst nehmen?",
+      "answerSimple": "Er kann sich in einer Privatpraxis behandeln lassen und die Kosten erstatten lassen – meist erst nach Ablehnung durch eine kassenärztlich zugelassene Praxis.",
+      "answerDetail": "Im Rahmen des Kostenerstattungsverfahrens können sich Patienten auch in Privatpraxis behandeln lassen. Meist ist dafür eine bestimmte Anzahl an Erstgesprächen bei kassenärztlich zugelassenen Praxen nötig, die abgelehnt haben.",
+      "extra": "Die Kostenerstattung wird nur für anerkannte psychotherapeutische Verfahren übernommen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-006",
+      "section": "1.1.2",
+      "question": "Seit wann kann man in Deutschland die Heilerlaubnis „Heilpraktiker/in, beschränkt auf das Gebiet der Psychotherapie“ erlangen, und ist dafür ein Hochschulstudium erforderlich?",
+      "answerSimple": "Seit 1993 – ein Hochschulstudium ist nicht erforderlich.",
+      "answerDetail": "Die Heilerlaubnis wird auf Grundlage des Heilpraktikergesetzes (HeilprG) ausgesprochen. Sie wird in Fachkreisen auch „kleiner Heilpraktikerschein“ genannt. Anders als bei Psychotherapeuten gibt es keine verbindlichen Ausbildungsrichtlinien, wohl aber Leitlinien zur Überprüfung.",
+      "extra": "Grundlage war ein Gerichtsurteil eines niedersächsischen Gerichts von 1993: Eine Klägerin klagte erfolgreich dagegen, umfassendes medizinisches Wissen lernen zu müssen, obwohl sie ausschließlich psychotherapeutisch tätig sein wollte.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-007",
+      "section": "1.1.2",
+      "question": "Darf sich ein Heilpraktiker für Psychotherapie „Psychotherapeut“ nennen, und wer übernimmt die Behandlungskosten?",
+      "answerSimple": "Nein, die Bezeichnung „Psychotherapeut“ ist geschützt. Patienten zahlen die Behandlung selbst.",
+      "answerDetail": "Die Berufsbezeichnung ist Ärzten, Psychologen (mit Zusatzausbildung und Approbation) sowie – bei Kindern/Jugendlichen – Pädagogen/Sozialpädagogen mit entsprechender Ausbildung vorbehalten. Die Kosten einer Behandlung durch Heilpraktiker für Psychotherapie werden nicht von den gesetzlichen Krankenkassen erstattet.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-008",
+      "section": "1.1.2",
+      "question": "Auf welchem historischen Gesetz basiert die Überprüfung nach HeilprG, und aus welcher Zeit stammt dieses Gesetz ursprünglich?",
+      "answerSimple": "Das Heilpraktikergesetz (HeilprG), das aus der Zeit des Nationalsozialismus (1939) stammt.",
+      "answerDetail": "Das Gesetz hatte ursprünglich das Ziel, die „Volksgesundheit“ zu schützen. Die Überprüfung zur eingeschränkten Heilerlaubnis orientiert sich an diesem Gesetz und ist heute bundeseinheitlich geregelt.",
+      "extra": "Eine in einem Bundesland ausgesprochene Heilerlaubnis gilt bundesweit – wurde z. B. eine Prüfung in Baden-Württemberg bestanden, ist eine Niederlassung auch in Sachsen-Anhalt oder Bremen erlaubt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-009",
+      "section": "1.1.2",
+      "question": "Aus wie vielen Teilen besteht die Überprüfung nach HeilprG, und wie viele der 28 Multiple-Choice-Fragen im schriftlichen Teil müssen mindestens richtig beantwortet werden?",
+      "answerSimple": "Zwei Teile (schriftlich + mündlich-praktisch); im schriftlichen Teil müssen 21 von 28 Fragen richtig sein (75 %).",
+      "answerDetail": "Für den schriftlichen Teil stehen 60 Minuten zur Verfügung. Nach Bestehen folgt eine Einladung zur mündlich-praktischen Überprüfung (ca. 45 Minuten) vor einer Prüfungskommission.",
+      "extra": "Die Kosten der Überprüfung liegen je nach Bundesland zwischen ca. 400 und 900 EUR.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-010",
+      "section": "1.1.2",
+      "question": "Nenne drei der geforderten Unterlagen, die dem Antrag auf Zulassung zur Überprüfung nach HeilprG beigefügt werden müssen.",
+      "answerSimple": "Z. B. Geburtsurkunde, amtliches Führungszeugnis, Nachweis mindestens des Hauptschulabschlusses.",
+      "answerDetail": "Weitere Unterlagen: kurz gefasster Lebenslauf (dreifach), Identitätsnachweis mit Lichtbild, ärztliche Bescheinigung der gesundheitlichen Eignung, Erklärung zu anhängigen Ermittlungsverfahren, Erklärung zur geplanten Niederlassung.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-011",
+      "section": "1.1.2",
+      "question": "Welche sechs Kriterien muss laut den neuen Überprüfungsrichtlinien (seit März 2018) die Ausbildung in einem Psychotherapieverfahren erfüllen, damit „grundlegende Kenntnisse“ nachgewiesen sind?",
+      "answerSimple": "Nachvollziehbares Therapiekonzept, theoretische + praktische Ausbildung, Therapieerfahrung/Supervision, Selbsterfahrung (i.d.R. 40 Stunden), Mindestdauer 2 Jahre, breites Indikationsspektrum.",
+      "answerDetail": "Wörtlich: 1. Nachvollziehbares Therapiekonzept und Krankheitserklärungsmodell. 2. Theoretische Wissensvermittlung und praktisches Training. 3. Therapieerfahrung und Supervision. 4. Selbsterfahrung (i. d. R. 40 Stunden). 5. Mindestens zwei Jahre Ausbildungsdauer. 6. Breites Indikationsspektrum für psychische Störungen.",
+      "extra": "Vor Inkrafttreten dieser Richtlinien im März 2018 gab es keinerlei diesbezügliche Mindestanforderungen – ein Kritikpunkt, den die neuen Richtlinien als Qualitätssicherung adressieren.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-012",
+      "section": "1.1.3",
+      "question": "Welche Wissensbereiche müssen Antragsteller für die Überprüfung nach HeilprG zusätzlich zur Abgrenzung der Berufsgruppen nachweisen?",
+      "answerSimple": "U. a. Rechtskunde, Gesundheitssystem, Diagnostik, Psychopathologie, Notfallsituationen, medizinische/pharmakologische Grundlagen.",
+      "answerDetail": "Vollständige Liste: Rechtskunde, Gesundheitssystem, Diagnostik, Psychopathologie, Psychiatrische Krankheitslehre, Klinische Psychologie, Grundlagen der Psychotherapie, Notfallsituationen, Fachspezifische Kommunikation und Interaktion, Medizinische und pharmakologische Grundlagen im Bereich der Psychotherapie.",
+      "extra": "Wichtig: Die Überprüfung kann sich auf den gesamten Bereich der Psychotherapie erstrecken – eine Beschränkung auf spezielle Therapieformen (z. B. wenn man eine Zusatzausbildung in Musik- oder Gestalttherapie hat) ist nicht möglich.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-013",
+      "section": "1.1.3",
+      "question": "Nach welchem Kriterium muss bei einer Wahnstimmung geprüft werden, ob eine Multiple-Choice-Antwort korrekt ist, wenn mehrere Aussagen zutreffen können?",
+      "answerSimple": "Antworten sind entweder ganz richtig oder ganz falsch – es gibt keine Teilpunkte.",
+      "answerDetail": "Multiple-Choice-Fragen haben meist fünf Antwortmöglichkeiten, von denen eine, zwei oder mehrere richtig sein können. Fragen und Antwortmöglichkeiten müssen sehr genau gelesen werden, da sich schnell Flüchtigkeitsfehler einschleichen.",
+      "extra": "Tipp für die mündliche Prüfung: möglichst viel Zeit mit dem dokumentieren, was man weiß, verbringen – und möglichst wenig Zeit mit dem Eindruck von Wissenslücken.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-014",
+      "section": "1.2.1",
+      "question": "Wie lautet die Definition von Psychiatrie als Teildisziplin der Medizin, und welche vier Aufgabenbereiche umfasst sie neben Erforschung, Diagnostik und Therapie?",
+      "answerSimple": "Lehre von den seelischen Krankheiten des Menschen; zusätzlich Prophylaxe und Rehabilitation.",
+      "answerDetail": "Psychiatrie befasst sich mit Erforschung, Diagnostik und Therapie seelischer Erkrankungen, aber auch mit der Prophylaxe (Vorbeugung) und der Rehabilitation (Wiedereingliederung) psychisch kranker Menschen.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-015",
+      "section": "1.2.1",
+      "question": "Ein Straftäter wird aufgrund einer schweren psychischen Störung als schuldunfähig eingestuft und in einer speziellen Einrichtung betreut. Welche Teildisziplin der Psychiatrie untersucht solche Zusammenhänge?",
+      "answerSimple": "Die Forensische Psychiatrie.",
+      "answerDetail": "Die Forensische Psychiatrie untersucht Zusammenhänge zwischen Straftaten und seelischen Störungen. Viele Straftäter sind aufgrund schwerer psychischer Störungen schuldunfähig und werden in speziellen Einrichtungen betreut.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-016",
+      "section": "1.2.1",
+      "question": "Welche Fachrichtung der Psychiatrie untersucht, welche Bedeutung zwischenmenschliche Beziehungen in der Familie sowie gesamtgesellschaftliche Faktoren für die Entstehung seelischer Krankheiten haben?",
+      "answerSimple": "Die Sozialpsychiatrie.",
+      "answerDetail": "Sozialpsychiatrie untersucht die Bedeutung sozialer Faktoren für Entstehung und Aufrechterhaltung seelischer Krankheiten – dazu zählen sowohl zwischenmenschliche Beziehungen in der Familie als auch gesamtgesellschaftliche Faktoren.",
+      "extra": "Abzugrenzen von: Akutpsychiatrie (akute Notfälle), Suchtmedizin (Suchterkrankungen), Gerontopsychiatrie (seelische Krankheiten im höheren Lebensalter – u. a. wegen zunehmender Demenzerkrankungen bedeutsam).",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-017",
+      "section": "1.2.1",
+      "question": "Was unterscheidet Lebenszeitprävalenz von Punktprävalenz?",
+      "answerSimple": "Lebenszeitprävalenz = Wahrscheinlichkeit, im Laufe des Lebens zu erkranken; Punktprävalenz = Häufigkeit zu einem eng gefassten Zeitpunkt.",
+      "answerDetail": "Beide Begriffe stammen aus der Epidemiologie, die u. a. die Häufigkeit des Auftretens einzelner seelischer Störungen in Bevölkerungs- und Altersgruppen untersucht.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-018",
+      "section": "1.2.1",
+      "question": "Wer gilt als Begründer einer bis heute international verbreiteten Systematik psychischer Erkrankungen um 1900, und welche zwei Krankheitsgruppen unterschied er?",
+      "answerSimple": "Emil Kraepelin – er unterschied Dementia praecox (heute Schizophrenie) von manisch-depressivem Irresein (heute affektive Störungen).",
+      "answerDetail": "Kraepelin entwickelte um 1900 eine Systematik psychischer Erkrankungen mit internationaler Verbreitung. Eugen Bleuler, Professor für Psychiatrie in Zürich, griff seine Ansätze auf, führte den Begriff Schizophrenie ein und unterteilte deren Symptome in Grund- und akzessorische Symptome.",
+      "extra": "Sigmund Freud beeinflusste das Fachgebiet parallel mit seiner Psychoanalyse und der Dimension unbewusster seelischer Zustände und verdrängter neurotischer Konflikte.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-019",
+      "section": "1.2.1",
+      "question": "Welches Krankheitsbild prägte durch seine Häufigkeit um 1900 maßgeblich das Bild des psychisch kranken Menschen, und wie viel Prozent der stationären Psychiatrieinsassen waren damals betroffen?",
+      "answerSimple": "Die Neurosyphilis – ca. 10 % der stationären Psychiatrieinsassen.",
+      "answerDetail": "Die Entdeckung der Syphilis-Erreger führte zur Suche nach weiteren Bakterien, die psychische Krankheiten auslösen könnten. Die Neurosyphilis war eine Spätform der Syphilis.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-020",
+      "section": "1.2.1",
+      "question": "Wie viele Menschen wurden während des Nationalsozialismus ab 1939 systematisch ermordet, weil sie als „psychisch krank“ galten, und welche weitere Maßnahme wurde an ihnen durchgeführt?",
+      "answerSimple": "Über 150.000 – zusätzlich wurden psychisch Kranke zwangssterilisiert.",
+      "answerDetail": "Während des Nationalsozialismus ist auch im Bereich der Psychiatrie großes Unrecht geschehen. Psychisch Kranke wurden zwangssterilisiert, und ab 1939 wurden über 150.000 psychisch Kranke systematisch ermordet.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-021",
+      "section": "1.2.1",
+      "question": "Welche Reform leitete 1975 ein Expertenkommissionsbericht vor dem Bundestag ein, und was bedeutet „gemeindenahe Psychiatrie“?",
+      "answerSimple": "Dezentralisierung psychiatrischer Krankenhäuser – Patienten werden näher am Wohnort behandelt, um Kontakt zu Angehörigen zu erleichtern.",
+      "answerDetail": "Die Fachleute stellten 1975 gravierende Mängel in der Versorgung psychisch kranker Menschen fest. In der Folge wurden psychiatrische Krankenhäuser dezentralisiert, d. h. die Einheiten wurden mehr und kleiner. Heute gilt der Grundsatz, die Verweildauer im Krankenhaus so kurz wie möglich zu halten.",
+      "extra": "Abgestufte Angebote heute: Tageskliniken, sozialpsychiatrische Dienste, betreutes Wohnen, Begegnungsstätten.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-022",
+      "section": "1.2.2",
+      "question": "Warum werden die Begriffe „Neurose“ und „Psychose“ in ICD-10 und ICD-11 vermieden, obwohl sie im Praxisalltag weiter verwendet werden?",
+      "answerSimple": "Weil sie nicht eindeutig definiert und ihre Konzepte wissenschaftlich nicht bewiesen sind.",
+      "answerDetail": "Die Begriffe sind an das psychoanalytische Gedankengebäude geknüpft und haben in der psychiatrischen Fachwelt an Bedeutung verloren. Dennoch hat die Unterscheidung nach wie vor hohe praktische Relevanz.",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-023",
+      "section": "1.2.2",
+      "question": "Vergleiche Psychose und Neurose hinsichtlich Realitätsbezug, sozialer/beruflicher Funktionsfähigkeit und Ich-Identität.",
+      "answerSimple": "Bei Psychose: alle drei weitgehend verloren. Bei Neurose: alle drei erhalten.",
+      "answerDetail": "Psychosen sind schwerste psychiatrische Störungen mit Realitätsverlust und Verlust sozialer Basisfertigkeiten. Neurotische Erkrankungen sind leichter – Realitätsbezug, Arbeitsfähigkeit und Ich-Identität bleiben meist erhalten.",
+      "extra": "Für Heilpraktiker für Psychotherapie bedeutet das Vorliegen einer Psychose, dass sie aus Gründen der Sorgfaltspflicht die Behandlung ablehnen sollten (Psychopharmaka/stationärer Aufenthalt oft indiziert). Neurosen können ambulant behandelt werden.",
+      "relevance": "!!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-024",
+      "section": "1.2.2",
+      "question": "Wie lautet die alte ICD-9-Bezeichnung für das, was in ICD-10 „Angststörungen“ und in ICD-11 „Angst- oder furchtbezogene Störungen“ heißt?",
+      "answerSimple": "Angstneurose.",
+      "answerDetail": "Weitere Beispiele für den Wandel: Neurotische Depression (ICD-9) → Leichte Depression (ICD-10) → Affektive Störungen (ICD-11). Zwangsneurose (ICD-9) → Zwangsstörung (ICD-10/11). Hysterische Neurose (ICD-9) → Dissoziative Störung (ICD-10/11). Hypochondrische Neurose (ICD-9) → Somatisierungsstörung (ICD-10) → Zwangsstörung oder verwandte Störungen (ICD-11).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-025",
+      "section": "1.2.3",
+      "question": "Was ist der Unterschied zwischen deskriptiver, analytischer und interventiver Epidemiologie?",
+      "answerSimple": "Deskriptiv = Häufigkeit/Verbreitung erforschen; analytisch = Entstehungsbedingungen erforschen; interventiv = effektive Behandlung erforschen.",
+      "answerDetail": "Epidemiologische Angaben beziehen sich immer auf eine bestimmte Bevölkerungsgruppe (z. B. alle über 60-jährigen Einwohner eines Landes).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-026",
+      "section": "1.2.3",
+      "question": "Was misst die Inzidenz im Unterschied zur Prävalenz?",
+      "answerSimple": "Inzidenz misst neue Erkrankungsfälle in einem Zeitraum (meist 1 Jahr); Prävalenz misst die Anzahl aller Erkrankungsfälle zu einem Zeitpunkt.",
+      "answerDetail": "Weitere wichtige Begriffe: Letalität (Anteil der Erkrankten, die an einer bestimmten Krankheit versterben), Mortalität (Anzahl der Todesfälle bezogen auf eine Bevölkerungsgruppe), Lebenszeitrisiko (Risiko, im Verlauf einer durchschnittlichen Lebensspanne an einer bestimmten Krankheit zu erkranken).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-027",
+      "section": "1.3.1",
+      "question": "Aus welchen zwei Teilen besteht das Nervensystem nach anatomischer Einteilung, und was gehört jeweils dazu?",
+      "answerSimple": "ZNS (Gehirn + Rückenmark) und peripheres Nervensystem (12 Hirnnervenpaare + 31 Rückenmarksnervenpaare).",
+      "answerDetail": "Das ZNS liegt auf der Mittelachse des Körpers. Das periphere Nervensystem verbindet das ZNS mit der Körperperipherie – Informationen werden zur Peripherie geleitet und Außenreize zum ZNS hin übermittelt.",
+      "extra": null,
+      "relevance": null,
+      "images": ["KHuHfP.Buch.Abb.1.8.jpg"]
+    },
+    {
+      "id": "khuhfp-01-028",
+      "section": "1.3.1",
+      "question": "Was ist der funktionelle Unterschied zwischen animalischem (willkürlichem) und vegetativem (autonomem) Nervensystem?",
+      "answerSimple": "Animalisch steuert willkürliche Handlungen der Skelettmuskulatur; vegetativ koordiniert unwillkürlich innere Organe, glatte Muskulatur und Drüsen.",
+      "answerDetail": "Das animalische Nervensystem steuert alle willkürlichen Handlungen, die wir mit der quergestreiften Skelettmuskulatur ausführen, sowie die bewusste Wahrnehmung. Das vegetative Nervensystem (VNS) arbeitet vorwiegend unbewusst.",
+      "extra": null,
+      "relevance": null,
+      "images": ["KHuHfP.Buch.Abb.1.8.jpg"]
+    },
+    {
+      "id": "khuhfp-01-029",
+      "section": "1.3.2",
+      "question": "Aus welchen vier Hauptstrukturen besteht das Zentrale Nervensystem im Wesentlichen (ohne Rückenmark)?",
+      "answerSimple": "Großhirn, Zwischenhirn (mit Hypothalamus und Hypophyse), Hirnstamm, Kleinhirn.",
+      "answerDetail": "Das limbische System ist eine funktionelle Einheit aus Strukturen des Großhirns, Zwischenhirns und Mittelhirns, die die Kerngebiete des Hirnstamms umgibt.",
+      "extra": null,
+      "relevance": "!",
+      "images": ["KHuHfP.Buch.Abb.1.9.jpg"]
+    },
+    {
+      "id": "khuhfp-01-030",
+      "section": "1.3.2",
+      "question": "In welche vier Lappen wird das Großhirn unterteilt, und welcher davon enthält das Sehzentrum?",
+      "answerSimple": "Stirn-, Scheitel-, Hinterhaupt- und Schläfenlappen; das Sehzentrum liegt im Hinterhauptlappen.",
+      "answerDetail": "Stirnlappen: willkürliche Bewegungen, Emotionen, Broca-Sprachzentrum. Scheitellappen: Schmerz-, Druck-, Tastempfinden, Sprachverständnis. Hinterhauptlappen: Sehzentrum. Schläfenlappen: Hörrinde, weiteres Sprachzentrum.",
+      "extra": "Beide Großhirnhälften sind durch den Balken (Corpus callosum) verbunden. Die Großhirnrinde besteht aus grauer Substanz und ist von Windungen (Gyri) und Furchen (Sulci) durchzogen.",
+      "relevance": "!",
+      "images": ["KHuHfP.Buch.Abb.1.10.jpg"]
+    },
+    {
+      "id": "khuhfp-01-031",
+      "section": "1.3.2",
+      "question": "Warum wird der Thalamus auch als „Tor zum Bewusstsein“ bezeichnet?",
+      "answerSimple": "Weil alle eingehenden Informationen dort aufgenommen, verarbeitet und gefiltert werden, bevor sie ans Großhirn weitergeleitet werden.",
+      "answerDetail": "Der Thalamus ist Teil des Zwischenhirns, das als Schaltstelle zwischen Großhirn und Stammhirn fungiert. Erst danach werden Informationen bewusst wahrgenommen.",
+      "extra": "Merkhilfe im Buch: „Wie ein Sekretär im Vorzimmer einer Konzernchefin leitet auch der Thalamus nur wichtige Informationen weiter.“",
+      "relevance": "!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-032",
+      "section": "1.3.2",
+      "question": "Welche Funktionen steuert der Hypothalamus, und in welcher Beziehung steht er zur Hypophyse?",
+      "answerSimple": "Körpertemperatur, Wasserhaushalt, Nahrungsaufnahme, Kreislauf, Verdauung, Ausscheidung – er steuert die Hypophyse, die dadurch Hormone freisetzt.",
+      "answerDetail": "Der Hypothalamus ist das Bindeglied zwischen Hormon- und Nervensystem und liegt direkt unter dem Thalamus. Er steht in Verbindung mit der Hirnanhangsdrüse (Hypophyse).",
+      "extra": null,
+      "relevance": "!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-033",
+      "section": "1.3.2",
+      "question": "Welche drei Strukturen des Hirnstamms steuern überlebensnotwendige Vorgänge wie Atmung, Herzfrequenz und Gefäßregulierung?",
+      "answerSimple": "Verlängertes Mark (Medulla oblongata), Brücke (Pons), Mittelhirn (Mesenzephalon).",
+      "answerDetail": "Der Hirnstamm ist entwicklungsgeschichtlich der älteste Teil des Gehirns (Reptilienhirn). Das Mittelhirn enthält zudem Zentren zur Steuerung unwillkürlicher Reflexe sowie ein optisches und akustisches Reflexzentrum.",
+      "extra": null,
+      "relevance": "!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-034",
+      "section": "1.3.2",
+      "question": "Welche zwei Strukturen bilden den Kern des limbischen Systems, das eine große Rolle bei der Steuerung von Emotionen (Wut, Angst, sexuelle Appetenz, Aggression) spielt?",
+      "answerSimple": "Mandelkern (Amygdala) und Hippokampus.",
+      "answerDetail": "Das limbische System hält sich nicht an die Grenzen der groben Hirnanatomie und besteht aus Anteilen des Groß-, Zwischen- und Mittelhirns.",
+      "extra": null,
+      "relevance": "!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-035",
+      "section": "1.3.2",
+      "question": "Woraus bestehen die Hirnhäute (Meningen), und welche der drei Häute liegt am weitesten außen?",
+      "answerSimple": "Harte Hirnhaut (Dura mater, außen), Spinnwebhaut (Arachnoidea mater), weiche/innere Hirnhaut (Pia mater, innen).",
+      "answerDetail": "Die harte Hirnhaut besteht aus festem Bindegewebe und bildet an manchen Stellen ein Kanalsystem für den venösen Blutabfluss. Zwischen den beiden inneren Häuten (Arachnoidea und Pia mater) verläuft der liquorhaltige Subarachnoidalraum.",
+      "extra": "Der Liquor ist eine klare, eiweißarme Flüssigkeit (ca. 150 ml), die das ZNS schützt und ernährt. Die Blut-Liquor-Schranke schützt zusätzlich, kann aber auch von vielen Medikamenten nicht überwunden werden.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-036",
+      "section": "1.3.2",
+      "question": "Welche drei Zellfortsätze/-teile besitzt ein Neuron, und was ist jeweils ihre Funktion?",
+      "answerSimple": "Zellkörper (formgebender Rumpf), Dendriten (Informationsaufnahme), Axon (Reizweiterleitung).",
+      "answerDetail": "Jede Nervenzelle hat viele Dendriten, aber nur ein Axon. Nervenzellen können sich nach Abschluss ihrer Entwicklung aufgrund ihrer hohen Spezialisierung nicht mehr teilen.",
+      "extra": "Reizübertragung innerhalb der Zelle: elektrisch. Reizübertragung von einer Nervenzelle zur nächsten (über die Synapse): chemisch, in Sekundenbruchteilen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-037",
+      "section": "1.3.2",
+      "question": "Beschreibe den Ablauf der Erregungsübertragung an einer Synapse in drei Schritten.",
+      "answerSimple": "1. Neurotransmitter werden aus Vesikeln der präsynaptischen Endigung freigesetzt. 2. Sie diffundieren durch den synaptischen Spalt. 3. Sie docken an Rezeptoren der postsynaptischen Membran an und lösen dort eine Erregungswelle aus.",
+      "answerDetail": "Die wichtigsten Neurotransmitter: Acetylcholin, Adrenalin, Noradrenalin, Dopamin, GABA, Serotonin. Viele seelische Störungen (z. B. Depression, Schizophrenie) gehen mit einer Dysbalance dieser Transmitter einher – moderne Psychopharmaka wirken genau hier.",
+      "extra": null,
+      "relevance": "!!",
+      "images": ["KHuHfP.Buch.Abb.1.11.jpg"]
+    },
+    {
+      "id": "khuhfp-01-038",
+      "section": "1.3.3",
+      "question": "Ein Patient berichtet während einer akuten Angstattacke von Herzklopfen, Schwitzen und Zittern. Welcher Anteil des VNS ist hier aktiv, und was bewirkt sein Gegenspieler in Ruhephasen?",
+      "answerSimple": "Der Sympathikus ist aktiv; der Parasympathikus wirkt in Ruhe-/Verdauungsphasen gegensätzlich.",
+      "answerDetail": "Sympathikus (Flucht/Kampf): beschleunigte Atmung/Herztätigkeit, Weitstellung von Bronchien/Herzkranzgefäßen/Pupillen, Steigerung des Blutdrucks, Hemmung der Verdauung. Parasympathikus: Verlangsamung von Atmung/Herzschlag, Verengung von Bronchien/Herzkranzgefäßen/Pupillen, Aktivierung der Verdauung, Senkung des Blutdrucks.",
+      "extra": "Wichtigster Anteil des Parasympathikus: der N. vagus (X. Hirnnerv).",
+      "relevance": null,
+      "images": ["KHuHfP.Buch.Abb.1.12.jpg"]
+    },
+    {
+      "id": "khuhfp-01-039",
+      "section": "1.3.3",
+      "question": "Welche Wirkung hat der Sympathikus auf die Pupille, und welche der Parasympathikus?",
+      "answerSimple": "Sympathikus: Erweiterung. Parasympathikus: Verengung.",
+      "answerDetail": "Weitere Beispiele: Herzmuskel – Sympathikus steigert Pulsrate/Kontraktionskraft, Parasympathikus senkt sie mäßig. Magen-Darm-Trakt – Sympathikus vermindert Tonus/Bewegungen, Parasympathikus steigert sie.",
+      "extra": "Fast alle Organe werden von beiden Teilsystemen innerviert – je nach Organleistung ist mal der Sympathikus, mal der Parasympathikus der aktivierende bzw. bremsende Anteil.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-040",
+      "section": "1.4.1",
+      "question": "Wie kann man das Fachgebiet Psychosomatik grundlegend definieren?",
+      "answerSimple": "Wissenschaft und Heilkunde von den wechselseitigen Beziehungen psychosozialer und körperlicher Vorgänge in ihrer Bedeutung für Gesundheit und Krankheit.",
+      "answerDetail": "Psychosomatik kann sowohl als Grundhaltung im Umgang mit Patienten jeder Fachrichtung als auch als Spezialgebiet zur Erkennung und Behandlung krankheitswertiger Störungen leibseelischer Vorgänge verstanden werden.",
+      "extra": "Zitat von Michael von Rad, Arzt für Psychosomatische Medizin, im Buch als Kerndefinition angeführt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-041",
+      "section": "1.4.2",
+      "question": "Wie beschreibt das Konversionsmodell die Entstehung eines psychisch bedingten körperlichen Symptoms?",
+      "answerSimple": "Ein unbewusster, nicht aushaltbarer Trieb-Abwehr-Konflikt wird verdrängt und stattdessen körpersprachlich/symbolisierend ausgedrückt.",
+      "answerDetail": "Stark vereinfacht: Ein innerseelischer Konflikt wird ins Körperliche „konvertiert“ – die Seele erfährt dadurch Entlastung. Beispiel: eine psychogene Blindheit kann symbolisieren, dass etwas nicht gesehen werden darf.",
+      "extra": "Konversionssymptome treten vor allem im Bereich der Sinnesorgane und der willkürlich innervierten Muskulatur auf und rufen dort pseudoneurologische Symptome hervor (Lähmungen, Gangstörungen, Anfälle, Sensibilitätsstörungen).",
+      "relevance": "!!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-042",
+      "section": "1.4.2",
+      "question": "Was unterscheidet die „vegetative Neurose“ nach Franz Alexander vom Konversionssymptom?",
+      "answerSimple": "Die vegetative Neurose ist eine körperliche Begleiterscheinung eines dauerhaften emotionalen Spannungszustands, kein symbolischer Ausdruck eines definierten Inhalts.",
+      "answerDetail": "Während das Konversionssymptom symbolischer Ausdruck eines genau definierten Inhalts ist, ist die vegetative Neurose gekennzeichnet durch das Überwiegen der jeweils vorherrschenden vegetativen Innervation (Sympathikus/Parasympathikus) und kann irreversible organische Erkrankungen zur Folge haben.",
+      "extra": "In seiner Spezifitätshypothese versuchte Alexander, bestimmten Krankheiten (z. B. Bluthochdruck) spezifische unbewusste Konflikte zuzuordnen (aggressionsgehemmte Menschen). Diese Generalisierung gilt heute als widerlegt.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-043",
+      "section": "1.4.2",
+      "question": "Was beschreibt der 1967 von Engel und Schmale formulierte „Giving-up-/Given-up-Komplex“?",
+      "answerSimple": "Einen schwerwiegenden Affektzustand von Verzweiflung, Depression und allgemeinem Rückzug, der zum Ausbruch einer psychosomatischen Krankheit beitragen kann.",
+      "answerDetail": "Kennzeichnend ist tiefe Hilflosigkeit über den Verlust der Ich-Autonomie und Hoffnungslosigkeit über die Unfähigkeit, sich selbst Befriedigung zu verschaffen. Er ist nicht notwendige oder hinreichende Bedingung für die Krankheitsentwicklung.",
+      "extra": "Engel und Schmale beobachteten häufig tatsächliche oder fantasierte Objektverluste (z. B. Verlust wichtiger Bezugspersonen) als Auslöser dieser Stimmungen.",
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-044",
+      "section": "1.4.2",
+      "question": "Was versteht Max Schur unter Desomatisierung und Resomatisierung?",
+      "answerSimple": "Desomatisierung = Reifungsprozess weg vom rein körperlichen Erleben; Resomatisierung = Rückfall auf die körperliche Ebene bei starker, nicht bewältigbarer Angst.",
+      "answerDetail": "Säuglinge erleben Empfinden zunächst rein körperlich (unmittelbar identifiziert mit körperlichen Prozessen). Mit der Reifung differenzieren sich Wahrnehmung und Ausdruck (Desomatisierung). Bei äußerer/innerer Gefahr, die nicht bewältigt werden kann, kommt es zu einer Regression zurück auf die rein körperliche Ausdrucksebene (Resomatisierung).",
+      "extra": null,
+      "relevance": null,
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-045",
+      "section": "1.4.3",
+      "question": "Nenne die sieben klassischen psychosomatischen Krankheiten („Holy Seven“) nach Franz Alexander, und warum gilt diese Einteilung heute als überholt?",
+      "answerSimple": "Magen-/Zwölffingerdarmgeschwür, Colitis ulcerosa, Asthma bronchiale, Hyperthyreose, essenzielle Hypertonie, Rheumatoide Arthritis, Neurodermitis – heute gelten die meisten Krankheiten als multikausal bedingt.",
+      "answerDetail": "Besonders deutlich wird die Überholtheit am Zwölffingerdarmgeschwür: 1983 wurde Helicobacter pylori als Erreger gefunden, der nachweislich mitursächlich ist. Eine Antibiotikatherapie führt heute meist zur Heilung – die Bedeutung seelischer Ursachen muss deutlich geringer eingeschätzt werden.",
+      "extra": "Merke: Die „Holy Seven“ sollten für die Prüfung dennoch auswendig aufzählbar sein.",
+      "relevance": "!!",
+      "images": []
+    },
+    {
+      "id": "khuhfp-01-046",
+      "section": "1.4.5",
+      "question": "Bei welcher Art von Erkrankung ist eine Kombination aus Psychotherapie und medikamentöser Therapie notwendig, und welchen Widerstand zeigen viele Betroffene häufig?",
+      "answerSimple": "Bei psychosomatischen Erkrankungen – viele Betroffene entwickeln Widerstand gegen den seelischen Zugang zum Krankheitsbild.",
+      "answerDetail": "Mögliche Gründe: Angst vor Stigmatisierung (,,eine Macke haben\") oder der Wunsch, Probleme lieber medikamentös statt eigenverantwortlich zu lösen.",
+      "extra": "Therapieoptionen: Psychodynamische Therapie (bei unbewussten/verdrängten Konflikten), Verhaltenstherapie (Verhaltensänderung, z. B. Stressbewältigung nach Herzinfarkt), Gesprächstherapie (bei schweren Erkrankungen), Körperorientierte Verfahren (Bioenergetik, Biosynthese), Hypnotherapie nach Erickson (schneller Zugang zu zugrunde liegenden Konflikten).",
+      "relevance": null,
+      "images": []
+    }
+  ]
+}
+
