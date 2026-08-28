@@ -15,17 +15,21 @@
 
 <header>
   <button class="icon" id="backBtn" style="display:none;">←</button>
-  <h1 id="headerTitle">KLUK</h1>
+  <div class="header-title-group">
+    <h1 id="headerTitle">K-L-U-K</h1>
+    <p class="header-subtitle" id="headerSubtitle">
+      <span class="sub-short">Ich werd so klug</span><span class="sub-long">Ich werd so klug, K-L-U-K</span>
+    </p>
+  </div>
   <div class="header-actions">
-    <button class="icon" id="fullscreenToggle" title="Vollbild">⛶</button>
-    <button class="icon" id="themeToggle" title="Theme wechseln">◐</button>
+    <button class="icon" id="fullscreenToggle" title="Vollbild"></button>
+    <button class="icon" id="themeToggle" title="Theme wechseln"></button>
+    <button class="icon" id="settingsToggle" title="Einstellungen"></button>
   </div>
 </header>
 
 <!-- ================= BOOK SELECTION ================= -->
 <section id="screen-books" class="screen">
-  <p class="sub" id="booksIntro">Ich bin so klug – K-L-U-K</p>
-  <p class="sub-en" id="booksIntroEn">(I am so smart – S-M-R-T)</p>
   <div id="bookList" class="stack"></div>
 </section>
 
@@ -36,8 +40,13 @@
     <button class="menu-btn primary" id="btnStartLearning">📚 Lerneinheit starten</button>
     <button class="menu-btn" id="btnCatalog">📖 Fragenkatalog</button>
     <button class="menu-btn" id="btnAchievements">🏆 Achievements</button>
-    <button class="menu-btn" id="btnSettings">⚙️ Einstellungen</button>
+    <button class="menu-btn" id="btnBookInfo">ℹ️ Über das Buch</button>
   </div>
+</section>
+
+<!-- ================= BOOK INFO ================= -->
+<section id="screen-bookinfo" class="screen">
+  <div class="card" id="bookInfoCard"></div>
 </section>
 
 <!-- ================= CHAPTER SELECTION ================= -->
@@ -144,7 +153,7 @@
     <input type="file" id="importFile" accept="application/json" style="display:none;">
     <button id="resetBtn" class="danger-btn">Fortschritt zurücksetzen</button>
   </div>
-  <footer>KLUK · v0.1.0</footer>
+  <footer>KLUK · v0.1.1</footer>
 </section>
 
 <!-- ================= IMAGE MODAL ================= -->

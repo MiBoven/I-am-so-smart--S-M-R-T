@@ -36,15 +36,23 @@ body {
   transition: background .2s, color .2s;
 }
 
-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
-header h1 { font-size: 20px; font-weight: 700; margin: 0; flex: 1; }
-.header-actions { display: flex; gap: 8px; }
+header { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px; }
+.header-title-group { flex: 1; min-width: 0; }
+header h1 { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: .02em; }
+.header-subtitle { color: var(--text-secondary); font-size: 12px; margin: 2px 0 0; }
+.header-subtitle .sub-long { display: none; }
+@media (min-width: 420px) {
+  .header-subtitle .sub-short { display: none; }
+  .header-subtitle .sub-long { display: inline; }
+}
+.header-actions { display: flex; gap: 8px; flex-shrink: 0; }
 button.icon {
   background: var(--surface); border: 1px solid var(--border); color: var(--text);
-  border-radius: 8px; width: 36px; height: 36px; font-size: 16px; cursor: pointer; flex-shrink: 0;
+  border-radius: 8px; width: 36px; height: 36px; cursor: pointer; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; padding: 0;
 }
-.sub { color: var(--text-secondary); font-size: 13px; margin: 0 0 4px; text-align: center; }
-.sub-en { color: var(--text-secondary); font-size: 11.5px; font-style: italic; font-weight: 400; margin: 0 0 16px; text-align: center; }
+button.icon svg { width: 18px; height: 18px; }
+.sub { color: var(--text-secondary); font-size: 13px; margin: 0 0 16px; text-align: center; }
 
 /* ---------- Generic screens ---------- */
 .screen { display: none; }
@@ -92,6 +100,29 @@ select, input[type=text] {
 }
 .book-card h2 { font-size: 17px; margin: 0 0 4px; }
 .book-card .meta { color: var(--text-secondary); font-size: 13px; }
+
+.book-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 4px;
+}
+.book-row .menu-btn { flex: 1; border: none; background: none; padding: 10px 6px; }
+.book-row .fav-btn {
+  background: none; border: none; color: var(--text-secondary); font-size: 19px;
+  cursor: pointer; width: 40px; height: 40px; flex-shrink: 0; display: flex;
+  align-items: center; justify-content: center; border-radius: 8px;
+}
+.book-row .fav-btn.active { color: var(--danger); }
+.book-list-divider {
+  border: none; border-top: 1px solid var(--border); margin: 6px 0;
+}
+
+/* ---------- Book info ---------- */
+.book-info-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+.book-info-meta { color: var(--text-secondary); font-size: 13.5px; margin-bottom: 14px; }
+.book-info-row { margin-bottom: 12px; }
+.book-info-row .label { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+.book-info-row .value { font-size: 14px; line-height: 1.5; }
 
 /* ---------- Segmented control ---------- */
 .segment {

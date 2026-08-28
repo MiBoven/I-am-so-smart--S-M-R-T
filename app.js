@@ -6,11 +6,10 @@
 
 const STRINGS = {
   de: {
-    booksIntro: 'Ich bin so klug – K-L-U-K',
     startLearning: '📚 Lerneinheit starten',
     catalog: '📖 Fragenkatalog',
     achievements: '🏆 Achievements',
-    settings: '⚙️ Einstellungen',
+    bookInfo: 'ℹ️ Über das Buch',
     modeNext: 'Nächstes',
     modeAll: 'Alle',
     modeParts: 'Nach Teil',
@@ -29,6 +28,18 @@ const STRINGS = {
 };
 let lang = 'de';
 function t(key) { return (STRINGS[lang] && STRINGS[lang][key]) || key; }
+
+// ---------- Icon set (inline SVGs, styled via currentColor) ----------
+const ICON_PATHS = {
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2 V4 M12 20 V22 M2 12 H4 M20 12 H22 M4.93 4.93 L6.34 6.34 M17.66 17.66 L19.07 19.07 M19.07 4.93 L17.66 6.34 M6.34 17.66 L4.93 19.07"/>',
+  moon: '<path d="M20.5 15.5 A8.5 8.5 0 0 1 8.5 3.5 A8.5 8.5 0 1 0 20.5 15.5 Z"/>',
+  gear: '<path d="M12 8 A4 4 0 1 0 12 16 A4 4 0 0 0 12 8 Z M19.4 15 L21 16.2 L19.2 19.2 L17.4 18.2 M4.6 15 L3 16.2 L4.8 19.2 L6.6 18.2 M15 4.6 L16.2 3 L19.2 4.8 L18.2 6.6 M9 4.6 L7.8 3 L4.8 4.8 L5.8 6.6 M4 12 H2 M22 12 H20 M12 4 V2 M12 22 V20"/>',
+  fullscreenOn: '<path d="M9 3 H3 V9 M15 3 H21 V9 M21 15 V21 H15 M3 15 V21 H9"/>',
+  fullscreenOff: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>'
+};
+function icon(name) {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[name]}</svg>`;
+}
 
 // ---------- Storage keys ----------
 const LS_PROGRESS = 'kluk-progress';
@@ -72,12 +83,13 @@ function loadSettings() {
     const raw = localStorage.getItem(LS_SETTINGS);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* ignore corrupt data */ }
-  return { sessionSize: 10, theme: 'dark', language: 'de' };
+  return { sessionSize: 10, theme: 'dark', language: 'de', favoriteBooks: [] };
 }
 function saveSettings() { localStorage.setItem(LS_SETTINGS, JSON.stringify(settings)); }
 
 let progress = loadProgress();
 let settings = loadSettings();
+if (!Array.isArray(settings.favoriteBooks)) settings.favoriteBooks = [];
 lang = settings.language || 'de';
 
 // ---------- Achievement definitions ----------
@@ -132,7 +144,8 @@ function showScreen(id, opts) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   document.getElementById('backBtn').style.display = opts.canGoBack ? 'block' : 'none';
-  document.getElementById('headerTitle').textContent = opts.title || 'KLUK';
+  document.getElementById('headerTitle').textContent = opts.title || 'K-L-U-K';
+  document.getElementById('headerSubtitle').style.display = opts.showSubtitle ? 'block' : 'none';
   if (opts.pushHistory !== false) state.navStack.push(id);
 }
 function goBack() {
@@ -144,6 +157,7 @@ function goBack() {
 function navigateTo(id) {
   if (id === 'screen-books') renderBooks();
   else if (id === 'screen-home') renderHome();
+  else if (id === 'screen-bookinfo') renderBookInfo();
   else if (id === 'screen-chapters') renderChapterSelect();
   else if (id === 'screen-catalog') renderCatalog();
   else if (id === 'screen-achievements') renderAchievements();
@@ -154,28 +168,61 @@ function navigateTo(id) {
 // ============================================================
 // Book selection
 // ============================================================
+function sortByTitle(books) {
+  return [...books].sort((a, b) => a.title.localeCompare(b.title, 'de'));
+}
+
+function renderBookRow(book, manifest) {
+  const row = document.createElement('div');
+  row.className = 'book-row';
+
+  const isFav = settings.favoriteBooks.includes(book.id);
+  const favBtn = document.createElement('button');
+  favBtn.className = 'fav-btn' + (isFav ? ' active' : '');
+  favBtn.textContent = isFav ? '♥' : '♡';
+  favBtn.title = isFav ? 'Von Favoriten entfernen' : 'Zu Favoriten hinzufügen';
+  favBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const idx = settings.favoriteBooks.indexOf(book.id);
+    if (idx === -1) settings.favoriteBooks.push(book.id); else settings.favoriteBooks.splice(idx, 1);
+    saveSettings();
+    renderBooks();
+  });
+
+  const btn = document.createElement('button');
+  btn.className = 'menu-btn';
+  btn.innerHTML = `<strong>${book.title}</strong><br><span style="font-weight:400;color:var(--text-secondary);font-size:12.5px;">${book.author}</span>`;
+  btn.addEventListener('click', () => {
+    state.currentBook = book;
+    renderHome();
+  });
+
+  row.appendChild(btn);
+  row.appendChild(favBtn);
+  return row;
+}
+
 async function renderBooks() {
   const manifest = await loadManifest();
   const list = document.getElementById('bookList');
   list.innerHTML = '';
-  manifest.books.forEach(book => {
-    const btn = document.createElement('button');
-    btn.className = 'menu-btn';
-    btn.innerHTML = `<strong>${book.title}</strong><br><span style="font-weight:400;color:var(--text-secondary);font-size:12.5px;">${book.author} · ${book.edition}</span>`;
-    btn.addEventListener('click', () => {
-      state.currentBook = book;
-      showScreen('screen-home', { canGoBack: manifest.books.length > 1, title: 'KLUK' });
-      renderHome();
-    });
-    list.appendChild(btn);
-  });
-  showScreen('screen-books', { canGoBack: false, title: 'KLUK', pushHistory: false });
-  document.getElementById('booksIntro').textContent = t('booksIntro');
+
+  const favorites = sortByTitle(manifest.books.filter(b => settings.favoriteBooks.includes(b.id)));
+  const others = sortByTitle(manifest.books.filter(b => !settings.favoriteBooks.includes(b.id)));
+
+  favorites.forEach(book => list.appendChild(renderBookRow(book, manifest)));
+  if (favorites.length && others.length) {
+    const divider = document.createElement('hr');
+    divider.className = 'book-list-divider';
+    list.appendChild(divider);
+  }
+  others.forEach(book => list.appendChild(renderBookRow(book, manifest)));
+
+  showScreen('screen-books', { canGoBack: false, title: 'K-L-U-K', showSubtitle: true });
 
   // Skip straight to home if there is exactly one book (common case for now)
   if (manifest.books.length === 1) {
     state.currentBook = manifest.books[0];
-    showScreen('screen-home', { canGoBack: false, title: 'KLUK' });
     renderHome();
   }
 }
@@ -183,13 +230,34 @@ async function renderBooks() {
 function renderHome() {
   const book = state.currentBook;
   const card = document.getElementById('homeBookCard');
-  card.innerHTML = `<h2>${book.title}</h2><div class="meta">${book.author} · ${book.edition}</div>`;
+  card.innerHTML = `<h2>${book.title}</h2><div class="meta">${book.author}</div>`;
   document.getElementById('btnStartLearning').textContent = t('startLearning');
   document.getElementById('btnCatalog').textContent = t('catalog');
   document.getElementById('btnAchievements').textContent = t('achievements');
-  document.getElementById('btnSettings').textContent = t('settings');
-  showScreen('screen-home', { canGoBack: false, title: 'KLUK' });
+  document.getElementById('btnBookInfo').textContent = t('bookInfo');
+  const canGoBack = !!(state.manifest && state.manifest.books.length > 1);
+  showScreen('screen-home', { canGoBack, title: 'K-L-U-K', showSubtitle: true });
 }
+
+// ============================================================
+// Book info ("Über das Buch")
+// ============================================================
+function renderBookInfo() {
+  const book = state.currentBook;
+  const rows = [];
+  rows.push(`<div class="book-info-row"><div class="label">Autor</div><div class="value">${book.author || '–'}</div></div>`);
+  if (book.edition) rows.push(`<div class="book-info-row"><div class="label">Auflage / Ausgabe</div><div class="value">${book.edition}</div></div>`);
+  if (book.year) rows.push(`<div class="book-info-row"><div class="label">Erscheinungsjahr</div><div class="value">${book.year}</div></div>`);
+  if (book.description) rows.push(`<div class="book-info-row"><div class="label">Beschreibung</div><div class="value">${book.description}</div></div>`);
+  if (rows.length === 1) rows.push(`<p class="hint">Weitere Angaben zu diesem Buch sind noch nicht hinterlegt.</p>`);
+
+  document.getElementById('bookInfoCard').innerHTML = `
+    <div class="book-info-title">${book.title}</div>
+    ${rows.join('')}
+  `;
+  showScreen('screen-bookinfo', { canGoBack: true, title: 'Über das Buch' });
+}
+document.getElementById('btnBookInfo').addEventListener('click', renderBookInfo);
 
 // ============================================================
 // Chapter selection
@@ -660,7 +728,8 @@ document.getElementById('btnStartLearning').addEventListener('click', () => {
 });
 document.getElementById('btnCatalog').addEventListener('click', renderCatalog);
 document.getElementById('btnAchievements').addEventListener('click', renderAchievements);
-document.getElementById('btnSettings').addEventListener('click', renderSettings);
+document.getElementById('settingsToggle').addEventListener('click', renderSettings);
+document.getElementById('settingsToggle').innerHTML = icon('gear');
 
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
@@ -668,12 +737,18 @@ function setTheme(theme) {
   root.setAttribute('data-theme', theme);
   settings.theme = theme;
   saveSettings();
-  themeToggle.textContent = theme === 'dark' ? '◐' : '◑';
+  themeToggle.innerHTML = icon(theme === 'dark' ? 'moon' : 'sun');
 }
 setTheme(settings.theme || 'dark');
 themeToggle.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
-document.getElementById('fullscreenToggle').addEventListener('click', () => {
+const fullscreenToggle = document.getElementById('fullscreenToggle');
+function updateFullscreenIcon() {
+  fullscreenToggle.innerHTML = icon(document.fullscreenElement ? 'fullscreenOff' : 'fullscreenOn');
+}
+updateFullscreenIcon();
+document.addEventListener('fullscreenchange', updateFullscreenIcon);
+fullscreenToggle.addEventListener('click', () => {
   if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
   else document.exitFullscreen();
 });

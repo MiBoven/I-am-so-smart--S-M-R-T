@@ -1,6 +1,6 @@
-# KLUK
-### Ich bin so klug – K-L-U-K
-*(I am so smart – S-M-R-T)*
+# K-L-U-K
+### Ich werd so klug – K-L-U-K
+*(I'm gettin so smart – S-M-R-T)*
 
 A privacy-friendly, fully offline flashcard learning app for studying textbook chapters, chapter by chapter. Everything runs entirely in your browser — no backend, no analytics, no data ever leaves the device (except optional manual export/import as a JSON file).
 
@@ -121,6 +121,13 @@ No code changes are needed for new chapters or books using the existing structur
 Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()` and CSS 3D transforms (for the card flip animation), both widely supported.
 
 ## Changelog
+
+### 0.1.1 — 2026-08-28 — Header, book list & favorites
+- App title in the header is now written with hyphens (K-L-U-K), with a German-only subtitle underneath ("Ich werd so klug" / "Ich werd so klug, K-L-U-K" depending on available width)
+- Header icons (theme toggle, fullscreen, settings) replaced with a consistent inline SVG icon set (sun/moon, gear, fullscreen on/off) instead of emoji/text glyphs
+- Settings is now reachable from a persistent gear icon in the header instead of a per-book menu button
+- Edition/print run is no longer shown in the book list or book home screen; it (and other book details) now lives in a new "Über das Buch" screen instead
+- Books can now be marked as favorites (heart icon); favorites are pinned to the top of the book list, separated by a divider from the alphabetically sorted remaining books
 
 ### 0.1.0 — 2026-08-27 — Initial release
 - Book and chapter selection (next chapter / all / by part / individual chapters)
