@@ -122,6 +122,11 @@ Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()`
 
 ## Changelog
 
+### 0.1.2 — 2026-08-29 — Welcome screen & flatter icons
+- New welcome screen as the app's actual entry point: a large hero button (book icon) leads to the book/script list, with a short explanation of what KLUK does underneath. The book list is now a screen of its own, reached after tapping the hero button, instead of being the entry point
+- Header icon buttons (theme, fullscreen, settings, back) switched from a bordered/filled button look to plain, borderless icons for a flatter, more modern feel
+- Back button now uses a proper arrow icon from the shared SVG icon set instead of a text glyph
+
 ### 0.1.1 — 2026-08-28 — Header, book list & favorites
 - App title in the header is now written with hyphens (K-L-U-K), with a German-only subtitle underneath ("Ich werd so klug" / "Ich werd so klug, K-L-U-K" depending on available width)
 - Header icons (theme toggle, fullscreen, settings) replaced with a consistent inline SVG icon set (sun/moon, gear, fullscreen on/off) instead of emoji/text glyphs

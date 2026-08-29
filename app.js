@@ -35,7 +35,9 @@ const ICON_PATHS = {
   moon: '<path d="M20.5 15.5 A8.5 8.5 0 0 1 8.5 3.5 A8.5 8.5 0 1 0 20.5 15.5 Z"/>',
   gear: '<path d="M12 8 A4 4 0 1 0 12 16 A4 4 0 0 0 12 8 Z M19.4 15 L21 16.2 L19.2 19.2 L17.4 18.2 M4.6 15 L3 16.2 L4.8 19.2 L6.6 18.2 M15 4.6 L16.2 3 L19.2 4.8 L18.2 6.6 M9 4.6 L7.8 3 L4.8 4.8 L5.8 6.6 M4 12 H2 M22 12 H20 M12 4 V2 M12 22 V20"/>',
   fullscreenOn: '<path d="M9 3 H3 V9 M15 3 H21 V9 M21 15 V21 H15 M3 15 V21 H9"/>',
-  fullscreenOff: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>'
+  fullscreenOff: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>',
+  arrowLeft: '<path d="M19 12 H5 M10 7 L5 12 L10 17"/>',
+  book: '<path d="M12 6 C10 4.5 7 4 4 4 V18 C7 18 10 18.5 12 20 C14 18.5 17 18 20 18 V4 C17 4 14 4.5 12 6 Z M12 6 V20"/>'
 };
 function icon(name) {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[name]}</svg>`;
@@ -150,12 +152,13 @@ function showScreen(id, opts) {
 }
 function goBack() {
   state.navStack.pop(); // remove current
-  const prev = state.navStack.pop() || 'screen-home';
+  const prev = state.navStack.pop() || 'screen-welcome';
   navigateTo(prev);
 }
 // central place mapping screen ids back to their render function, used by goBack
 function navigateTo(id) {
-  if (id === 'screen-books') renderBooks();
+  if (id === 'screen-welcome') renderWelcome();
+  else if (id === 'screen-books') renderBooks();
   else if (id === 'screen-home') renderHome();
   else if (id === 'screen-bookinfo') renderBookInfo();
   else if (id === 'screen-chapters') renderChapterSelect();
@@ -164,6 +167,15 @@ function navigateTo(id) {
   else if (id === 'screen-settings') renderSettings();
   else showScreen(id);
 }
+
+// ============================================================
+// Welcome screen (app entry point)
+// ============================================================
+function renderWelcome() {
+  document.getElementById('heroIcon').innerHTML = icon('book');
+  showScreen('screen-welcome', { canGoBack: false, title: 'K-L-U-K', showSubtitle: true });
+}
+document.getElementById('btnGoToBooks').addEventListener('click', renderBooks);
 
 // ============================================================
 // Book selection
@@ -218,7 +230,7 @@ async function renderBooks() {
   }
   others.forEach(book => list.appendChild(renderBookRow(book, manifest)));
 
-  showScreen('screen-books', { canGoBack: false, title: 'K-L-U-K', showSubtitle: true });
+  showScreen('screen-books', { canGoBack: true, title: 'Bücher & Skripte' });
 
   // Skip straight to home if there is exactly one book (common case for now)
   if (manifest.books.length === 1) {
@@ -236,7 +248,7 @@ function renderHome() {
   document.getElementById('btnAchievements').textContent = t('achievements');
   document.getElementById('btnBookInfo').textContent = t('bookInfo');
   const canGoBack = !!(state.manifest && state.manifest.books.length > 1);
-  showScreen('screen-home', { canGoBack, title: 'K-L-U-K', showSubtitle: true });
+  showScreen('screen-home', { canGoBack, title: 'K-L-U-K' });
 }
 
 // ============================================================
@@ -720,6 +732,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 // Global chrome: header buttons, theme, fullscreen, toast
 // ============================================================
 document.getElementById('backBtn').addEventListener('click', goBack);
+document.getElementById('backBtn').innerHTML = icon('arrowLeft');
 document.getElementById('btnStartLearning').addEventListener('click', () => {
   state.chapterMode = 'next';
   state.selectedChapters = [];
@@ -773,4 +786,4 @@ window.addEventListener('beforeunload', e => {
 // ============================================================
 // Init
 // ============================================================
-renderBooks();
+renderWelcome();
