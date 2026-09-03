@@ -100,7 +100,7 @@ function loadSettings() {
     const raw = localStorage.getItem(LS_SETTINGS);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* ignore corrupt data */ }
-  return { sessionSize: 10, theme: 'dark', language: 'de', favoriteBooks: [] };
+  return { sessionSize: 10, theme: 'dark', language: 'de', favoriteBooks: [], rememberLastBook: false, lastBookId: null };
 }
 function saveSettings() { localStorage.setItem(LS_SETTINGS, JSON.stringify(settings)); }
 
@@ -151,6 +151,33 @@ async function loadAllChapters(book) {
     results.push(data);
   }
   return results;
+}
+
+// Aggregate mastery stats for a whole book, plus a per-chapter breakdown.
+// A card counts as:
+//   - "green"  (gemeistert)      -> mastery level 2
+//   - "red"    (gesehen, offen)  -> seen at least once, but level < 2
+//   - "grey"   (noch nicht gesehen) -> never answered
+// Used by both the Brainfood book-card's mini bar and the bigger bar under
+// Achievements, so the two always agree on the same numbers.
+async function computeBookProgress(book) {
+  const chapterDatas = await loadAllChapters(book);
+  const chapters = chapterDatas.map(chData => {
+    let green = 0, red = 0, grey = 0;
+    chData.cards.forEach(c => {
+      const cp = peekCardProgress(c.id);
+      if (cp.level === 2) green++;
+      else if (cp.seen > 0) red++;
+      else grey++;
+    });
+    const total = chData.cards.length;
+    return { number: chData.chapter, title: chData.title, total, green, red, grey };
+  });
+  const totals = chapters.reduce((acc, c) => {
+    acc.total += c.total; acc.green += c.green; acc.red += c.red; acc.grey += c.grey;
+    return acc;
+  }, { total: 0, green: 0, red: 0, grey: 0 });
+  return Object.assign({ chapters }, totals);
 }
 
 // Small collection of playful/teasing one-liners shown when flipping a
@@ -263,6 +290,16 @@ function sortByTitle(books) {
   return [...books].sort((a, b) => a.title.localeCompare(b.title, 'de'));
 }
 
+// Central place to "open" a book: keeps the remembered-last-book setting in
+// sync no matter where the book was chosen from (list, favorites, or the
+// single-book auto-skip below).
+function selectBook(book) {
+  state.currentBook = book;
+  settings.lastBookId = book.id;
+  saveSettings();
+  renderHome();
+}
+
 function renderBookRow(book, manifest) {
   const row = document.createElement('div');
   row.className = 'book-row';
@@ -283,10 +320,7 @@ function renderBookRow(book, manifest) {
   const btn = document.createElement('button');
   btn.className = 'menu-btn';
   btn.innerHTML = `<strong>${book.title}</strong><br><span style="font-weight:400;color:var(--text-secondary);font-size:12.5px;">${book.author}</span>`;
-  btn.addEventListener('click', () => {
-    state.currentBook = book;
-    renderHome();
-  });
+  btn.addEventListener('click', () => selectBook(book));
 
   row.appendChild(btn);
   row.appendChild(favBtn);
@@ -318,15 +352,22 @@ async function renderBooks() {
 
   // Skip straight to home if there is exactly one book (common case for now)
   if (manifest.books.length === 1) {
-    state.currentBook = manifest.books[0];
-    renderHome();
+    selectBook(manifest.books[0]);
   }
 }
 
-function renderHome() {
+async function renderHome() {
   const book = state.currentBook;
   const card = document.getElementById('homeBookCard');
-  card.innerHTML = `<h2>${book.title}</h2><div class="meta">${book.author}</div>`;
+  card.classList.add('clickable');
+  card.innerHTML = `
+    <h2>${book.title}</h2>
+    <div class="meta">${book.author}</div>
+    <div class="mini-progress" id="homeProgressBar" title="Fortschritt wird geladen …">
+      <div class="mini-progress-fill green" id="homeProgressGreen" style="width:0%"></div>
+      <div class="mini-progress-fill red" id="homeProgressRed" style="width:0%"></div>
+    </div>
+  `;
   document.getElementById('btnStartLearning').textContent = t('startLearning');
   document.getElementById('btnCatalog').textContent = t('catalog');
   document.getElementById('btnAchievements').textContent = t('achievements');
@@ -336,7 +377,31 @@ function renderHome() {
     canGoBack, title: 'Brainfood', showSubtitle: true,
     subtitleShort: 'Guten Appetit', subtitleLong: 'Viel Erfolg und guten Appetit'
   });
+
+  const stats = await computeBookProgress(book);
+  // book may have changed again while we were loading (fast tapping) — bail if so
+  if (state.currentBook !== book) return;
+  applyMiniBar('homeProgressGreen', 'homeProgressRed', 'homeProgressBar', stats);
 }
+
+// Fills a green/red segmented mini bar (id-based, shared by the book-card
+// and any future reuse) and adds the golden "fully mastered" glow when
+// every card in `stats` is at mastery level 2.
+function applyMiniBar(greenId, redId, wrapId, stats) {
+  const pct = n => stats.total ? Math.round((n / stats.total) * 100) : 0;
+  document.getElementById(greenId).style.width = pct(stats.green) + '%';
+  document.getElementById(redId).style.width = pct(stats.red) + '%';
+  const wrap = document.getElementById(wrapId);
+  const allMastered = stats.total > 0 && stats.green === stats.total;
+  wrap.classList.toggle('mastered', allMastered);
+  wrap.title = stats.total
+    ? `${pct(stats.green)}% gemeistert · ${pct(stats.red)}% offen · ${pct(stats.grey)}% nicht angeschaut`
+    : 'Noch keine Karten in diesem Buch.';
+}
+
+document.getElementById('homeBookCard').addEventListener('click', () => {
+  goBackTo('screen-books', renderBooks);
+});
 
 // ============================================================
 // Book info ("Über das Buch")
@@ -452,6 +517,14 @@ function getCardProgress(cardId) {
     progress.cardStats[cardId] = { level: 0, seen: 0, everWrong: false, fixedCounted: false };
   }
   return progress.cardStats[cardId];
+}
+
+// Read-only variant for stats/display purposes (progress bars etc.) that
+// must NOT create a stored entry for every card in a book just because its
+// stats were glanced at — that would otherwise silently bloat localStorage
+// with thousands of untouched "level 0" cards for large, unstarted books.
+function peekCardProgress(cardId) {
+  return progress.cardStats[cardId] || { level: 0, seen: 0, everWrong: false, fixedCounted: false };
 }
 
 function weightForLevel(level) { return level === 0 ? 3 : level === 1 ? 2 : 1; }
@@ -988,7 +1061,9 @@ document.getElementById('catalogLastBtn').innerHTML = icon('skipLast');
 // ============================================================
 // Achievements screen
 // ============================================================
-function renderAchievements() {
+let latestBookStats = null;
+
+async function renderAchievements() {
   showScreen('screen-achievements', { canGoBack: true, title: 'Achievements' });
   const grid = document.getElementById('statsGrid');
   const accuracy = progress.totalAnswered ? Math.round((progress.correctTotal / progress.totalAnswered) * 100) : 0;
@@ -1007,7 +1082,75 @@ function renderAchievements() {
     el.innerHTML = `<span class="emoji">${a.emoji}</span><div class="name">${a.name}</div><div class="cond">${a.cond}</div>`;
     badgeGrid.appendChild(el);
   });
+
+  const book = state.currentBook;
+  document.getElementById('bookProgressHint').textContent = 'Lädt …';
+  const stats = await computeBookProgress(book);
+  if (state.currentBook !== book) return; // user switched books while this was loading
+  latestBookStats = stats;
+  applyMiniBar('bookProgressGreen', 'bookProgressRed', 'bookProgressBar', stats);
+  const pct = n => stats.total ? Math.round((n / stats.total) * 100) : 0;
+  document.getElementById('bookProgressHint').textContent = stats.total
+    ? `${pct(stats.green)}% gemeistert · ${pct(stats.red)}% offen · ${pct(stats.grey)}% nicht angeschaut — ${stats.total} Karten insgesamt. Antippen für Details.`
+    : 'Für dieses Buch sind noch keine Karten vorhanden.';
 }
+
+document.getElementById('bookProgressBar').addEventListener('click', openProgressModal);
+
+function openProgressModal() {
+  if (!latestBookStats || !latestBookStats.total) return;
+  const stats = latestBookStats;
+  const pct = n => Math.round((n / stats.total) * 100);
+  document.getElementById('progressModalSummary').innerHTML = `
+    <p style="margin:0 0 10px;"><strong>${state.currentBook.title}</strong></p>
+    <div class="mini-progress big${stats.green === stats.total ? ' mastered' : ''}" style="cursor:default;">
+      <div class="mini-progress-fill green" style="width:${pct(stats.green)}%"></div>
+      <div class="mini-progress-fill red" style="width:${pct(stats.red)}%"></div>
+    </div>
+    <p class="hint" style="text-align:left; margin-top:10px;">
+      ${pct(stats.green)}% gemeistert (grün)<br>
+      ${pct(stats.red)}% schon angeschaut, noch offen (rot)<br>
+      ${pct(stats.grey)}% noch nicht angeschaut<br>
+      ${stats.total} Karten insgesamt
+    </p>
+  `;
+  document.getElementById('progressModalChapters').style.display = 'none';
+  document.getElementById('progressModalChapters').innerHTML = '';
+  document.getElementById('btnProgressMoreDetails').textContent = 'Mehr Details';
+  document.getElementById('progressModalBg').classList.add('open');
+}
+
+document.getElementById('btnProgressMoreDetails').addEventListener('click', () => {
+  const container = document.getElementById('progressModalChapters');
+  const btn = document.getElementById('btnProgressMoreDetails');
+  const opening = container.style.display === 'none';
+  if (opening && !container.childElementCount && latestBookStats) {
+    latestBookStats.chapters.forEach(ch => {
+      const pct = n => ch.total ? Math.round((n / ch.total) * 100) : 0;
+      const mastered = ch.total > 0 && ch.green === ch.total;
+      const row = document.createElement('div');
+      row.className = 'progress-chapter-row';
+      row.innerHTML = `
+        <div class="chapter-label">Kapitel ${ch.number} – ${ch.title}</div>
+        <div class="mini-progress${mastered ? ' mastered' : ''}" style="cursor:default;">
+          <div class="mini-progress-fill green" style="width:${pct(ch.green)}%"></div>
+          <div class="mini-progress-fill red" style="width:${pct(ch.red)}%"></div>
+        </div>
+        <div class="chapter-pct">${pct(ch.green)}% gemeistert · ${pct(ch.red)}% offen · ${pct(ch.grey)}% nicht angeschaut</div>
+      `;
+      container.appendChild(row);
+    });
+  }
+  container.style.display = opening ? 'flex' : 'none';
+  btn.textContent = opening ? 'Weniger anzeigen' : 'Mehr Details';
+});
+
+document.getElementById('closeProgressModal').addEventListener('click', () => {
+  document.getElementById('progressModalBg').classList.remove('open');
+});
+document.getElementById('progressModalBg').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+});
 
 // ============================================================
 // Settings
@@ -1017,7 +1160,14 @@ function renderSettings() {
   document.getElementById('sessionSizeInput').value = settings.sessionSize;
   document.getElementById('sessionSizeLabel').textContent = settings.sessionSize;
   document.getElementById('languageSelect').value = settings.language || 'de';
+  document.getElementById('rememberLastBookToggle').checked = !!settings.rememberLastBook;
 }
+
+document.getElementById('rememberLastBookToggle').addEventListener('change', e => {
+  settings.rememberLastBook = e.target.checked;
+  if (settings.rememberLastBook && state.currentBook) settings.lastBookId = state.currentBook.id;
+  saveSettings();
+});
 
 document.getElementById('sessionSizeInput').addEventListener('input', e => {
   settings.sessionSize = parseInt(e.target.value);
@@ -1158,5 +1308,13 @@ window.addEventListener('beforeunload', e => {
 // ============================================================
 // Init
 // ============================================================
-renderWelcome();
+async function initApp() {
+  if (settings.rememberLastBook && settings.lastBookId) {
+    const manifest = await loadManifest();
+    const book = manifest.books.find(b => b.id === settings.lastBookId);
+    if (book) { state.currentBook = book; renderHome(); return; }
+  }
+  renderWelcome();
+}
+initApp();
 loadFlipQuotes(); // warm the cache early so the first flip-back has no delay

@@ -123,6 +123,12 @@ Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()`
 
 ## Changelog
 
+### 0.2.3 — 2026-09-02 — Mastery progress bars, remember last book
+- New setting "Letztes Brainfood merken (Buch, Skript usw.)" (off by default): when enabled, the app jumps straight to the last opened book's Brainfood screen on load instead of showing the welcome/book-list screens
+- Clicking the book title card on the Brainfood screen now goes back to the book list, instead of doing nothing
+- The book card now shows a subtle, unlabeled progress bar: green for mastered cards, red for cards seen but not yet mastered, and the remaining grey track for cards not seen at all. The bar gets a soft gold shimmer once every card in the book is mastered
+- Achievements now shows a bigger version of the same bar for the current book; tapping it opens a detail popup with exact percentages, plus a "Mehr Details" toggle that reveals the same breakdown per chapter
+
 ### 0.2.2 — 2026-09-01 — Mouse flip fix, keyboard controls
 - Fixed flipping a flashcard by clicking with a mouse (touch already worked): tap-to-flip and swipe-to-rate/-navigate are now handled by a single pointer-event flow instead of a separate native "click" listener next to pointer-capture-based dragging, which some desktop browsers could suppress
 - Keyboard controls while a flashcard is showing: Arrow Left/Right (or A/D) rate the card during a learning session (kann ich nicht / weiß ich) or browse to the previous/next card in the Karteikartenbox's card view; Arrow Up/Down (or W/S) flip the card in both places; Space marks a session card as "später". Ignored while typing in a text field

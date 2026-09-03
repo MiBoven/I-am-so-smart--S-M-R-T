@@ -192,6 +192,14 @@
 
 <!-- ================= ACHIEVEMENTS ================= -->
 <section id="screen-achievements" class="screen">
+  <h3 class="section-title" style="margin-top:0;">Fortschritt im Buch</h3>
+  <div class="card big-progress-card" id="bookProgressCard">
+    <div class="mini-progress big" id="bookProgressBar" title="Fortschritt wird geladen …">
+      <div class="mini-progress-fill green" id="bookProgressGreen" style="width:0%"></div>
+      <div class="mini-progress-fill red" id="bookProgressRed" style="width:0%"></div>
+    </div>
+    <p class="hint" id="bookProgressHint">Lädt …</p>
+  </div>
   <div class="stats-grid" id="statsGrid"></div>
   <h3 class="section-title">Abzeichen</h3>
   <div class="badge-grid" id="badgeGrid"></div>
@@ -214,6 +222,13 @@
     <p class="hint">Weitere Sprachen folgen in einem späteren Update.</p>
   </div>
   <div class="card">
+    <div class="toggle-row">
+      <label class="label-main" for="rememberLastBookToggle">Letztes Brainfood merken (Buch, Skript usw.)</label>
+      <input type="checkbox" id="rememberLastBookToggle">
+    </div>
+    <p class="hint" style="margin-top:8px;">Beim nächsten Besuch direkt zum zuletzt geöffneten Buch springen, statt zur Startseite.</p>
+  </div>
+  <div class="card">
     <label class="label-main">Daten</label>
     <div class="btn-row" style="margin-top:10px;">
       <button id="exportBtn">Exportieren</button>
@@ -222,7 +237,7 @@
     <input type="file" id="importFile" accept="application/json" style="display:none;">
     <button id="resetBtn" class="danger-btn">Fortschritt zurücksetzen</button>
   </div>
-  <footer>K-L-U-K · v0.2.2</footer>
+  <footer>K-L-U-K · v0.2.3</footer>
 </section>
 
 <!-- ================= IMAGE MODAL ================= -->
@@ -263,6 +278,17 @@
       </div>
     </div>
     <button class="close" id="closeReviewModal">Schließen</button>
+  </div>
+</div>
+
+<!-- ================= PROGRESS DETAIL MODAL ================= -->
+<div class="modal-bg" id="progressModalBg">
+  <div class="modal">
+    <h2 style="margin-top:0;">Fortschritt im Detail</h2>
+    <div id="progressModalSummary"></div>
+    <button class="menu-btn" id="btnProgressMoreDetails" style="margin-top:12px; width:100%;">Mehr Details</button>
+    <div id="progressModalChapters" class="stack" style="display:none; margin-top:12px;"></div>
+    <button class="close" id="closeProgressModal">Schließen</button>
   </div>
 </div>
 
