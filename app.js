@@ -221,8 +221,17 @@ function showScreen(id, opts) {
   // While replaying a popstate, state.navStack has already been restored
   // from the saved history entry, so we must not push onto it again here.
   if (opts.pushHistory !== false && !state.isPopping) {
-    state.navStack.push(id);
-    history.pushState({ stack: state.navStack.slice() }, '', '#' + id);
+    if (opts.replaceHistory && state.navStack.length) {
+      // Replace the current top entry instead of stacking a new one on top
+      // of it — used when a screen (like a finished session) shouldn't be
+      // reachable again via the back button at all, e.g. the summary screen
+      // replaces the live session screen so "back" skips straight past it.
+      state.navStack[state.navStack.length - 1] = id;
+      history.replaceState({ stack: state.navStack.slice() }, '', '#' + id);
+    } else {
+      state.navStack.push(id);
+      history.pushState({ stack: state.navStack.slice() }, '', '#' + id);
+    }
   }
 }
 
@@ -582,6 +591,24 @@ function showNextCard() {
   renderSessionCard();
 }
 
+// Shows the book's own "!"/"!!"/"!!!" exam-relevance marking (only present
+// where the source book explicitly rates a topic — see the chapter JSON
+// format) as a small colored badge next to the section label.
+function relevanceClass(rel) {
+  const n = (rel.match(/!/g) || []).length;
+  return 'r' + Math.min(Math.max(n, 1), 3);
+}
+function applyRelevanceBadge(elId, relevance) {
+  const el = document.getElementById(elId);
+  if (relevance) {
+    el.textContent = relevance;
+    el.className = 'relevance-badge ' + relevanceClass(relevance);
+    el.style.display = 'inline-block';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
 function renderSessionCard() {
   const session = state.session;
   const card = session.current;
@@ -592,6 +619,7 @@ function renderSessionCard() {
   hideFlipBackCaption();
 
   document.getElementById('cardSectionLabel').textContent = `Kapitel ${card.chapterNumber}${card.section ? ' · ' + card.section : ''}`;
+  applyRelevanceBadge('cardRelevance', card.relevance);
   document.getElementById('cardQuestion').textContent = card.question;
 
   const img = document.getElementById('cardImage');
@@ -718,6 +746,7 @@ document.getElementById('btnLater').addEventListener('click', () => rateCard('la
 
 function rateCard(result) {
   const session = state.session;
+  if (!session || !session.current) return; // nothing left to rate (e.g. mid-transition to summary, or after key auto-repeat)
   const card = session.current;
   const cp = getCardProgress(card.id);
   const isLateNight = new Date().getHours() >= 22;
@@ -748,8 +777,12 @@ function rateCard(result) {
 
   updateProgressBar();
   if (session.queue.length === 0) {
-    // let the progress bar's CSS transition actually reach 100% before
-    // switching to the summary screen, instead of jumping there instantly
+    // Clear the current card immediately so any further rating attempts
+    // during the brief transition (e.g. a key still auto-repeating) are
+    // ignored by the guard above, instead of re-rating the last card over
+    // and over. The 350ms delay itself just lets the progress bar's CSS
+    // transition actually reach 100% before switching to the summary screen.
+    session.current = null;
     setTimeout(finishSession, 350);
   } else {
     showNextCard();
@@ -818,7 +851,11 @@ function renderSummary(stats, newlyUnlocked) {
   document.getElementById('summaryReviewList').style.display = 'none';
   document.getElementById('summaryReviewList').innerHTML = '';
   document.getElementById('btnReviewAnswers').textContent = 'Antworten nochmal anschauen';
-  showScreen('screen-summary', { canGoBack: true, title: 'Fertig' });
+  // Replaces the (now finished) session screen in the browser history
+  // instead of stacking on top of it, so pressing back from here goes
+  // straight to the chapter-selection screen — there's nothing to "resume"
+  // in a session that has already been scored and saved.
+  showScreen('screen-summary', { canGoBack: true, title: 'Fertig', replaceHistory: true });
 }
 
 document.getElementById('btnReviewAnswers').addEventListener('click', () => {
@@ -955,7 +992,7 @@ function renderCatalogList() {
     item.className = 'catalog-item';
     item.innerHTML = `
       <div class="q">${c.question}</div>
-      <div class="meta">Kapitel ${c.chapterNumber}${c.section ? ' · ' + c.section : ''}</div>
+      <div class="meta">Kapitel ${c.chapterNumber}${c.section ? ' · ' + c.section : ''}${c.relevance ? ` <span class="relevance-badge ${relevanceClass(c.relevance)}">${c.relevance}</span>` : ''}</div>
       <div class="a">
         <strong>${c.answerSimple}</strong><br>${c.answerDetail || ''}
         ${c.extra ? '<br><em>' + c.extra + '</em>' : ''}
@@ -974,6 +1011,7 @@ function renderCatalogCard() {
     document.getElementById('catalogCardQuestion').textContent = '';
     document.getElementById('catalogAnswerSimple').textContent = '';
     document.getElementById('catalogAnswerDetail').textContent = '';
+    document.getElementById('catalogCardRelevance').style.display = 'none';
     return;
   }
   if (catalogIndex >= catalogFiltered.length) catalogIndex = catalogFiltered.length - 1;
@@ -984,6 +1022,7 @@ function renderCatalogCard() {
   document.getElementById('catalogFlashcard').style.transform = '';
   document.getElementById('catalogCardPosition').textContent = `Karte ${catalogIndex + 1} von ${catalogFiltered.length}`;
   document.getElementById('catalogCardSectionLabel').textContent = `Kapitel ${card.chapterNumber}${card.section ? ' · ' + card.section : ''}`;
+  applyRelevanceBadge('catalogCardRelevance', card.relevance);
   document.getElementById('catalogCardQuestion').textContent = card.question;
 
   const img = document.getElementById('catalogCardImage');

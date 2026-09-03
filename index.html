@@ -93,7 +93,10 @@
       <div class="flashcard-inner" id="flashcardInner">
         <div class="flashcard-face flashcard-front">
           <img id="cardImage" class="card-image" style="display:none;" alt="">
-          <div class="card-section-label" id="cardSectionLabel"></div>
+          <div class="card-top-row">
+            <div class="card-section-label" id="cardSectionLabel"></div>
+            <span class="relevance-badge" id="cardRelevance" style="display:none;"></span>
+          </div>
           <div class="card-question" id="cardQuestion"></div>
           <div class="flip-hint">Tippen zum Umdrehen</div>
         </div>
@@ -158,7 +161,10 @@
         <div class="flashcard-inner" id="catalogFlashcardInner">
           <div class="flashcard-face flashcard-front">
             <img id="catalogCardImage" class="card-image" style="display:none;" alt="">
-            <div class="card-section-label" id="catalogCardSectionLabel"></div>
+            <div class="card-top-row">
+              <div class="card-section-label" id="catalogCardSectionLabel"></div>
+              <span class="relevance-badge" id="catalogCardRelevance" style="display:none;"></span>
+            </div>
             <div class="card-question" id="catalogCardQuestion"></div>
             <div class="flip-hint">Tippen zum Umdrehen</div>
           </div>
@@ -237,7 +243,7 @@
     <input type="file" id="importFile" accept="application/json" style="display:none;">
     <button id="resetBtn" class="danger-btn">Fortschritt zurücksetzen</button>
   </div>
-  <footer>K-L-U-K · v0.2.3</footer>
+  <footer>K-L-U-K · v0.3.1</footer>
 </section>
 
 <!-- ================= IMAGE MODAL ================= -->

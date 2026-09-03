@@ -123,7 +123,12 @@ Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()`
 
 ## Changelog
 
-### 0.2.3 — 2026-09-02 — Mastery progress bars, remember last book
+### 0.3.1 — 2026-09-03 — Bugfixes: rating over-count, stale session, relevance badge
+- Fixed a bug where holding down a rating key (or arrow key) could register far more "Weiß ich"/"Kann ich nicht" answers than the session actually has cards, by continuing to rate the last card during the short transition to the summary screen
+- Fixed a bug where pressing back from the "Lerninhalt abgeschlossen" summary returned to the just-finished, still-interactive session screen, letting you keep rating and silently changing already-saved stats. The summary screen now replaces the session screen in the browser history instead of stacking on top of it, so back correctly goes to chapter selection instead
+- The book's own exam-relevance marking (`!`/`!!`/`!!!`, only present where the source explicitly rates a topic) is now actually shown as a small colored badge next to the chapter/section label — on the session card, in the Karteikartenbox card view, and in its list view. This was defined in the chapter JSON format from the start but had never been wired up in the UI
+
+### 0.3.0 — 2026-09-02 — Mastery progress bars, remember last book
 - New setting "Letztes Brainfood merken (Buch, Skript usw.)" (off by default): when enabled, the app jumps straight to the last opened book's Brainfood screen on load instead of showing the welcome/book-list screens
 - Clicking the book title card on the Brainfood screen now goes back to the book list, instead of doing nothing
 - The book card now shows a subtle, unlabeled progress bar: green for mastered cards, red for cards seen but not yet mastered, and the remaining grey track for cards not seen at all. The bar gets a soft gold shimmer once every card in the book is mastered
