@@ -237,7 +237,8 @@ select, input[type=text] {
 .catalog-item .a { display: none; margin-top: 10px; font-size: 13.5px; color: var(--text-secondary); border-top: 1px solid var(--border); padding-top: 10px; }
 .catalog-item.open .a { display: block; }
 
-.catalog-card-nav { display: flex; justify-content: space-between; margin-top: 4px; }
+.catalog-card-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+.catalog-card-nav-center { display: flex; gap: 16px; }
 .icon-round {
   width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border);
   color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer;

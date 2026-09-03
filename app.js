@@ -40,6 +40,8 @@ const ICON_PATHS = {
   fullscreenOff: { d: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>' },
   arrowLeft: { d: '<path d="M19 12 H5 M10 7 L5 12 L10 17"/>' },
   arrowRight: { d: '<path d="M5 12 H19 M14 7 L19 12 L14 17"/>' },
+  skipFirst: { d: '<path d="M7 5 V19 M17 6 L9 12 L17 18"/>' },
+  skipLast: { d: '<path d="M17 5 V19 M7 6 L15 12 L7 18"/>' },
   book: { d: '<path d="M12 6 C10 4.5 7 4 4 4 V18 C7 18 10 18.5 12 20 C14 18.5 17 18 20 18 V4 C17 4 14 4.5 12 6 Z M12 6 V20"/>' },
   gear: {
     d: '<path d="M 9.24,5.35 L 10.0,2.61 L 14.0,2.61 L 14.76,5.35 L 17.23,3.95 L 20.05,6.77 L 18.65,9.24 L 21.39,10.0 L 21.39,14.0 L 18.65,14.76 L 20.05,17.23 L 17.23,20.05 L 14.76,18.65 L 14.0,21.39 L 10.0,21.39 L 9.24,18.65 L 6.77,20.05 L 3.95,17.23 L 5.35,14.76 L 2.61,14.0 L 2.61,10.0 L 5.35,9.24 L 3.95,6.77 L 6.77,3.95 Z M 15.4,12 A 3.4,3.4 0 1,0 8.6,12 A 3.4,3.4 0 1,0 15.4,12 Z" fill-rule="evenodd"/>',
@@ -549,15 +551,13 @@ function updateProgressBar() {
 // no longer depends on having flipped at all. Flipping *back* from the
 // answer to the question side additionally shows a small teasing one-liner
 // underneath the card (see loadFlipQuotes / showFlipBackCaption).
-let sessionWasDragged = false;
-document.getElementById('flashcardInner').addEventListener('click', () => {
+function toggleSessionFlip() {
   if (!state.session) return;
-  if (sessionWasDragged) { sessionWasDragged = false; return; }
   const inner = document.getElementById('flashcardInner');
   const wasFlipped = inner.classList.contains('flipped');
   inner.classList.toggle('flipped');
   if (wasFlipped) showFlipBackCaption(); else hideFlipBackCaption();
-});
+}
 
 function showFlipBackCaption() {
   const el = document.getElementById('flipBackCaption');
@@ -600,14 +600,22 @@ document.getElementById('btnYes').addEventListener('click', () => rateCard('yes'
 document.getElementById('btnNo').addEventListener('click', () => rateCard('no'));
 document.getElementById('btnLater').addEventListener('click', () => rateCard('later'));
 
-// ---------- Swipe to rate (left = kann ich nicht, right = weiß ich) ----------
-// "Später" is deliberately button-only, per spec.
+// ---------- Tap-to-flip & swipe-to-rate, unified into one pointer handler ----------
+// Mouse and touch are both handled the same way here on purpose: relying on
+// a separate native "click" listener alongside pointer-capture-based drag
+// tracking is unreliable on desktop (browsers can suppress the synthesized
+// click while a pointer is captured), so a small, unmoved pointer press is
+// treated as "flip" directly, instead of waiting for a click event.
+// "Später" is deliberately button/keyboard-only, never a swipe gesture.
 (function setupSessionSwipe() {
   const flashcard = document.getElementById('flashcard');
   let dragging = false, startX = 0, dx = 0;
+  const TAP_THRESHOLD = 6;
+  const RATE_THRESHOLD = 90;
 
   flashcard.addEventListener('pointerdown', e => {
     if (!state.session) return;
+    if (e.target.closest('.more-btn, .card-image')) return; // let those handle their own clicks
     dragging = true; startX = e.clientX; dx = 0;
     flashcard.setPointerCapture(e.pointerId);
     flashcard.style.transition = 'none';
@@ -621,11 +629,14 @@ document.getElementById('btnLater').addEventListener('click', () => rateCard('la
     if (!dragging) return;
     dragging = false;
     flashcard.style.transition = '';
-    const threshold = 90;
-    if (Math.abs(dx) > 5) sessionWasDragged = true;
-    if (dx > threshold) { flashcard.style.transform = ''; rateCard('yes'); }
-    else if (dx < -threshold) { flashcard.style.transform = ''; rateCard('no'); }
-    else { flashcard.style.transform = ''; }
+    flashcard.style.transform = '';
+    if (Math.abs(dx) < TAP_THRESHOLD) {
+      toggleSessionFlip();
+    } else if (dx > RATE_THRESHOLD) {
+      rateCard('yes');
+    } else if (dx < -RATE_THRESHOLD) {
+      rateCard('no');
+    }
     dx = 0;
   }
   flashcard.addEventListener('pointerup', endDrag);
@@ -913,30 +924,40 @@ function renderCatalogCard() {
   else { extraBlock.style.display = 'none'; }
 }
 
-let catalogWasDragged = false;
-document.getElementById('catalogFlashcardInner').addEventListener('click', () => {
-  if (catalogWasDragged) { catalogWasDragged = false; return; }
+function toggleCatalogFlip() {
   document.getElementById('catalogFlashcardInner').classList.toggle('flipped');
-});
+}
 document.getElementById('catalogCardImage').addEventListener('click', e => {
   e.stopPropagation();
   document.getElementById('modalImage').src = e.target.src;
   document.getElementById('imageModalBg').classList.add('open');
 });
 
+function catalogFirst() { if (catalogFiltered.length) { catalogIndex = 0; renderCatalogCard(); } }
 function catalogPrev() { if (catalogIndex > 0) { catalogIndex--; renderCatalogCard(); } }
 function catalogNext() { if (catalogIndex < catalogFiltered.length - 1) { catalogIndex++; renderCatalogCard(); } }
+function catalogLast() { if (catalogFiltered.length) { catalogIndex = catalogFiltered.length - 1; renderCatalogCard(); } }
+document.getElementById('catalogFirstBtn').addEventListener('click', catalogFirst);
 document.getElementById('catalogPrevBtn').addEventListener('click', catalogPrev);
 document.getElementById('catalogNextBtn').addEventListener('click', catalogNext);
+document.getElementById('catalogLastBtn').addEventListener('click', catalogLast);
+document.getElementById('catalogFirstBtn').innerHTML = icon('skipFirst');
 document.getElementById('catalogPrevBtn').innerHTML = icon('arrowLeft');
 document.getElementById('catalogNextBtn').innerHTML = icon('arrowRight');
+document.getElementById('catalogLastBtn').innerHTML = icon('skipLast');
 
-// Swipe left/right to browse between cards (pure navigation, no rating here).
+// Tap-to-flip & swipe-to-navigate, unified into one pointer handler for the
+// same reason as the session card (see setupSessionSwipe above): a separate
+// native "click" listener next to pointer-capture-based dragging is
+// unreliable with a mouse.
 (function setupCatalogSwipe() {
   const flashcard = document.getElementById('catalogFlashcard');
   let dragging = false, startX = 0, dx = 0;
+  const TAP_THRESHOLD = 6;
+  const NAV_THRESHOLD = 70;
 
   flashcard.addEventListener('pointerdown', e => {
+    if (e.target.closest('.card-image')) return;
     dragging = true; startX = e.clientX; dx = 0;
     flashcard.setPointerCapture(e.pointerId);
     flashcard.style.transition = 'none';
@@ -950,11 +971,14 @@ document.getElementById('catalogNextBtn').innerHTML = icon('arrowRight');
     if (!dragging) return;
     dragging = false;
     flashcard.style.transition = '';
-    if (Math.abs(dx) > 5) catalogWasDragged = true;
-    const threshold = 70;
     flashcard.style.transform = '';
-    if (dx < -threshold) catalogNext();
-    else if (dx > threshold) catalogPrev();
+    if (Math.abs(dx) < TAP_THRESHOLD) {
+      toggleCatalogFlip();
+    } else if (dx < -NAV_THRESHOLD) {
+      catalogNext();
+    } else if (dx > NAV_THRESHOLD) {
+      catalogPrev();
+    }
     dx = 0;
   }
   flashcard.addEventListener('pointerup', endDrag);
@@ -1094,6 +1118,34 @@ function showToast(msg) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
 }
+
+// ============================================================
+// Keyboard controls for flashcards
+// ============================================================
+// Session: ArrowLeft/A = kann ich nicht, ArrowRight/D = weiß ich,
+//          ArrowUp/ArrowDown/W/S = flip, Space = später.
+// Karteikartenbox (card view): ArrowLeft/A = vorherige Karte,
+//          ArrowRight/D = nächste Karte, ArrowUp/ArrowDown/W/S = flip.
+// Ignored while typing in a text field (e.g. the catalog search box).
+document.addEventListener('keydown', e => {
+  const activeTag = document.activeElement && document.activeElement.tagName;
+  if (activeTag === 'INPUT' || activeTag === 'TEXTAREA') return;
+
+  const key = e.key.toLowerCase();
+  const sessionActive = document.getElementById('screen-session').classList.contains('active');
+  const catalogActive = document.getElementById('screen-catalog').classList.contains('active');
+
+  if (sessionActive && state.session) {
+    if (key === 'arrowleft' || key === 'a') { e.preventDefault(); rateCard('no'); }
+    else if (key === 'arrowright' || key === 'd') { e.preventDefault(); rateCard('yes'); }
+    else if (['arrowup', 'arrowdown', 'w', 's'].includes(key)) { e.preventDefault(); toggleSessionFlip(); }
+    else if (key === ' ') { e.preventDefault(); rateCard('later'); }
+  } else if (catalogActive && catalogView === 'cards') {
+    if (key === 'arrowleft' || key === 'a') { e.preventDefault(); catalogPrev(); }
+    else if (key === 'arrowright' || key === 'd') { e.preventDefault(); catalogNext(); }
+    else if (['arrowup', 'arrowdown', 'w', 's'].includes(key)) { e.preventDefault(); toggleCatalogFlip(); }
+  }
+});
 
 // Warn before an accidental reload/navigation discards an in-progress session
 window.addEventListener('beforeunload', e => {

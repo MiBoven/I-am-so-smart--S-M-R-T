@@ -123,6 +123,11 @@ Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()`
 
 ## Changelog
 
+### 0.2.2 — 2026-09-01 — Mouse flip fix, keyboard controls
+- Fixed flipping a flashcard by clicking with a mouse (touch already worked): tap-to-flip and swipe-to-rate/-navigate are now handled by a single pointer-event flow instead of a separate native "click" listener next to pointer-capture-based dragging, which some desktop browsers could suppress
+- Keyboard controls while a flashcard is showing: Arrow Left/Right (or A/D) rate the card during a learning session (kann ich nicht / weiß ich) or browse to the previous/next card in the Karteikartenbox's card view; Arrow Up/Down (or W/S) flip the card in both places; Space marks a session card as "später". Ignored while typing in a text field
+- Karteikartenbox card view gained "first" and "last" buttons alongside the existing previous/next arrows, to jump straight to either end of the current (filtered) card list
+
 ### 0.2.1 — 2026-08-31 — Flip-back captions & abort notice
 - Leaving an unfinished learning session (back arrow or hardware/browser back) now shows a toast confirming that nothing was saved, instead of leaving silently
 - Flipping a session card back from the answer to the question side now shows a small teasing one-liner underneath the card (e.g. "Du schummelst doch nicht, oder? 🧐"), picked at random from `data/flip-quotes.json`; the caption clears again once you move to the next card
