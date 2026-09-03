@@ -9,16 +9,16 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico">
 <link rel="stylesheet" href="style.css">
-<title>KLUK</title>
+<title>K-L-U-K</title>
 </head>
 <body>
 
 <header>
-  <button class="icon" id="backBtn" style="display:none;">←</button>
+  <button class="icon" id="backBtn" style="display:none;"></button>
   <div class="header-title-group">
     <h1 id="headerTitle">K-L-U-K</h1>
-    <p class="header-subtitle" id="headerSubtitle">
-      <span class="sub-short">Ich werd so klug</span><span class="sub-long">Ich werd so klug, K-L-U-K</span>
+    <p class="header-subtitle" id="headerSubtitle" style="display:none;">
+      <span class="sub-short"></span><span class="sub-long"></span>
     </p>
   </div>
   <div class="header-actions">
@@ -35,9 +35,9 @@
     <span class="hero-label">Bücher &amp; Skripte</span>
   </button>
   <div class="welcome-text">
-    <p>KLUK hilft dir, Fachbücher und Skripte kapitelweise mit Karteikarten zu lernen – ähnlich wie beim klassischen Vokabeln büffeln, nur eben mit richtigen Prüfungs- oder Studieninhalten.</p>
+    <p>K-L-U-K hilft dir, Fachbücher und Skripte kapitelweise mit Karteikarten zu lernen – ähnlich wie beim klassischen Vokabeln büffeln, nur eben mit richtigen Prüfungs- oder Studieninhalten.</p>
     <p>Du wählst ein Buch oder Skript, entscheidest, welche Kapitel dran sind, und lernst in kurzen Lerneinheiten. Karten, die du noch nicht sicher kannst, kommen dabei automatisch häufiger dran als Karten, die du schon gut beherrschst.</p>
-    <p>Im Fragenkatalog kannst du außerdem jederzeit gezielt nachschlagen, und unter Achievements siehst du deinen Lernfortschritt und gesammelte Abzeichen.</p>
+    <p>In der Karteikartenbox kannst du außerdem jederzeit gezielt nachschlagen, und unter Achievements siehst du deinen Lernfortschritt und gesammelte Abzeichen.</p>
   </div>
 </section>
 
@@ -51,7 +51,7 @@
   <div class="book-card" id="homeBookCard"></div>
   <div class="stack">
     <button class="menu-btn primary" id="btnStartLearning">📚 Lerneinheit starten</button>
-    <button class="menu-btn" id="btnCatalog">📖 Fragenkatalog</button>
+    <button class="menu-btn" id="btnCatalog">🗃️ Karteikartenbox</button>
     <button class="menu-btn" id="btnAchievements">🏆 Achievements</button>
     <button class="menu-btn" id="btnBookInfo">ℹ️ Über das Buch</button>
   </div>
@@ -72,6 +72,13 @@
   </div>
   <div id="chapterModeDetail" class="card"></div>
   <p class="hint" id="chapterCountHint"></p>
+  <div class="card">
+    <label class="label-main" for="chapterSessionSizeInput">Kartenanzahl für diese Lerneinheit</label>
+    <div class="row" style="margin-top:8px;">
+      <input type="range" id="chapterSessionSizeInput" min="5" max="30" step="5" value="10">
+      <span class="qty-val" id="chapterSessionSizeLabel">10</span>
+    </div>
+  </div>
   <button class="menu-btn primary" id="btnStartSession">Lerneinheit starten</button>
 </section>
 
@@ -109,7 +116,8 @@
       </div>
     </div>
   </div>
-  <div class="session-actions" id="sessionActions" style="visibility:hidden;">
+  <p class="flip-back-caption" id="flipBackCaption" style="display:none;"></p>
+  <div class="session-actions" id="sessionActions">
     <button class="action-btn no" id="btnNo">✕<span>Kann ich nicht</span></button>
     <button class="action-btn later" id="btnLater">🕓<span>Später</span></button>
     <button class="action-btn yes" id="btnYes">✓<span>Weiß ich</span></button>
@@ -120,18 +128,62 @@
 <section id="screen-summary" class="screen">
   <div class="summary-card">
     <div class="summary-emoji">🎉</div>
-    <h2>Lerneinheit abgeschlossen!</h2>
+    <h2>Lerninhalt abgeschlossen!</h2>
     <div class="summary-stats" id="summaryStats"></div>
     <div id="summaryAchievements"></div>
-    <button class="menu-btn primary" id="btnSummaryHome">Zurück zum Start</button>
+    <button class="menu-btn" id="btnReviewAnswers">Antworten nochmal anschauen</button>
+    <div id="summaryReviewList" class="stack" style="display:none; margin-top:12px;"></div>
+    <button class="menu-btn primary" id="btnSummaryHome" style="margin-top:12px;">Zurück zu Brainfood</button>
   </div>
 </section>
 
-<!-- ================= CATALOG ================= -->
+<!-- ================= CATALOG / KARTEIKARTENBOX ================= -->
 <section id="screen-catalog" class="screen">
-  <input type="text" id="catalogSearch" placeholder="Suchen…">
+  <div class="catalog-toolbar">
+    <input type="text" id="catalogSearch" placeholder="Suchen…">
+    <button class="add-btn-disabled" id="catalogAddBtn" title="Neue Karteikarte (bald verfügbar)">+</button>
+  </div>
   <div class="chip-row" id="catalogFilters"></div>
-  <div id="catalogList" class="stack"></div>
+  <div class="segment" id="catalogViewToggle">
+    <button type="button" class="seg-btn active" data-view="cards">Karten</button>
+    <button type="button" class="seg-btn" data-view="list">Liste</button>
+  </div>
+
+  <div id="catalogListView" class="stack"></div>
+
+  <div id="catalogCardView">
+    <div class="progress-text" id="catalogCardPosition"></div>
+    <div class="card-stage" id="catalogCardStage">
+      <div class="flashcard" id="catalogFlashcard">
+        <div class="flashcard-inner" id="catalogFlashcardInner">
+          <div class="flashcard-face flashcard-front">
+            <img id="catalogCardImage" class="card-image" style="display:none;" alt="">
+            <div class="card-section-label" id="catalogCardSectionLabel"></div>
+            <div class="card-question" id="catalogCardQuestion"></div>
+            <div class="flip-hint">Tippen zum Umdrehen</div>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <div class="answer-block">
+              <div class="answer-label">Antwort</div>
+              <div class="answer-simple" id="catalogAnswerSimple"></div>
+            </div>
+            <div class="answer-block" id="catalogAnswerDetailBlock">
+              <div class="answer-label">Details</div>
+              <div class="answer-detail" id="catalogAnswerDetail"></div>
+            </div>
+            <div class="answer-block" id="catalogAnswerExtraBlock" style="display:none;">
+              <div class="answer-label">Extra</div>
+              <div class="answer-extra" id="catalogAnswerExtra"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-card-nav">
+      <button class="icon-round" id="catalogPrevBtn"></button>
+      <button class="icon-round" id="catalogNextBtn"></button>
+    </div>
+  </div>
 </section>
 
 <!-- ================= ACHIEVEMENTS ================= -->
@@ -166,7 +218,7 @@
     <input type="file" id="importFile" accept="application/json" style="display:none;">
     <button id="resetBtn" class="danger-btn">Fortschritt zurücksetzen</button>
   </div>
-  <footer>KLUK · v0.1.2</footer>
+  <footer>K-L-U-K · v0.2.1</footer>
 </section>
 
 <!-- ================= IMAGE MODAL ================= -->
@@ -174,6 +226,39 @@
   <div class="modal image-modal">
     <img id="modalImage" src="" alt="">
     <button class="close" id="closeImageModal">Schließen</button>
+  </div>
+</div>
+
+<!-- ================= REVIEW CARD MODAL ================= -->
+<div class="modal-bg" id="reviewModalBg">
+  <div class="modal review-modal">
+    <div class="card-stage" id="reviewCardStage">
+      <div class="flashcard" id="reviewFlashcard">
+        <div class="flashcard-inner" id="reviewFlashcardInner">
+          <div class="flashcard-face flashcard-front">
+            <img id="reviewCardImage" class="card-image" style="display:none;" alt="">
+            <div class="card-section-label" id="reviewCardSectionLabel"></div>
+            <div class="card-question" id="reviewCardQuestion"></div>
+            <div class="flip-hint">Tippen zum Umdrehen</div>
+          </div>
+          <div class="flashcard-face flashcard-back">
+            <div class="answer-block">
+              <div class="answer-label">Antwort</div>
+              <div class="answer-simple" id="reviewAnswerSimple"></div>
+            </div>
+            <div class="answer-block">
+              <div class="answer-label">Details</div>
+              <div class="answer-detail" id="reviewAnswerDetail"></div>
+            </div>
+            <div class="answer-block" id="reviewAnswerExtraBlock" style="display:none;">
+              <div class="answer-label">Extra</div>
+              <div class="answer-extra" id="reviewAnswerExtra"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="close" id="closeReviewModal">Schließen</button>
   </div>
 </div>
 

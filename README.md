@@ -106,6 +106,7 @@ No code changes are needed for new chapters or books using the existing structur
 - `app.js` — application logic
 - `chapters/` — manifest + one JSON file per chapter
 - `images/` — images referenced by cards
+- `data/flip-quotes.json` — one-liners shown when flipping a session card back to the question side
 
 ## Favicon
 
@@ -121,6 +122,22 @@ No code changes are needed for new chapters or books using the existing structur
 Works in all modern browsers (Chrome, Safari, Firefox, Edge). Requires `fetch()` and CSS 3D transforms (for the card flip animation), both widely supported.
 
 ## Changelog
+
+### 0.2.1 — 2026-08-31 — Flip-back captions & abort notice
+- Leaving an unfinished learning session (back arrow or hardware/browser back) now shows a toast confirming that nothing was saved, instead of leaving silently
+- Flipping a session card back from the answer to the question side now shows a small teasing one-liner underneath the card (e.g. "Du schummelst doch nicht, oder? 🧐"), picked at random from `data/flip-quotes.json`; the caption clears again once you move to the next card
+
+### 0.2.0 — 2026-08-30 — Karteikartenbox, browser back, free-form rating
+- Browser/hardware back button now works like the in-app back arrow (via the History API) across every major screen transition, instead of leaving the page
+- The book list now shows "Brainfood Speisekarte" as a subtitle under its title, and the per-book home screen is now titled "Brainfood" with its own subtitle ("Guten Appetit" / "Viel Erfolg und guten Appetit")
+- The settings gear icon is now a solid, rounded-tooth cog (closer to a standard OS settings icon) instead of a thin outline that was hard to recognize at small sizes
+- "Fragenkatalog" renamed to "Karteikartenbox"; it now offers two views — a browsable, flippable card view (default, swipe or arrow buttons to move between cards, no rating) and the previous list view — both sharing the same search and part filter. A "+" button for adding new cards is visible but disabled for now (shows a notice on tap)
+- Chapter selection screen (now titled "Lerneinheit starten") lets you set the number of cards for just this one session, without changing your saved default
+- A learning session can always be left via the back button; nothing is saved to your statistics unless the session is completed
+- The progress bar now visibly reaches 100% before the "Lerninhalt abgeschlossen" screen appears, instead of jumping there while still showing the previous card's progress
+- Fixed a bug where returning to Brainfood from the session summary, then pressing back, would land back on the (already finished) summary screen instead of the book list
+- The summary screen's "Zurück zum Start" button is renamed to "Zurück zu Brainfood" (it never went to the actual start screen) and gained a "Antworten nochmal anschauen" section: an expandable list of every card from that session (green/red per card), tapping one opens it as a flippable card in a popup
+- During a session, cards can now be rated at any time — before or after flipping — and can be flipped back and forth as often as you like. Swiping the card left/right now also works for "Kann ich nicht" / "Weiß ich" (not for "Später", which stays button-only)
 
 ### 0.1.2 — 2026-08-29 — Welcome screen & flatter icons
 - New welcome screen as the app's actual entry point: a large hero button (book icon) leads to the book/script list, with a short explanation of what KLUK does underneath. The book list is now a screen of its own, reached after tapping the hero button, instead of being the entry point

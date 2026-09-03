@@ -7,7 +7,7 @@
 const STRINGS = {
   de: {
     startLearning: '📚 Lerneinheit starten',
-    catalog: '📖 Fragenkatalog',
+    catalog: '🗃️ Karteikartenbox',
     achievements: '🏆 Achievements',
     bookInfo: 'ℹ️ Über das Buch',
     modeNext: 'Nächstes',
@@ -21,8 +21,8 @@ const STRINGS = {
     dontKnow: 'Kann ich nicht',
     later: 'Später',
     know: 'Weiß ich',
-    sessionDone: 'Lerneinheit abgeschlossen!',
-    backHome: 'Zurück zum Start',
+    sessionDone: 'Lerninhalt abgeschlossen!',
+    backHome: 'Zurück zu Brainfood',
     noCards: 'Für diese Auswahl sind noch keine Karten vorhanden.'
   }
 };
@@ -30,17 +30,28 @@ let lang = 'de';
 function t(key) { return (STRINGS[lang] && STRINGS[lang][key]) || key; }
 
 // ---------- Icon set (inline SVGs, styled via currentColor) ----------
+// Most icons are simple outline strokes; the gear is a solid filled shape
+// (rounded-tooth cog, closer to a standard OS settings icon) built from a
+// generated polygon plus an inner hole drawn with fill-rule="evenodd".
 const ICON_PATHS = {
-  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2 V4 M12 20 V22 M2 12 H4 M20 12 H22 M4.93 4.93 L6.34 6.34 M17.66 17.66 L19.07 19.07 M19.07 4.93 L17.66 6.34 M6.34 17.66 L4.93 19.07"/>',
-  moon: '<path d="M20.5 15.5 A8.5 8.5 0 0 1 8.5 3.5 A8.5 8.5 0 1 0 20.5 15.5 Z"/>',
-  gear: '<path d="M12 8 A4 4 0 1 0 12 16 A4 4 0 0 0 12 8 Z M19.4 15 L21 16.2 L19.2 19.2 L17.4 18.2 M4.6 15 L3 16.2 L4.8 19.2 L6.6 18.2 M15 4.6 L16.2 3 L19.2 4.8 L18.2 6.6 M9 4.6 L7.8 3 L4.8 4.8 L5.8 6.6 M4 12 H2 M22 12 H20 M12 4 V2 M12 22 V20"/>',
-  fullscreenOn: '<path d="M9 3 H3 V9 M15 3 H21 V9 M21 15 V21 H15 M3 15 V21 H9"/>',
-  fullscreenOff: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>',
-  arrowLeft: '<path d="M19 12 H5 M10 7 L5 12 L10 17"/>',
-  book: '<path d="M12 6 C10 4.5 7 4 4 4 V18 C7 18 10 18.5 12 20 C14 18.5 17 18 20 18 V4 C17 4 14 4.5 12 6 Z M12 6 V20"/>'
+  sun: { d: '<circle cx="12" cy="12" r="4"/><path d="M12 2 V4 M12 20 V22 M2 12 H4 M20 12 H22 M4.93 4.93 L6.34 6.34 M17.66 17.66 L19.07 19.07 M19.07 4.93 L17.66 6.34 M6.34 17.66 L4.93 19.07"/>' },
+  moon: { d: '<path d="M20.5 15.5 A8.5 8.5 0 0 1 8.5 3.5 A8.5 8.5 0 1 0 20.5 15.5 Z"/>' },
+  fullscreenOn: { d: '<path d="M9 3 H3 V9 M15 3 H21 V9 M21 15 V21 H15 M3 15 V21 H9"/>' },
+  fullscreenOff: { d: '<path d="M9 3 V9 H3 M15 3 V9 H21 M21 15 H15 V21 M3 15 H9 V21"/>' },
+  arrowLeft: { d: '<path d="M19 12 H5 M10 7 L5 12 L10 17"/>' },
+  arrowRight: { d: '<path d="M5 12 H19 M14 7 L19 12 L14 17"/>' },
+  book: { d: '<path d="M12 6 C10 4.5 7 4 4 4 V18 C7 18 10 18.5 12 20 C14 18.5 17 18 20 18 V4 C17 4 14 4.5 12 6 Z M12 6 V20"/>' },
+  gear: {
+    d: '<path d="M 9.24,5.35 L 10.0,2.61 L 14.0,2.61 L 14.76,5.35 L 17.23,3.95 L 20.05,6.77 L 18.65,9.24 L 21.39,10.0 L 21.39,14.0 L 18.65,14.76 L 20.05,17.23 L 17.23,20.05 L 14.76,18.65 L 14.0,21.39 L 10.0,21.39 L 9.24,18.65 L 6.77,20.05 L 3.95,17.23 L 5.35,14.76 L 2.61,14.0 L 2.61,10.0 L 5.35,9.24 L 3.95,6.77 L 6.77,3.95 Z M 15.4,12 A 3.4,3.4 0 1,0 8.6,12 A 3.4,3.4 0 1,0 15.4,12 Z" fill-rule="evenodd"/>',
+    filled: true
+  }
 };
 function icon(name) {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[name]}</svg>`;
+  const def = ICON_PATHS[name];
+  const attrs = def.filled
+    ? 'fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"'
+    : 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
+  return `<svg viewBox="0 0 24 24" ${attrs}>${def.d}</svg>`;
 }
 
 // ---------- Storage keys ----------
@@ -55,8 +66,10 @@ const state = {
   chapterMode: 'next',
   selectedParts: [],
   selectedChapters: [],
+  chapterSessionSize: 10, // per-session override, does not touch the settings default
   session: null,       // { queue: [cards...], resolvedIds:Set, book, chapters, stats:{...} }
-  navStack: []          // for back button
+  navStack: [],         // for back button
+  isPopping: false      // true while handling a popstate, to avoid re-pushing history
 };
 
 // ---------- Progress / settings persistence ----------
@@ -138,24 +151,85 @@ async function loadAllChapters(book) {
   return results;
 }
 
+// Small collection of playful/teasing one-liners shown when flipping a
+// session card back from the answer to the question side (see
+// showFlipBackCaption below). Loaded once and cached.
+async function loadFlipQuotes() {
+  if (state.flipQuotes) return state.flipQuotes;
+  try {
+    const res = await fetch('data/flip-quotes.json');
+    state.flipQuotes = await res.json();
+  } catch (e) {
+    state.flipQuotes = [];
+  }
+  return state.flipQuotes;
+}
+
 // ============================================================
 // Navigation
 // ============================================================
+// Every screen-level transition pushes one browser history entry, carrying
+// a full snapshot of our own navStack. This lets the hardware/browser back
+// button (popstate) and the in-app back arrow share one code path, and lets
+// us jump back several steps at once (e.g. "Zurück zu Brainfood") simply by
+// calling history.go(-n) and letting popstate re-render the target screen.
+function setHeaderSubtitle(shortText, longText) {
+  const el = document.getElementById('headerSubtitle');
+  if (shortText == null) { el.style.display = 'none'; return; }
+  el.querySelector('.sub-short').textContent = shortText;
+  el.querySelector('.sub-long').textContent = longText != null ? longText : shortText;
+  el.style.display = 'block';
+}
+
 function showScreen(id, opts) {
   opts = opts || {};
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  document.getElementById('backBtn').style.display = opts.canGoBack ? 'block' : 'none';
+  document.getElementById('backBtn').style.display = opts.canGoBack ? 'flex' : 'none';
   document.getElementById('headerTitle').textContent = opts.title || 'K-L-U-K';
-  document.getElementById('headerSubtitle').style.display = opts.showSubtitle ? 'block' : 'none';
-  if (opts.pushHistory !== false) state.navStack.push(id);
+  setHeaderSubtitle(opts.showSubtitle ? (opts.subtitleShort || '') : null, opts.subtitleLong);
+
+  // While replaying a popstate, state.navStack has already been restored
+  // from the saved history entry, so we must not push onto it again here.
+  if (opts.pushHistory !== false && !state.isPopping) {
+    state.navStack.push(id);
+    history.pushState({ stack: state.navStack.slice() }, '', '#' + id);
+  }
 }
-function goBack() {
-  state.navStack.pop(); // remove current
-  const prev = state.navStack.pop() || 'screen-welcome';
-  navigateTo(prev);
+
+// In-app back arrow: just replay real browser history; the popstate
+// handler below does the actual re-rendering, so hardware/gesture back
+// behaves identically to tapping the arrow.
+function goBack() { history.back(); }
+
+// Jump back to the most recent occurrence of `targetId` in the nav stack
+// (e.g. summary screen -> "Zurück zu Brainfood"), collapsing every screen
+// in between out of the browser history in one go.
+function goBackTo(targetId, fallbackRender) {
+  const idx = state.navStack.lastIndexOf(targetId);
+  if (idx !== -1 && idx < state.navStack.length - 1) {
+    history.go(idx - (state.navStack.length - 1));
+  } else if (fallbackRender) {
+    fallbackRender();
+  }
 }
-// central place mapping screen ids back to their render function, used by goBack
+
+window.addEventListener('popstate', e => {
+  if (!e.state || !e.state.stack) return;
+  const wasOnUnfinishedSession = state.navStack[state.navStack.length - 1] === 'screen-session'
+    && state.session && state.session.resolvedCount < state.session.total;
+
+  state.isPopping = true;
+  state.navStack = e.state.stack.slice();
+  navigateTo(state.navStack[state.navStack.length - 1]);
+  state.isPopping = false;
+
+  if (wasOnUnfinishedSession) {
+    showToast('Lerneinheit abgebrochen – dein Fortschritt wurde nicht gespeichert.');
+  }
+});
+
+// central place mapping screen ids back to their render function, used by popstate/goBack
 function navigateTo(id) {
   if (id === 'screen-welcome') renderWelcome();
   else if (id === 'screen-books') renderBooks();
@@ -165,7 +239,7 @@ function navigateTo(id) {
   else if (id === 'screen-catalog') renderCatalog();
   else if (id === 'screen-achievements') renderAchievements();
   else if (id === 'screen-settings') renderSettings();
-  else showScreen(id);
+  else showScreen(id, { pushHistory: false });
 }
 
 // ============================================================
@@ -173,7 +247,10 @@ function navigateTo(id) {
 // ============================================================
 function renderWelcome() {
   document.getElementById('heroIcon').innerHTML = icon('book');
-  showScreen('screen-welcome', { canGoBack: false, title: 'K-L-U-K', showSubtitle: true });
+  showScreen('screen-welcome', {
+    canGoBack: false, title: 'K-L-U-K', showSubtitle: true,
+    subtitleShort: 'Ich werd so klug', subtitleLong: 'Ich werd so klug, K-L-U-K'
+  });
 }
 document.getElementById('btnGoToBooks').addEventListener('click', renderBooks);
 
@@ -198,7 +275,7 @@ function renderBookRow(book, manifest) {
     const idx = settings.favoriteBooks.indexOf(book.id);
     if (idx === -1) settings.favoriteBooks.push(book.id); else settings.favoriteBooks.splice(idx, 1);
     saveSettings();
-    renderBooks();
+    renderBookList(manifest); // just refresh the list, not a navigation event
   });
 
   const btn = document.createElement('button');
@@ -214,14 +291,11 @@ function renderBookRow(book, manifest) {
   return row;
 }
 
-async function renderBooks() {
-  const manifest = await loadManifest();
+function renderBookList(manifest) {
   const list = document.getElementById('bookList');
   list.innerHTML = '';
-
   const favorites = sortByTitle(manifest.books.filter(b => settings.favoriteBooks.includes(b.id)));
   const others = sortByTitle(manifest.books.filter(b => !settings.favoriteBooks.includes(b.id)));
-
   favorites.forEach(book => list.appendChild(renderBookRow(book, manifest)));
   if (favorites.length && others.length) {
     const divider = document.createElement('hr');
@@ -229,8 +303,16 @@ async function renderBooks() {
     list.appendChild(divider);
   }
   others.forEach(book => list.appendChild(renderBookRow(book, manifest)));
+}
 
-  showScreen('screen-books', { canGoBack: true, title: 'Bücher & Skripte' });
+async function renderBooks() {
+  const manifest = await loadManifest();
+  renderBookList(manifest);
+
+  showScreen('screen-books', {
+    canGoBack: true, title: 'Bücher & Skripte', showSubtitle: true,
+    subtitleShort: 'Brainfood Speisekarte', subtitleLong: 'Brainfood Speisekarte'
+  });
 
   // Skip straight to home if there is exactly one book (common case for now)
   if (manifest.books.length === 1) {
@@ -248,7 +330,10 @@ function renderHome() {
   document.getElementById('btnAchievements').textContent = t('achievements');
   document.getElementById('btnBookInfo').textContent = t('bookInfo');
   const canGoBack = !!(state.manifest && state.manifest.books.length > 1);
-  showScreen('screen-home', { canGoBack, title: 'K-L-U-K' });
+  showScreen('screen-home', {
+    canGoBack, title: 'Brainfood', showSubtitle: true,
+    subtitleShort: 'Guten Appetit', subtitleLong: 'Viel Erfolg und guten Appetit'
+  });
 }
 
 // ============================================================
@@ -279,8 +364,14 @@ function renderChapterSelect() {
     b.classList.toggle('active', b.dataset.mode === state.chapterMode);
   });
   renderChapterModeDetail();
-  showScreen('screen-chapters', { canGoBack: true, title: 'Kapitel wählen' });
+  document.getElementById('chapterSessionSizeInput').value = state.chapterSessionSize;
+  document.getElementById('chapterSessionSizeLabel').textContent = state.chapterSessionSize;
+  showScreen('screen-chapters', { canGoBack: true, title: 'Lerneinheit starten' });
 }
+document.getElementById('chapterSessionSizeInput').addEventListener('input', e => {
+  state.chapterSessionSize = parseInt(e.target.value);
+  document.getElementById('chapterSessionSizeLabel').textContent = state.chapterSessionSize;
+});
 
 function renderChapterModeDetail() {
   const book = state.currentBook;
@@ -342,7 +433,8 @@ document.getElementById('chapterModeToggle').addEventListener('click', e => {
   const btn = e.target.closest('.seg-btn');
   if (!btn) return;
   state.chapterMode = btn.dataset.mode;
-  renderChapterSelect();
+  document.querySelectorAll('#chapterModeToggle .seg-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderChapterModeDetail(); // switching modes stays within the same screen, so no new history entry
 });
 
 document.getElementById('btnStartSession').addEventListener('click', async () => {
@@ -388,7 +480,7 @@ async function startSession(chapterNumbers) {
   });
   if (!allCards.length) { showToast(t('noCards')); return; }
 
-  const size = Math.min(settings.sessionSize, allCards.length);
+  const size = Math.min(state.chapterSessionSize || settings.sessionSize, allCards.length);
   const queue = weightedSample(allCards, size);
 
   state.session = {
@@ -398,10 +490,13 @@ async function startSession(chapterNumbers) {
     resolvedCount: 0,
     stats: { correct: 0, wrong: 0, later: 0, lateNight: 0, fixedThisSession: 0 },
     current: null,
-    flipStage: 0 // 0 = front, 1 = simple shown, 2 = detail shown, 3 = extra shown
+    // review data: original draw order + per-card outcome, for "Antworten nochmal anschauen"
+    initialOrder: queue.map(c => c.id),
+    cardsById: Object.fromEntries(queue.map(c => [c.id, c])),
+    results: {}
   };
 
-  showScreen('screen-session', { canGoBack: false, title: 'Lernen' });
+  showScreen('screen-session', { canGoBack: true, title: 'Lernen' });
   showNextCard();
 }
 
@@ -409,7 +504,6 @@ function showNextCard() {
   const session = state.session;
   if (!session.queue.length) { finishSession(); return; }
   session.current = session.queue.shift();
-  session.flipStage = 0;
   renderSessionCard();
 }
 
@@ -418,6 +512,9 @@ function renderSessionCard() {
   const card = session.current;
   const flashcardInner = document.getElementById('flashcardInner');
   flashcardInner.classList.remove('flipped');
+  document.getElementById('flashcard').style.transform = '';
+  document.getElementById('flashcard').style.transition = '';
+  hideFlipBackCaption();
 
   document.getElementById('cardSectionLabel').textContent = `Kapitel ${card.chapterNumber}${card.section ? ' · ' + card.section : ''}`;
   document.getElementById('cardQuestion').textContent = card.question;
@@ -437,7 +534,6 @@ function renderSessionCard() {
   document.getElementById('answerExtraBlock').style.display = 'none';
   document.getElementById('moreBtn1').style.display = card.answerDetail ? 'block' : 'none';
   document.getElementById('moreBtn2').style.display = 'none';
-  document.getElementById('sessionActions').style.visibility = 'hidden';
 
   updateProgressBar();
 }
@@ -446,18 +542,34 @@ function updateProgressBar() {
   const session = state.session;
   const pct = Math.round((session.resolvedCount / session.total) * 100);
   document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressText').textContent = `Karte ${session.resolvedCount + 1} von ${session.total}`;
+  document.getElementById('progressText').textContent = `Karte ${Math.min(session.resolvedCount + 1, session.total)} von ${session.total}`;
 }
 
+// Flip is a free toggle now (front<->back, as often as you like) and rating
+// no longer depends on having flipped at all. Flipping *back* from the
+// answer to the question side additionally shows a small teasing one-liner
+// underneath the card (see loadFlipQuotes / showFlipBackCaption).
+let sessionWasDragged = false;
 document.getElementById('flashcardInner').addEventListener('click', () => {
-  const session = state.session;
-  if (!session) return;
+  if (!state.session) return;
+  if (sessionWasDragged) { sessionWasDragged = false; return; }
   const inner = document.getElementById('flashcardInner');
-  if (!inner.classList.contains('flipped')) {
-    inner.classList.add('flipped');
-    document.getElementById('sessionActions').style.visibility = 'visible';
-  }
+  const wasFlipped = inner.classList.contains('flipped');
+  inner.classList.toggle('flipped');
+  if (wasFlipped) showFlipBackCaption(); else hideFlipBackCaption();
 });
+
+function showFlipBackCaption() {
+  const el = document.getElementById('flipBackCaption');
+  const quotes = state.flipQuotes;
+  if (!quotes || !quotes.length) { el.style.display = 'none'; return; }
+  const q = quotes[Math.floor(Math.random() * quotes.length)];
+  el.textContent = q.attribution ? `${q.text} — ${q.attribution}` : q.text;
+  el.style.display = 'block';
+}
+function hideFlipBackCaption() {
+  document.getElementById('flipBackCaption').style.display = 'none';
+}
 
 document.getElementById('moreBtn1').addEventListener('click', e => {
   e.stopPropagation();
@@ -480,10 +592,45 @@ document.getElementById('cardImage').addEventListener('click', e => {
 document.getElementById('closeImageModal').addEventListener('click', () => {
   document.getElementById('imageModalBg').classList.remove('open');
 });
+document.getElementById('imageModalBg').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+});
 
 document.getElementById('btnYes').addEventListener('click', () => rateCard('yes'));
 document.getElementById('btnNo').addEventListener('click', () => rateCard('no'));
 document.getElementById('btnLater').addEventListener('click', () => rateCard('later'));
+
+// ---------- Swipe to rate (left = kann ich nicht, right = weiß ich) ----------
+// "Später" is deliberately button-only, per spec.
+(function setupSessionSwipe() {
+  const flashcard = document.getElementById('flashcard');
+  let dragging = false, startX = 0, dx = 0;
+
+  flashcard.addEventListener('pointerdown', e => {
+    if (!state.session) return;
+    dragging = true; startX = e.clientX; dx = 0;
+    flashcard.setPointerCapture(e.pointerId);
+    flashcard.style.transition = 'none';
+  });
+  flashcard.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    dx = e.clientX - startX;
+    flashcard.style.transform = `translateX(${dx}px) rotate(${dx / 20}deg)`;
+  });
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    flashcard.style.transition = '';
+    const threshold = 90;
+    if (Math.abs(dx) > 5) sessionWasDragged = true;
+    if (dx > threshold) { flashcard.style.transform = ''; rateCard('yes'); }
+    else if (dx < -threshold) { flashcard.style.transform = ''; rateCard('no'); }
+    else { flashcard.style.transform = ''; }
+    dx = 0;
+  }
+  flashcard.addEventListener('pointerup', endDrag);
+  flashcard.addEventListener('pointercancel', endDrag);
+})();
 
 function rateCard(result) {
   const session = state.session;
@@ -494,24 +641,35 @@ function rateCard(result) {
   if (result === 'later') {
     session.stats.later++;
     session.queue.push(card); // goes to the back of the same session's queue
-  } else {
-    session.resolvedCount++;
-    cp.seen++;
-    if (result === 'yes') {
-      session.stats.correct++;
-      cp.level = Math.min(cp.level + 1, 2);
-      if (cp.everWrong && !cp.fixedCounted) {
-        cp.fixedCounted = true;
-        session.stats.fixedThisSession++;
-      }
-    } else {
-      session.stats.wrong++;
-      cp.level = 0;
-      cp.everWrong = true;
-    }
-    if (isLateNight) session.stats.lateNight++;
+    showNextCard();
+    return;
   }
-  showNextCard();
+
+  session.resolvedCount++;
+  cp.seen++;
+  session.results[card.id] = result;
+  if (result === 'yes') {
+    session.stats.correct++;
+    cp.level = Math.min(cp.level + 1, 2);
+    if (cp.everWrong && !cp.fixedCounted) {
+      cp.fixedCounted = true;
+      session.stats.fixedThisSession++;
+    }
+  } else {
+    session.stats.wrong++;
+    cp.level = 0;
+    cp.everWrong = true;
+  }
+  if (isLateNight) session.stats.lateNight++;
+
+  updateProgressBar();
+  if (session.queue.length === 0) {
+    // let the progress bar's CSS transition actually reach 100% before
+    // switching to the summary screen, instead of jumping there instantly
+    setTimeout(finishSession, 350);
+  } else {
+    showNextCard();
+  }
 }
 
 function finishSession() {
@@ -573,19 +731,75 @@ function renderSummary(stats, newlyUnlocked) {
   achDiv.innerHTML = newlyUnlocked.length
     ? '<p>Neues Abzeichen freigeschaltet:</p>' + newlyUnlocked.map(a => `<span class="unlocked-badge">${a.emoji} ${a.name}</span>`).join('')
     : '';
-  showScreen('screen-summary', { canGoBack: false, title: 'Fertig' });
+  document.getElementById('summaryReviewList').style.display = 'none';
+  document.getElementById('summaryReviewList').innerHTML = '';
+  document.getElementById('btnReviewAnswers').textContent = 'Antworten nochmal anschauen';
+  showScreen('screen-summary', { canGoBack: true, title: 'Fertig' });
 }
 
-document.getElementById('btnSummaryHome').addEventListener('click', renderHome);
+document.getElementById('btnReviewAnswers').addEventListener('click', () => {
+  const listEl = document.getElementById('summaryReviewList');
+  const btn = document.getElementById('btnReviewAnswers');
+  const session = state.session;
+  const opening = listEl.style.display === 'none';
+  if (opening && !listEl.childElementCount) {
+    session.initialOrder.forEach(id => {
+      const card = session.cardsById[id];
+      const result = session.results[id];
+      const row = document.createElement('button');
+      row.className = 'review-item';
+      row.innerHTML = `<span class="dot ${result === 'yes' ? 'correct' : 'wrong'}"></span><span class="q">${card.question}</span>`;
+      row.addEventListener('click', () => openReviewCard(card));
+      listEl.appendChild(row);
+    });
+  }
+  listEl.style.display = opening ? 'flex' : 'none';
+  btn.textContent = opening ? 'Antworten ausblenden' : 'Antworten nochmal anschauen';
+});
+
+function openReviewCard(card) {
+  document.getElementById('reviewFlashcardInner').classList.remove('flipped');
+  document.getElementById('reviewCardSectionLabel').textContent = `Kapitel ${card.chapterNumber}${card.section ? ' · ' + card.section : ''}`;
+  document.getElementById('reviewCardQuestion').textContent = card.question;
+  const img = document.getElementById('reviewCardImage');
+  if (card.images && card.images.length) { img.src = 'images/' + card.images[0]; img.style.display = 'block'; }
+  else { img.style.display = 'none'; }
+  document.getElementById('reviewAnswerSimple').textContent = card.answerSimple || '';
+  document.getElementById('reviewAnswerDetail').textContent = card.answerDetail || '';
+  const extraBlock = document.getElementById('reviewAnswerExtraBlock');
+  if (card.extra) { document.getElementById('reviewAnswerExtra').textContent = card.extra; extraBlock.style.display = 'block'; }
+  else { extraBlock.style.display = 'none'; }
+  document.getElementById('reviewModalBg').classList.add('open');
+}
+document.getElementById('reviewFlashcardInner').addEventListener('click', () => {
+  document.getElementById('reviewFlashcardInner').classList.toggle('flipped');
+});
+document.getElementById('closeReviewModal').addEventListener('click', () => {
+  document.getElementById('reviewModalBg').classList.remove('open');
+});
+document.getElementById('reviewModalBg').addEventListener('click', e => {
+  if (e.target === e.currentTarget) e.currentTarget.classList.remove('open');
+});
+
+// "Zurück zu Brainfood" collapses the chapters->session->summary chain out
+// of the browser history instead of stacking a fresh "screen-home" on top
+// of it (which used to make the back arrow land on the finished summary
+// screen again instead of the book list).
+document.getElementById('btnSummaryHome').addEventListener('click', () => {
+  goBackTo('screen-home', renderHome);
+});
 
 // ============================================================
-// Catalog (Fragenkatalog)
+// Catalog / Karteikartenbox
 // ============================================================
 let catalogAllCards = null;
 let catalogFilterPart = null;
+let catalogFiltered = [];
+let catalogView = 'cards'; // default view, per spec
+let catalogIndex = 0;
 
 async function renderCatalog() {
-  showScreen('screen-catalog', { canGoBack: true, title: 'Fragenkatalog' });
+  showScreen('screen-catalog', { canGoBack: true, title: 'Karteikartenbox' });
   if (!catalogAllCards) {
     const chapters = await loadAllChapters(state.currentBook);
     catalogAllCards = [];
@@ -595,8 +809,11 @@ async function renderCatalog() {
       })));
     });
   }
+  catalogView = 'cards';
+  catalogIndex = 0;
+  document.querySelectorAll('#catalogViewToggle .seg-btn').forEach(b => b.classList.toggle('active', b.dataset.view === catalogView));
   renderCatalogFilters();
-  renderCatalogList('');
+  applyCatalogFilter(document.getElementById('catalogSearch').value);
 }
 
 function renderCatalogFilters() {
@@ -609,23 +826,47 @@ function renderCatalogFilters() {
     chip.addEventListener('click', () => {
       catalogFilterPart = (catalogFilterPart === part.number) ? null : part.number;
       renderCatalogFilters();
-      renderCatalogList(document.getElementById('catalogSearch').value);
+      applyCatalogFilter(document.getElementById('catalogSearch').value);
     });
     row.appendChild(chip);
   });
 }
 
-function renderCatalogList(query) {
-  const list = document.getElementById('catalogList');
+// Search & part filter are shared between the list view and the card view.
+function applyCatalogFilter(query) {
   const q = (query || '').toLowerCase().trim();
-  const filtered = catalogAllCards.filter(c => {
+  catalogFiltered = catalogAllCards.filter(c => {
     if (catalogFilterPart !== null && c.part !== catalogFilterPart) return false;
     if (!q) return true;
     return (c.question + ' ' + c.answerSimple).toLowerCase().includes(q);
   });
+  catalogIndex = 0;
+  renderCatalogList();
+  renderCatalogCard();
+}
+document.getElementById('catalogSearch').addEventListener('input', e => applyCatalogFilter(e.target.value));
+
+document.getElementById('catalogViewToggle').addEventListener('click', e => {
+  const btn = e.target.closest('.seg-btn');
+  if (!btn) return;
+  catalogView = btn.dataset.view;
+  document.querySelectorAll('#catalogViewToggle .seg-btn').forEach(b => b.classList.toggle('active', b === btn));
+  document.getElementById('catalogListView').style.display = catalogView === 'list' ? 'flex' : 'none';
+  document.getElementById('catalogCardView').style.display = catalogView === 'cards' ? 'block' : 'none';
+  if (catalogView === 'cards') renderCatalogCard();
+});
+
+document.getElementById('catalogAddBtn').addEventListener('click', () => {
+  showToast('Diese Funktion ist noch nicht verfügbar.');
+});
+
+// ---------- List view ----------
+function renderCatalogList() {
+  const list = document.getElementById('catalogListView');
+  list.style.display = catalogView === 'list' ? 'flex' : 'none';
   list.innerHTML = '';
-  if (!filtered.length) { list.innerHTML = `<p class="hint">${t('noCards')}</p>`; return; }
-  filtered.forEach(c => {
+  if (!catalogFiltered.length) { list.innerHTML = `<p class="hint">${t('noCards')}</p>`; return; }
+  catalogFiltered.forEach(c => {
     const item = document.createElement('div');
     item.className = 'catalog-item';
     item.innerHTML = `
@@ -640,7 +881,85 @@ function renderCatalogList(query) {
   });
 }
 
-document.getElementById('catalogSearch').addEventListener('input', e => renderCatalogList(e.target.value));
+// ---------- Card view (browse & flip, no rating) ----------
+function renderCatalogCard() {
+  const cardView = document.getElementById('catalogCardView');
+  cardView.style.display = catalogView === 'cards' ? 'block' : 'none';
+  if (!catalogFiltered.length) {
+    document.getElementById('catalogCardPosition').textContent = t('noCards');
+    document.getElementById('catalogCardQuestion').textContent = '';
+    document.getElementById('catalogAnswerSimple').textContent = '';
+    document.getElementById('catalogAnswerDetail').textContent = '';
+    return;
+  }
+  if (catalogIndex >= catalogFiltered.length) catalogIndex = catalogFiltered.length - 1;
+  if (catalogIndex < 0) catalogIndex = 0;
+  const card = catalogFiltered[catalogIndex];
+
+  document.getElementById('catalogFlashcardInner').classList.remove('flipped');
+  document.getElementById('catalogFlashcard').style.transform = '';
+  document.getElementById('catalogCardPosition').textContent = `Karte ${catalogIndex + 1} von ${catalogFiltered.length}`;
+  document.getElementById('catalogCardSectionLabel').textContent = `Kapitel ${card.chapterNumber}${card.section ? ' · ' + card.section : ''}`;
+  document.getElementById('catalogCardQuestion').textContent = card.question;
+
+  const img = document.getElementById('catalogCardImage');
+  if (card.images && card.images.length) { img.src = 'images/' + card.images[0]; img.style.display = 'block'; }
+  else { img.style.display = 'none'; }
+
+  document.getElementById('catalogAnswerSimple').textContent = card.answerSimple || '';
+  document.getElementById('catalogAnswerDetail').textContent = card.answerDetail || '';
+  const extraBlock = document.getElementById('catalogAnswerExtraBlock');
+  if (card.extra) { document.getElementById('catalogAnswerExtra').textContent = card.extra; extraBlock.style.display = 'block'; }
+  else { extraBlock.style.display = 'none'; }
+}
+
+let catalogWasDragged = false;
+document.getElementById('catalogFlashcardInner').addEventListener('click', () => {
+  if (catalogWasDragged) { catalogWasDragged = false; return; }
+  document.getElementById('catalogFlashcardInner').classList.toggle('flipped');
+});
+document.getElementById('catalogCardImage').addEventListener('click', e => {
+  e.stopPropagation();
+  document.getElementById('modalImage').src = e.target.src;
+  document.getElementById('imageModalBg').classList.add('open');
+});
+
+function catalogPrev() { if (catalogIndex > 0) { catalogIndex--; renderCatalogCard(); } }
+function catalogNext() { if (catalogIndex < catalogFiltered.length - 1) { catalogIndex++; renderCatalogCard(); } }
+document.getElementById('catalogPrevBtn').addEventListener('click', catalogPrev);
+document.getElementById('catalogNextBtn').addEventListener('click', catalogNext);
+document.getElementById('catalogPrevBtn').innerHTML = icon('arrowLeft');
+document.getElementById('catalogNextBtn').innerHTML = icon('arrowRight');
+
+// Swipe left/right to browse between cards (pure navigation, no rating here).
+(function setupCatalogSwipe() {
+  const flashcard = document.getElementById('catalogFlashcard');
+  let dragging = false, startX = 0, dx = 0;
+
+  flashcard.addEventListener('pointerdown', e => {
+    dragging = true; startX = e.clientX; dx = 0;
+    flashcard.setPointerCapture(e.pointerId);
+    flashcard.style.transition = 'none';
+  });
+  flashcard.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    dx = e.clientX - startX;
+    flashcard.style.transform = `translateX(${dx}px)`;
+  });
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    flashcard.style.transition = '';
+    if (Math.abs(dx) > 5) catalogWasDragged = true;
+    const threshold = 70;
+    flashcard.style.transform = '';
+    if (dx < -threshold) catalogNext();
+    else if (dx > threshold) catalogPrev();
+    dx = 0;
+  }
+  flashcard.addEventListener('pointerup', endDrag);
+  flashcard.addEventListener('pointercancel', endDrag);
+})();
 
 // ============================================================
 // Achievements screen
@@ -737,6 +1056,7 @@ document.getElementById('btnStartLearning').addEventListener('click', () => {
   state.chapterMode = 'next';
   state.selectedChapters = [];
   state.selectedParts = [];
+  state.chapterSessionSize = settings.sessionSize;
   renderChapterSelect();
 });
 document.getElementById('btnCatalog').addEventListener('click', renderCatalog);
@@ -787,3 +1107,4 @@ window.addEventListener('beforeunload', e => {
 // Init
 // ============================================================
 renderWelcome();
+loadFlipQuotes(); // warm the cache early so the first flip-back has no delay
